@@ -20,17 +20,19 @@ class MusicTitle extends StatelessWidget {
 class Music extends StatelessWidget {
   final String cipher;
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          cipher.toUpperCase(),
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+    return Center(
+      child: Column(
+        children: [
+          Text(
+            cipher.toUpperCase(),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
           ),
-        ),
-        Text(''),
-      ],
+          Text(''),
+        ],
+      ),
     );
   }
 
