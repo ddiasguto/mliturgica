@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../templates/cipher.dart';
+import 'ofertorios.dart';
 
 class Musica extends StatefulWidget {
   const Musica({super.key});
@@ -39,25 +40,7 @@ class _MusicaState extends State<Musica> {
         body: SingleChildScrollView(
           child: SelectionArea(
             child: Column(
-              children: const <Widget>[
-                Text(' '),
-                MusicTitle(title: 'A TI MEU DEUS'),
-                Cifra(cipher: '        F#m'),
-                Music(cipher: 'A Ti, meu Deus elevo meu coração'),
-                Cifra(cipher: '        E'),
-                Music(cipher: 'Elevo as minhas mãos'),
-                Cifra(cipher: '        E'),
-                Music(cipher: 'Meu olhar, minha voz'),
-                Music(cipher: 'A Ti, meu Deus'),
-                Music(cipher: 'Eu quero oferecer'),
-                Music(cipher: 'Meus passos e meu viver'),
-                Music(cipher: 'Meus caminhos, meu sofrer'),
-                Music(cipher: 'A Tua ternura, Senhor, vem me abraçar'),
-                Music(cipher: 'E a Tua bondade infinita me perdoar'),
-                Music(cipher: 'Vou ser o Teu seguidor'),
-                Music(cipher: 'E Te dar o meu coração'),
-                Music(cipher: 'Eu quero sentir o calor, de Tuas mãos'),
-              ],
+              children: seBendito,
             ),
           ),
         ),
