@@ -4,14 +4,13 @@ import 'ofertorios.dart';
 class Musica extends StatefulWidget {
   const Musica({super.key});
   @override
-  State<StatefulWidget> createState() => _MusicaState();
+  State<Musica> createState() => MusicaState();
 }
 
-class _MusicaState extends State<Musica> {
+class MusicaState extends State<Musica> {
   @override
+  int _selectedIndex = 0;
   Widget build(BuildContext context) {
-    int selectedIndex = 0;
-
     const List<Widget> offers = <Widget>[
       AtiMeuDeus(),
       MinhaVidaTemSentido(),
@@ -20,42 +19,38 @@ class _MusicaState extends State<Musica> {
     ];
 
     _onItemTapped(int index) {
-      if (index == 1) {
+      if (index == 1 && _selectedIndex < offers.length - 1) {
         setState(() {
-          selectedIndex++;
+          _selectedIndex++;
         });
-        print(selectedIndex);
-      } else {
+        print(_selectedIndex);
+      } else if (index == 0 && _selectedIndex > 0) {
         setState(() {
-          selectedIndex--;
+          _selectedIndex--;
         });
-        print(selectedIndex);
+        print(_selectedIndex);
       }
     }
 
-    return MaterialApp(
-      title: 'A ti Meu Deus',
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Ofertório')),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.cyan,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_left),
-              label: 'Anterior',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_right),
-              label: 'Próxima',
-            ),
-          ],
-          currentIndex: selectedIndex,
-          selectedItemColor: Colors.redAccent,
-          onTap: _onItemTapped,
-        ),
-        body: SingleChildScrollView(
-          child: offers.elementAt(selectedIndex + 1),
-        ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Ofertório')),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.cyan,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_circle_left),
+            label: 'Anterior',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.arrow_circle_right),
+            label: 'Próxima',
+          ),
+        ],
+        selectedItemColor: Colors.redAccent,
+        onTap: _onItemTapped,
+      ),
+      body: SingleChildScrollView(
+        child: offers.elementAt(_selectedIndex),
       ),
     );
   }
