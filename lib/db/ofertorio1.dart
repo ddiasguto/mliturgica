@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../templates/cipher.dart';
 import 'ofertorios.dart';
 
 class Musica extends StatefulWidget {
@@ -11,11 +10,28 @@ class Musica extends StatefulWidget {
 class _MusicaState extends State<Musica> {
   @override
   Widget build(BuildContext context) {
-    void _onItemTapped(int index) {
-      index;
-    }
-
     int selectedIndex = 0;
+
+    const List<Widget> offers = <Widget>[
+      AtiMeuDeus(),
+      MinhaVidaTemSentido(),
+      EstarEmTuasMaos(),
+      SeBendito()
+    ];
+
+    _onItemTapped(int index) {
+      if (index == 1) {
+        setState(() {
+          selectedIndex++;
+        });
+        print(selectedIndex);
+      } else {
+        setState(() {
+          selectedIndex--;
+        });
+        print(selectedIndex);
+      }
+    }
 
     return MaterialApp(
       title: 'A ti Meu Deus',
@@ -38,11 +54,7 @@ class _MusicaState extends State<Musica> {
           onTap: _onItemTapped,
         ),
         body: SingleChildScrollView(
-          child: SelectionArea(
-            child: Column(
-              children: seBendito,
-            ),
-          ),
+          child: offers.elementAt(selectedIndex + 1),
         ),
       ),
     );
