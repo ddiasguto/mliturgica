@@ -1,6 +1,10 @@
 import 'package:diasguto/components/home.dart';
+import 'package:diasguto/pages/catalogue_page.dart';
+import 'package:diasguto/pages/contact_page.dart';
+import 'package:diasguto/pages/sheet_page.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/politic_page.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -30,14 +34,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    SheetPage(),
+    CataloguePage(),
+    ContactPage(),
+    PoliticPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -67,12 +67,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.menu_book),
+            label: 'Partitura',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.phone),
+            label: 'Contato',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Catálogo',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.balance),
+            label: 'Politica',
           ),
         ],
         currentIndex: _selectedIndex,
