@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ofertorios.dart';
+import 'ofertorio.dart';
 
 class Musica extends StatefulWidget {
   const Musica({super.key});
