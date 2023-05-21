@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'ofertorio.dart';
+import '../db/ofertorio.dart';
 
-class Musica extends StatefulWidget {
-  const Musica({super.key});
+class ShowMusic extends StatefulWidget {
+  const ShowMusic({
+    super.key,
+    this.category,
+  });
+
+  final String? category;
   @override
-  State<Musica> createState() => MusicaState();
+  State<ShowMusic> createState() => ShowMusicState();
 }
 
-class MusicaState extends State<Musica> {
+class ShowMusicState extends State<ShowMusic> {
   @override
   int _selectedIndex = 0;
+
   Widget build(BuildContext context) {
     const List<Widget> offers = <Widget>[
       AtiMeuDeus(),
