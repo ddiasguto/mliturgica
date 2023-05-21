@@ -14,6 +14,8 @@ def setingFileOut(index):
         out='../db/ofertorio.dart'
     elif index ==3:
         out='../db/comunhao.dart'
+    elif index==4:
+        out='../db/final.dart'
     return out
 
 def writeHeader(out,titulo):

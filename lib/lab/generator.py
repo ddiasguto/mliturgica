@@ -10,7 +10,7 @@ file1 = open('aux.txt','r')
 
 titulo = input('Titulo da Musica:')
 
-category = int(input(print('Categorias:\n\t1-Entrada;\n\t2-Ofertorio;\n\t3-Comunhão;\nDigite a categoria:')))
+category = int(input(print('Categorias:\n\t1-Entrada;\n\t2-Ofertorio;\n\t3-Comunhão;\n\t4-Final\nDigite a categoria:')))
 
 
 outPath = open(functions.setingFileOut(category),'a')
