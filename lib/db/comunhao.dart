@@ -6,6 +6,7 @@ class PelosPradosECampinas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Pelos Prados e Campinas'),
       const Music(cipher: 'C Am F Fm C'),
       const Music(cipher: 'PELOS PRADOS E CAMPINAS VERDEJANTES EU VOU'),
       const Music(cipher: 'Em F G'),
@@ -43,6 +44,7 @@ class SacramentoDaComunhao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Sacramento da Comunhão'),
       const Music(cipher: 'D A/C# Bm Bm/A'),
       const Music(cipher: 'SENHOR, QUANDO TE VEJO NO SACRAMENTO DA COMUNHÃO'),
       const Music(cipher: 'G A D G'),
@@ -92,6 +94,7 @@ class CantarABelezaDaVida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Cantar a Beleza da Vida'),
       const Music(cipher: 'D A Bm F#'),
       const Music(
           cipher: '1. CANTAR A BELEZA DA VIDA, PRESENTE DO AMOR SEM IGUAL:'),
@@ -148,6 +151,7 @@ class ConhecoUmCoracao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Conheço um Coração'),
       const Music(cipher: 'A C#m Bm7 E7'),
       const Music(cipher: 'CONHEÇO UM CORAÇÃO TÃO MANSO, HUMILDE E SERENO.'),
       const Music(cipher: 'A C#m Bm7 E7'),
@@ -183,6 +187,7 @@ class PaoDaVida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Pão da Vida'),
       const Music(cipher: 'E B/E A/E E'),
       const Music(cipher: 'NA COMUNHÃO, JESUS SE DÁ NO PÃO,'),
       const Music(cipher: 'A/E E D B7'),
@@ -210,6 +215,7 @@ class ComoEsLindo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Como és Lindo'),
       const Music(cipher: 'D A/C# Bm Bm/A'),
       const Music(cipher: 'QUE BOM, SENHOR, IR AO TEU ENCONTRO,'),
       const Music(cipher: 'G A D A/C#'),
@@ -235,6 +241,7 @@ class VouCantarTeuAmor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Vou Cantar Teu Amor'),
       const Music(cipher: 'E G#m A B'),
       const Music(cipher: 'VOU CANTAR TEU AMOR, SER NO MUNDO UM FAROL'),
       const Music(cipher: 'G#m C#m F#m B7 E (B7)'),

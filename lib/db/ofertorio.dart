@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 
 class AtiMeuDeus extends StatelessWidget {
   const AtiMeuDeus({super.key});
+  final String titulo = 'A Ti Meu Deus';
+  get getTitulo => titulo;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -95,6 +97,7 @@ class SeBendito extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Sê Bendito'),
       const Music(cipher: 'Sê bendito, Senhor, para sempre'),
       const Music(cipher: 'Pelos frutos das nossas jornadas!'),
       const Music(cipher: 'Repartidos na mesa do reino'),

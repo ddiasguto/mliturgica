@@ -6,6 +6,7 @@ class VouNavegar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Vou Navegar'),
       const Music(cipher: 'Outra vez me vejo só, com meu Deus'),
       const Music(cipher: 'Não consigo mais fugir, fugir de mim'),
       const Music(cipher: 'Junto às águas deste mar vou lutar'),
@@ -40,6 +41,7 @@ class MariaDeMinhaInfancia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Maria de Minha Infância'),
       const Music(cipher: 'Eu era pequeno, nem me lembro'),
       const Music(cipher: 'Só lembro que à noite, ao pé da cama'),
       const Music(cipher: 'Juntava as mãozinhas e rezava apressado'),
@@ -82,6 +84,7 @@ class PelasEstradasDaVida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Pelas Estradas da Vida'),
       const Music(cipher: 'Pelas estradas da vida, nunca sozinho estás'),
       const Music(cipher: 'Contigo pelo caminho, Santa Maria vai'),
       const Music(cipher: ''),
@@ -114,6 +117,7 @@ class AEscolhida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'A Escolhida'),
       const Music(cipher: 'Uma entre todas foi a escolhida'),
       const Music(cipher: 'Fostes tu, Maria, a serva preferida'),
       const Music(cipher: 'Mãe do meu Senhor'),
@@ -145,6 +149,7 @@ class ChuvaDeGraca extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      const MusicTitle(title: 'Chuva de Graças'),
       const Music(cipher: 'Há uma chuva de graça aqui'),
       const Music(cipher: 'Está chovendo sobre todos nós'),
       const Music(cipher: 'E quem mais se entregar'),
