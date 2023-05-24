@@ -2,10 +2,23 @@ import 'package:diasguto/components/home.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/contact_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
+import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'pages/politic_page.dart';
-void main() => runApp(const MyApp());
+
+void main() {
+  runApp(
+    /// Providers are above [MyApp] instead of inside it, so that tests
+    /// can use [MyApp] while mocking the providers
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Maestro()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,53 +1,53 @@
+import 'package:diasguto/db/lists.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../db/ofertorio.dart';
+import '../provider/Maestro.dart';
+import '../db/lists.dart';
 
 class ShowMusic extends StatefulWidget {
   const ShowMusic({
     super.key,
-    this.category,
   });
 
-  final String? category;
   @override
   State<ShowMusic> createState() => ShowMusicState();
 }
 
 class ShowMusicState extends State<ShowMusic> {
-  @override
   int _selectedIndex = 0;
-
-  Widget build(BuildContext context) {
-    const List<Widget> offers = <Widget>[
-      AtiMeuDeus(),
-      MinhaVidaTemSentido(),
-      EstarEmTuasMaos(),
-      SeBendito()
-    ];
-
-    _onItemTapped(int index) {
-      if (index == 1 && _selectedIndex < offers.length - 1) {
-        setState(() {
-          _selectedIndex++;
-        });
-        print(_selectedIndex);
-      } else if (index == 0 && _selectedIndex > 0) {
-        setState(() {
-          _selectedIndex--;
-        });
-        print(_selectedIndex);
-      }
+  _onItemTapped(int index) {
+    Maestro maestro = Provider.of<Maestro>(context, listen: false);
+    if (index == 1 && _selectedIndex < maestro.getLocalList.length - 1) {
+      setState(() {
+        _selectedIndex++;
+      });
+      print(_selectedIndex);
+    } else if (index == 0 && _selectedIndex > 0) {
+      setState(() {
+        _selectedIndex--;
+      });
+      print(_selectedIndex);
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Maestro maestro = Provider.of<Maestro>(context);
+    List<Widget> localList = maestro.getLocalList;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ofertório')),
+      appBar: AppBar(
+          title: Text('Musica ${_selectedIndex + 1}/${localList.length}')),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.cyan,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.arrow_circle_left),
             label: 'Anterior',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.arrow_circle_right),
             label: 'Próxima',
           ),
@@ -56,7 +56,7 @@ class ShowMusicState extends State<ShowMusic> {
         onTap: _onItemTapped,
       ),
       body: SingleChildScrollView(
-        child: offers.elementAt(_selectedIndex),
+        child: localList.elementAt(_selectedIndex),
       ),
     );
   }
