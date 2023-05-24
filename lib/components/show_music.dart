@@ -58,6 +58,15 @@ class ShowMusicState extends State<ShowMusic> {
       body: SingleChildScrollView(
         child: localList.elementAt(_selectedIndex),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _onItemTapped(2),
+        tooltip: 'Adicionar à Partitura',
+        child: const Icon(
+          Icons.add,
+          color: Colors.greenAccent,
+        ),
+        backgroundColor: Colors.cyan,
+      ),
     );
   }
 }
