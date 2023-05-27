@@ -1,4 +1,5 @@
 import 'package:diasguto/components/home.dart';
+import 'package:diasguto/components/show_list_category.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/contact_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
@@ -9,8 +10,6 @@ import 'pages/politic_page.dart';
 
 void main() {
   runApp(
-    /// Providers are above [MyApp] instead of inside it, so that tests
-    /// can use [MyApp] while mocking the providers
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Maestro()),
@@ -48,7 +47,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     SheetPage(),
-    CataloguePage(),
+    ShowCategory(),
     ContactPage(),
     PoliticPage(),
   ];
@@ -88,7 +87,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Contato',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.list),
             label: 'Catálogo',
           ),
           BottomNavigationBarItem(
@@ -97,7 +96,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.redAccent,
+        selectedItemColor: const Color.fromARGB(255, 116, 12, 12),
         onTap: _onItemTapped,
       ),
     );
