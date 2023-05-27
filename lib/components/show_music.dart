@@ -23,12 +23,10 @@ class ShowMusicState extends State<ShowMusic> {
       setState(() {
         _selectedIndex++;
       });
-      print(_selectedIndex);
     } else if (index == 0 && _selectedIndex > 0) {
       setState(() {
         _selectedIndex--;
       });
-      print(_selectedIndex);
     }
   }
 
@@ -36,37 +34,50 @@ class ShowMusicState extends State<ShowMusic> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     List<Widget> localList = maestro.getLocalList;
-
+    String category = maestro.getCategory;
+    bool isSheet = maestro.getIsSheet;
     return Scaffold(
-      appBar: AppBar(
-          title: Text('Musica ${_selectedIndex + 1}/${localList.length}')),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.cyan,
-        items: <BottomNavigationBarItem>[
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_circle_left),
-            label: 'Anterior',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_circle_right),
-            label: 'Próxima',
-          ),
-        ],
-        selectedItemColor: Colors.redAccent,
-        onTap: _onItemTapped,
-      ),
-      body: SingleChildScrollView(
-        child: localList.elementAt(_selectedIndex),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _onItemTapped(2),
+        appBar: AppBar(
+            title: Text('Musica ${_selectedIndex + 1}/${localList.length}')),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.cyan,
+          items: <BottomNavigationBarItem>[
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_circle_left),
+              label: 'Anterior',
+            ),
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_circle_right),
+              label: 'Próxima',
+            ),
+          ],
+          selectedItemColor: Colors.redAccent,
+          onTap: _onItemTapped,
+        ),
+        body: SingleChildScrollView(
+          child: localList.elementAt(_selectedIndex),
+        ),
+        floatingActionButton: _floatButton());
+  }
+
+  Widget _floatButton() {
+    Maestro maestro = Provider.of<Maestro>(context);
+    List<Widget> localList = maestro.getLocalList;
+    bool isSheet = maestro.getIsSheet;
+    if (!isSheet) {
+      return FloatingActionButton(
+        onPressed: () {
+          maestro.setSheetElement(localList.elementAt(_selectedIndex));
+        },
         tooltip: 'Adicionar à Partitura',
+        backgroundColor: Colors.cyan,
         child: const Icon(
           Icons.add,
           color: Colors.greenAccent,
         ),
-        backgroundColor: Colors.cyan,
-      ),
-    );
+      );
+    } else {
+      return Container();
+    }
   }
 }

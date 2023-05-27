@@ -1,4 +1,8 @@
+import 'package:diasguto/db/entrada.dart';
+import 'package:diasguto/db/final.dart';
+import 'package:diasguto/db/ofertorio.dart';
 import 'package:flutter/material.dart';
+import '../db/comunhao.dart';
 import '../db/lists.dart';
 
 class Maestro with ChangeNotifier {
@@ -9,12 +13,24 @@ class Maestro with ChangeNotifier {
 
   List<Widget> localList = [];
   int currentIndex = 0;
+  String category = '';
+  bool isSheet = false;
+
+  List<Widget> sheet = [
+    const TeAmareiSenhor(),
+    const AtiMeuDeus(),
+    const ComoEsLindo(),
+    const AEscolhida()
+  ];
 
   get getCurrentIndex => currentIndex;
   get getLocalList => localList;
+  get getCategory => category;
+  get getSheet => sheet;
+  get getIsSheet => isSheet;
 
-  void setLocalList(String category) {
-    switch (category) {
+  void setLocalList(String _category) {
+    switch (_category) {
       case 'Entrada':
         localList = entranceCategory;
         break;
@@ -27,25 +43,37 @@ class Maestro with ChangeNotifier {
       case 'Final':
         localList = finalCategory;
         break;
+
+      default:
+    }
+    category = _category;
+    isSheet = false;
+    notifyListeners();
+  }
+
+  void setSheetElement(Widget element) {
+    switch (category) {
+      case 'Entrada':
+        sheet[0] = element;
+        break;
+      case 'Ofertório':
+        sheet[1] = element;
+        break;
+      case 'Comunhão':
+        sheet[2] = element;
+        break;
+      case 'Final':
+        sheet[3] = element;
+        break;
       default:
     }
     notifyListeners();
   }
 
-  nextOfList() {
-    if (currentIndex < localList.length - 1) {
-      currentIndex++;
-      debugPrint(
-          'Proximo Clicado $currentIndex localistlenght ${localList.length}');
-    }
-
-    notifyListeners();
-  }
-
-  previousOfList() {
-    if (currentIndex > 0) {
-      currentIndex--;
-    }
+  void setLocalListToSheet() {
+    isSheet = true;
+    localList = sheet;
+    debugPrint('Reached here');
     notifyListeners();
   }
 }
