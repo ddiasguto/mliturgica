@@ -1,12 +1,9 @@
 import 'package:diasguto/components/home.dart';
-import 'package:diasguto/components/show_list_category.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
-import 'package:diasguto/pages/contact_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'pages/politic_page.dart';
 
 void main() {
   runApp(
@@ -47,9 +44,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     SheetPage(),
-    ShowCategory(),
-    ContactPage(),
-    PoliticPage(),
+    CataloguePage(), /*
+    ContactPage(), 
+    PoliticPage(),*/
   ];
 
   void _onItemTapped(int index) {
@@ -83,20 +80,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Partitura',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'Catálogo',
+          ), /* 
+          BottomNavigationBarItem(
             icon: Icon(Icons.phone),
             label: 'Contato',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Catálogo',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.balance),
             label: 'Politica',
-          ),
+          ),*/
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color.fromARGB(255, 116, 12, 12),
+        selectedItemColor: Colors.lightGreen[700],
+        unselectedItemColor: const Color.fromARGB(255, 116, 12, 12),
         onTap: _onItemTapped,
       ),
     );
