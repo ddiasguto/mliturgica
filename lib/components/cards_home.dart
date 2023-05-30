@@ -23,6 +23,7 @@ class CardHome extends StatelessWidget {
             tileColor: Colors.cyan[200],
             onTap: () {
               maestro.setLocalList(category);
+              maestro.setIndexToZero();
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ShowMusic()));
             },

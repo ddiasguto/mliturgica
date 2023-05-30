@@ -12,17 +12,12 @@ class ShowMusic extends StatefulWidget {
 }
 
 class ShowMusicState extends State<ShowMusic> {
-  int _selectedIndex = 0;
   _onItemTapped(int index) {
     Maestro maestro = Provider.of<Maestro>(context, listen: false);
-    if (index == 1 && _selectedIndex < maestro.getLocalList.length - 1) {
-      setState(() {
-        _selectedIndex++;
-      });
-    } else if (index == 0 && _selectedIndex > 0) {
-      setState(() {
-        _selectedIndex--;
-      });
+    if (index == 1) {
+      maestro.nextItem();
+    } else {
+      maestro.previousItem();
     }
   }
 
@@ -30,10 +25,11 @@ class ShowMusicState extends State<ShowMusic> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     List<Widget> localList = maestro.getLocalList;
+    int currentIndex = maestro.getCurrentIndex;
 
     return Scaffold(
         appBar: AppBar(
-            title: Text('Musica ${_selectedIndex + 1}/${localList.length}')),
+            title: Text('Musica ${currentIndex + 1}/${localList.length}')),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.cyan,
           items: <BottomNavigationBarItem>[
@@ -50,7 +46,7 @@ class ShowMusicState extends State<ShowMusic> {
           onTap: _onItemTapped,
         ),
         body: SingleChildScrollView(
-          child: localList.elementAt(_selectedIndex),
+          child: localList.elementAt(currentIndex),
         ),
         floatingActionButton: _floatButton());
   }
@@ -58,11 +54,12 @@ class ShowMusicState extends State<ShowMusic> {
   Widget _floatButton() {
     Maestro maestro = Provider.of<Maestro>(context);
     List<Widget> localList = maestro.getLocalList;
+    int currentIndex = maestro.getCurrentIndex;
     bool isSheet = maestro.getIsSheet;
     if (!isSheet) {
       return FloatingActionButton(
         onPressed: () {
-          maestro.setSheetElement(localList.elementAt(_selectedIndex));
+          maestro.setSheetElement(localList.elementAt(currentIndex));
         },
         tooltip: 'Adicionar à Partitura',
         backgroundColor: Colors.cyan,

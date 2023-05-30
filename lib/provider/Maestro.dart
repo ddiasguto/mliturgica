@@ -70,6 +70,30 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void setCurrentIndex(int i) {
+    currentIndex = i;
+    notifyListeners();
+  }
+
+  void nextItem() {
+    if (currentIndex < localList.length - 1) {
+      currentIndex++;
+    }
+    notifyListeners();
+  }
+
+  void previousItem() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    }
+    notifyListeners();
+  }
+
+  void setIndexToZero() {
+    currentIndex = 0;
+    notifyListeners();
+  }
+
   void setLocalListToSheet() {
     isSheet = true;
     localList = sheet;

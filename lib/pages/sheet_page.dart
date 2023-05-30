@@ -22,6 +22,7 @@ class _SheetPageState extends State<SheetPage> {
         child: InkWell(
           onTap: () {
             maestro.setLocalListToSheet();
+            maestro.setIndexToZero();
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShowMusic()));
           },
