@@ -1,9 +1,5 @@
-import 'package:diasguto/chants/chants.dart';
-import 'package:diasguto/components/chant_page.dart';
 import 'package:diasguto/components/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

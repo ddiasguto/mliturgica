@@ -1,10 +1,6 @@
-import 'package:diasguto/db/lists.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../db/ofertorio.dart';
 import '../provider/Maestro.dart';
-import '../db/lists.dart';
 
 class ShowMusic extends StatefulWidget {
   const ShowMusic({
@@ -34,8 +30,7 @@ class ShowMusicState extends State<ShowMusic> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     List<Widget> localList = maestro.getLocalList;
-    String category = maestro.getCategory;
-    bool isSheet = maestro.getIsSheet;
+
     return Scaffold(
         appBar: AppBar(
             title: Text('Musica ${_selectedIndex + 1}/${localList.length}')),
