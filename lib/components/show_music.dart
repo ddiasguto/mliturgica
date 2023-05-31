@@ -1,3 +1,6 @@
+import 'package:diasguto/components/float_button.dart';
+import 'package:diasguto/components/next_button.dart';
+import 'package:diasguto/components/previous_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/Maestro.dart';
@@ -34,42 +37,23 @@ class ShowMusicState extends State<ShowMusic> {
           backgroundColor: Colors.cyan,
           items: <BottomNavigationBarItem>[
             const BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_left),
+              icon: PreviousButton(),
               label: 'Anterior',
             ),
             const BottomNavigationBarItem(
-              icon: Icon(Icons.arrow_circle_right),
+              icon: NextButton(),
               label: 'Próxima',
             ),
           ],
-          selectedItemColor: Colors.redAccent,
           onTap: _onItemTapped,
+          selectedLabelStyle:
+              const TextStyle(color: Colors.black, fontSize: 14),
+          unselectedLabelStyle:
+              const TextStyle(color: Colors.black, fontSize: 14),
         ),
         body: SingleChildScrollView(
           child: localList.elementAt(currentIndex),
         ),
-        floatingActionButton: _floatButton());
-  }
-
-  Widget _floatButton() {
-    Maestro maestro = Provider.of<Maestro>(context);
-    List<Widget> localList = maestro.getLocalList;
-    int currentIndex = maestro.getCurrentIndex;
-    bool isSheet = maestro.getIsSheet;
-    if (!isSheet) {
-      return FloatingActionButton(
-        onPressed: () {
-          maestro.setSheetElement(localList.elementAt(currentIndex));
-        },
-        tooltip: 'Adicionar à Partitura',
-        backgroundColor: Colors.cyan,
-        child: const Icon(
-          Icons.add,
-          color: Colors.greenAccent,
-        ),
-      );
-    } else {
-      return Container();
-    }
+        floatingActionButton: const FloatButton());
   }
 }
