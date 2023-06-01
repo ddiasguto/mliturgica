@@ -18,32 +18,36 @@ class _SheetPageState extends State<SheetPage> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     return Center(
-      child: Card(
-        child: InkWell(
-          onTap: () {
-            maestro.setLocalListToSheet();
-            maestro.setIndexToZero();
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const ShowMusic()));
-          },
-          splashColor: Color.fromARGB(255, 116, 12, 12),
-          focusColor: Colors.black,
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Navegar Pela Partitura ',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 116, 12, 12),
-                  fontSize: 20,
+      child: Container(
+        width: 300,
+        height: 50,
+        child: Card(
+          child: InkWell(
+            onTap: () {
+              maestro.setLocalListToSheet();
+              maestro.setIndexToZero();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ShowMusic()));
+            },
+            splashColor: Color.fromARGB(255, 116, 12, 12),
+            focusColor: Colors.black,
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Navegar Pela Partitura ',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 116, 12, 12),
+                    fontSize: 20,
+                  ),
                 ),
-              ),
-              Icon(
-                Icons.arrow_circle_right,
-                color: Color.fromARGB(255, 116, 12, 12),
-                size: 30,
-              ),
-            ],
+                Icon(
+                  Icons.arrow_circle_right,
+                  color: Color.fromARGB(255, 116, 12, 12),
+                  size: 30,
+                ),
+              ],
+            ),
           ),
         ),
       ),
