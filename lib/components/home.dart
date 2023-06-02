@@ -6,16 +6,26 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      mainAxisSpacing: 18.0,
-      crossAxisSpacing: 18,
-      padding: EdgeInsets.all(18.0),
-      crossAxisCount: 2,
+    return ListView(
+      padding: const EdgeInsets.all(10),
       children: [
-        CardHome("Entrada"),
-        CardHome("Ofertório"),
-        CardHome("Comunhão"),
-        CardHome("Final"),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardHome("Entrada"),
+            CardHome("Ofertório"),
+          ],
+        ),
+        const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          CardHome("Comunhão"),
+          CardHome("Final"),
+        ]),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CardHome("Comunhão"),
+          ],
+        ),
       ],
     );
   }
