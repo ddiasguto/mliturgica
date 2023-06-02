@@ -6,7 +6,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return GridView.count(
+      mainAxisSpacing: 18.0,
+      crossAxisSpacing: 18,
+      padding: EdgeInsets.all(18.0),
+      crossAxisCount: 2,
       children: [
         CardHome("Entrada"),
         CardHome("Ofertório"),
