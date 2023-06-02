@@ -39,14 +39,10 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     SheetPage(),
-    CataloguePage(), /*
-    ContactPage(), 
-    PoliticPage(),*/
+    CataloguePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -82,15 +78,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Catálogo',
-          ), /* 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.phone),
-            label: 'Contato',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.balance),
-            label: 'Politica',
-          ),*/
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.lightGreen[700],
