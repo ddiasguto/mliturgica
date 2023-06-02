@@ -11,25 +11,24 @@ class CardHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    return Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        // ignore: prefer_const_literals_to_create_immutables
-        children: <Widget>[
-          ListTile(
-            leading: const Icon(Icons.music_note_rounded),
-            title: Text(category),
-            subtitle: Text('Cânticos de  $category'),
-            tileColor: Colors.cyan[200],
-            onTap: () {
-              maestro.setLocalList(category);
-              maestro.setIndexToZero();
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ShowMusic()));
-            },
-          ),
-        ],
+    return ListTile(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
       ),
+      dense: true,
+      leading: const Icon(
+        Icons.music_note_rounded,
+        color: Colors.black,
+      ),
+      title: Text(category),
+      subtitle: Text('Cânticos de  $category'),
+      tileColor: Colors.cyan[200],
+      onTap: () {
+        maestro.setLocalList(category);
+        maestro.setIndexToZero();
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ShowMusic()));
+      },
     );
   }
 }
