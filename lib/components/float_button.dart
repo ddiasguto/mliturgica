@@ -1,4 +1,3 @@
-import 'package:diasguto/components/add_dialog.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,19 +22,30 @@ class FloatButton extends StatelessWidget {
                 'Adicionar à Partitura?',
                 style: TextStyle(color: Colors.cyan, fontSize: 18),
               ),
-              content: Text(
-                  "Sera adicionado como cântico de ${maestro.getCategory}"),
+              content: Container(
+                width: 80,
+                child: Text(
+                    "Sera adicionado como cântico de ${maestro.getCategory}"),
+              ),
+              actionsAlignment: MainAxisAlignment.spaceEvenly,
               actions: <Widget>[
                 TextButton(
                   onPressed: () => Navigator.pop(context, 'Cancel'),
-                  child: const Text('Cancelar'),
+                  child: const Text(
+                    'Cancelar',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 116, 12, 12), fontSize: 18),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context, 'Confirm');
                     maestro.setSheetElement(localList.elementAt(currentIndex));
                   },
-                  child: const Text('OK'),
+                  child: const Text(
+                    'Adicionar',
+                    style: TextStyle(color: Colors.cyan, fontSize: 18),
+                  ),
                 ),
               ],
             ),
