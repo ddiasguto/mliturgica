@@ -16,7 +16,7 @@ class NextButton extends StatelessWidget {
     } else {
       return const Icon(
         Icons.arrow_circle_right,
-        color: Colors.black,
+        color: Colors.black12,
       );
     }
   }
