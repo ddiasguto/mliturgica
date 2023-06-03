@@ -19,40 +19,37 @@ class MyDrawer extends StatelessWidget {
               title: const Text('Cânticos de Entrada'),
               onTap: () {
                 maestro.setLocalList('Entrada');
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ShowCategory()));
+                Navigator.pop(context);
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
               title: const Text('Cânticos de Ofertório'),
               onTap: () {
                 maestro.setLocalList('Ofertório');
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ShowCategory()));
+                Navigator.pop(context);
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
               title: const Text('Cânticos de Comunhão'),
               onTap: () {
                 maestro.setLocalList('Comunhão');
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ShowCategory()));
+                Navigator.pop(context);
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
               title: const Text('Cânticos Finais'),
               onTap: () {
                 maestro.setLocalList('Final');
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ShowCategory()));
+                Navigator.pop(context);
+              }),
+          Divider(),
+          ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Página Inicial'),
+              onTap: () {
+                maestro.setLocalList('Final');
+                Navigator.pop(context);
+                Navigator.pop(context);
               }),
         ],
       ),
