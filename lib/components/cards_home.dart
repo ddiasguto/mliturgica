@@ -1,3 +1,4 @@
+import 'package:diasguto/components/show_list_category.dart';
 import 'package:diasguto/components/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,10 @@ class CardHome extends StatelessWidget {
             onTap: () {
               maestro.setLocalList(category);
               maestro.setIndexToZero();
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ShowMusic()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ShowCategory()));
             },
             focusColor: Colors.black,
             child: Row(

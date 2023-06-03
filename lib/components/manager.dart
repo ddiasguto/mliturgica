@@ -1,5 +1,4 @@
 import 'package:diasguto/pages/politic_page.dart';
-import 'package:diasguto/pages/sheet_page.dart';
 import 'package:flutter/material.dart';
 
 class Policy extends StatelessWidget {
@@ -10,7 +9,7 @@ class Policy extends StatelessWidget {
     return IconButton(
       icon: Icon(
         Icons.settings,
-        size: 18,
+        size: 30,
       ),
       onPressed: () {
         Navigator.push(context,
