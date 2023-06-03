@@ -1,4 +1,5 @@
 import 'package:diasguto/components/home.dart';
+import 'package:diasguto/components/manager.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
@@ -54,18 +55,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan,
+      backgroundColor: Colors.cyan[800],
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
+        elevation: 0,
+        backgroundColor: Colors.cyan[800],
         title: const Text(
           'Cânticos de Liturgia',
         ),
+        actions: [Policy(), Container()],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.cyan,
+        elevation: 0,
+        backgroundColor: const Color.fromARGB(255, 152, 226, 233),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -81,7 +85,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.lightGreen[700],
+        selectedItemColor: Colors.green[900],
         unselectedItemColor: const Color.fromARGB(255, 116, 12, 12),
         onTap: _onItemTapped,
       ),
