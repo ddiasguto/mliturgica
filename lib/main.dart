@@ -1,5 +1,5 @@
+import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/home.dart';
-import 'package:diasguto/components/manager.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
@@ -57,14 +57,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.cyan[800],
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.cyan[800],
-        title: const Text(
-          'Cânticos de Liturgia',
-        ),
-        actions: [Policy(), Container()],
-      ),
+      appBar: appBarOptions.elementAt(_selectedIndex),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
