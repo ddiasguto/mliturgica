@@ -18,25 +18,7 @@ class ShowCategoryState extends State<ShowCategory> {
     return Scaffold(
       appBar: AppBar(title: Text('Cânticos de ${maestro.category}')),
       drawer: const MyDrawer(),
-      body: chantsCategory(),
+      body: chantsCategory(context),
     );
-  }
-
-  Widget chantsCategory() {
-    Maestro maestro = Provider.of<Maestro>(context);
-
-    return ListView.builder(
-        itemCount: maestro.localList.length,
-        itemBuilder: (_, index) => ListTile(
-            leading: const Icon(Icons.music_note),
-            title: Text('${maestro.localList[index]}'),
-            iconColor: Colors.red,
-            tileColor: Colors.cyan,
-            selectedColor: Colors.amberAccent,
-            onTap: () {
-              maestro.setCurrentIndex(index);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ShowMusic()));
-            }));
   }
 }
