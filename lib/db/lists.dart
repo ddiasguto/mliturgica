@@ -1,38 +1,37 @@
-import 'package:flutter/widgets.dart';
 import 'comunhao.dart';
 import 'ofertorio.dart';
 import 'final.dart';
 import 'entrada.dart';
 
-const List<Widget> entrance = <Widget>[
-  TeAmareiSenhor(),
-  EisMeAquiSenhor(),
-  SenhorQuemEntrara(),
-  OProfeta(),
-  DiaDeFesta()
+const List entrance = [
+  ['Te Amarei, Senhor', TeAmareiSenhor()],
+  ['Eis me aqui, Senhor', EisMeAquiSenhor()],
+  ['Senhor, quem Entrará?', SenhorQuemEntrara()],
+  ['O Profeta', OProfeta()],
+  ['Dia de Festa', DiaDeFesta()]
 ];
 
-const List<Widget> offers = <Widget>[
-  AtiMeuDeus(),
-  MinhaVidaTemSentido(),
-  EstarEmTuasMaos(),
-  SeBendito()
+const List offers = [
+  ['A ti, meu Deus', AtiMeuDeus()],
+  ['Minha vida tem sentido', MinhaVidaTemSentido()],
+  ['Estar em tuas mãos', EstarEmTuasMaos()],
+  ['Sê bendito', SeBendito()]
 ];
 
-const List<Widget> comunion = <Widget>[
-  ComoEsLindo(),
-  PelosPradosECampinas(),
-  ConhecoUmCoracao(),
-  PaoDaVida(),
-  CantarABelezaDaVida(),
-  SacramentoDaComunhao(),
-  VouCantarTeuAmor()
+const List comunion = [
+  ['Como és Lindo', ComoEsLindo()],
+  ['Pelos prados e campinas', PelosPradosECampinas()],
+  ['Conheço um coração', ConhecoUmCoracao()],
+  ['Pão da vida', PaoDaVida()],
+  ['Cantar a Beleza da Vida', CantarABelezaDaVida()],
+  ['Sacramento da Comunhão', SacramentoDaComunhao()],
+  ['Vou Cantar teu amor', VouCantarTeuAmor()]
 ];
 
-const List<Widget> ending = <Widget>[
-  VouNavegar(),
-  MariaDeMinhaInfancia(),
-  PelasEstradasDaVida(),
-  AEscolhida(),
-  ChuvaDeGraca()
+const List ending = [
+  ['Vou Navegar', VouNavegar()],
+  ['Maria de minha infância', MariaDeMinhaInfancia()],
+  ['Pelas estradas da vida', PelasEstradasDaVida()],
+  ['A escolhida', AEscolhida()],
+  ['Chuva de graças', ChuvaDeGraca()]
 ];

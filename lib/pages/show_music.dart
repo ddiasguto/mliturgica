@@ -27,12 +27,13 @@ class ShowMusicState extends State<ShowMusic> {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    List<Widget> localList = maestro.getLocalList;
     int currentIndex = maestro.getCurrentIndex;
 
     return Scaffold(
         appBar: AppBar(
-            title: Text('Musica ${currentIndex + 1}/${localList.length}')),
+          title: Text('${maestro.localList[currentIndex][0]}'),
+          actions: [Text('${currentIndex + 1}/${maestro.localList.length}')],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.cyan,
           items: <BottomNavigationBarItem>[
@@ -52,7 +53,7 @@ class ShowMusicState extends State<ShowMusic> {
               const TextStyle(color: Colors.black, fontSize: 14),
         ),
         body: SingleChildScrollView(
-          child: localList.elementAt(currentIndex),
+          child: maestro.localList[currentIndex][1],
         ),
         floatingActionButton: const FloatButton());
   }

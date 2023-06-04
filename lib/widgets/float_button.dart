@@ -8,7 +8,6 @@ class FloatButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    List<Widget> localList = maestro.getLocalList;
     int currentIndex = maestro.getCurrentIndex;
     bool isSheet = maestro.getIsSheet;
 
@@ -40,7 +39,7 @@ class FloatButton extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     Navigator.pop(context, 'Confirm');
-                    maestro.setSheetElement(localList.elementAt(currentIndex));
+                    maestro.setSheetElement(maestro.localList[currentIndex]);
                   },
                   child: const Text(
                     'Adicionar',
