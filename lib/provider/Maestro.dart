@@ -11,7 +11,13 @@ class Maestro with ChangeNotifier {
   List finalCategory = ending;
   List comunionCategory = comunion;
 
-  List localList = [];
+  List localList = [
+    ['Te amarei, senhor', TeAmareiSenhor()],
+    ['A ti, meu Deus', AtiMeuDeus()],
+    ['Como és lindo', ComoEsLindo()],
+    ['A escolhida', AEscolhida()]
+  ];
+
   int currentIndex = 0;
   String category = '';
   bool isSheet = false;

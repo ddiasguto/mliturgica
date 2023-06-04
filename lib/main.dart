@@ -1,10 +1,11 @@
-import 'package:diasguto/components/app_bars.dart';
-import 'package:diasguto/components/home.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'components/app_bars.dart';
+import 'components/home.dart';
 
 void main() {
   runApp(

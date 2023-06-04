@@ -1,8 +1,7 @@
+import 'package:diasguto/pages/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../components/show_music.dart';
 
 class SheetPage extends StatefulWidget {
   const SheetPage({super.key});
@@ -26,6 +25,45 @@ class _SheetPageState extends State<SheetPage> {
               maestro.setIndexToZero();
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ShowMusic()));
+            },
+            onLongPress: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 200,
+                    color: const Color.fromARGB(255, 152, 226, 233),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('Cântico de Entrada: ${maestro.localList[0][0]}',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 116, 12, 12),
+                                  fontSize: 16)),
+                          Text(
+                              'Cântico de Ofertório: ${maestro.localList[1][0]}',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 116, 12, 12),
+                                  fontSize: 16)),
+                          Text(
+                              'Cântico de Comunhão: ${maestro.localList[2][0]}',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 116, 12, 12),
+                                  fontSize: 16)),
+                          Text(
+                              'Cântico de Encerramento: ${maestro.localList[3][0]}',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 116, 12, 12),
+                                  fontSize: 16)),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
             },
             splashColor: Color.fromARGB(255, 116, 12, 12),
             focusColor: Colors.black,
