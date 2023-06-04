@@ -1,5 +1,4 @@
 import 'package:diasguto/components/show_list_category.dart';
-import 'package:diasguto/components/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
