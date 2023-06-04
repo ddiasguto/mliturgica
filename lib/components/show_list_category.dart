@@ -1,8 +1,8 @@
-import 'package:diasguto/components/my_drawer.dart';
-import 'package:diasguto/components/show_music.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/Maestro.dart';
+import '../widgets/chants_category.dart';
+import '../widgets/my_drawer.dart';
 
 class ShowCategory extends StatefulWidget {
   const ShowCategory({super.key});

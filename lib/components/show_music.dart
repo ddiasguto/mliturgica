@@ -1,9 +1,9 @@
-import 'package:diasguto/components/float_button.dart';
-import 'package:diasguto/components/next_button.dart';
-import 'package:diasguto/components/previous_button.dart';
+import 'package:diasguto/widgets/next_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/Maestro.dart';
+import '../widgets/float_button.dart';
+import '../widgets/previous_button.dart';
 
 class ShowMusic extends StatefulWidget {
   const ShowMusic({
