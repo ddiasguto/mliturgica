@@ -9,7 +9,6 @@ class AtiMeuDeus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const MusicTitle(title: 'A TI MEU DEUS'),
         const Cifra(cipher: '        F#m'),
         const Music(cipher: 'A Ti, meu Deus elevo meu coração'),
         const Cifra(cipher: '        E'),
@@ -35,7 +34,6 @@ class MinhaVidaTemSentido extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Minha Vida tem Sentido'),
       const Cifra(cipher: 'E B E C#m F#m B E B7'),
       const Music(
           cipher: 'MINHA VIDA TEM SENTIDO, CADA VEZ QUE EU VENHO AQUI.'),
@@ -66,7 +64,6 @@ class EstarEmTuasMaos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Estar em Tuas Mãos'),
       const Music(cipher: 'Mão na terra e o coração além deste céu)'),
       const Music(cipher: 'E a semente que brota é um germe de eternidade'),
       const Music(cipher: 'Vai brotando, crescendo, esperando'),
@@ -97,7 +94,6 @@ class SeBendito extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Sê Bendito'),
       const Music(cipher: 'Sê bendito, Senhor, para sempre'),
       const Music(cipher: 'Pelos frutos das nossas jornadas!'),
       const Music(cipher: 'Repartidos na mesa do reino'),

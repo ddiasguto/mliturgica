@@ -6,7 +6,6 @@ class TeAmareiSenhor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Te Amarei Senhor'),
       const Music(cipher: 'E A E A B'),
       const Music(cipher: 'ME CHAMASTES PARA CAMINHAR A VIDA CONTIGO'),
       const Music(cipher: 'E A D B'),
@@ -44,7 +43,6 @@ class EisMeAquiSenhor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Eis me Aqui Senhor'),
       const Music(cipher: 'Eis-me aqui, Senhor! Eis-me aqui, Senhor!'),
       const Music(cipher: 'Pra fazer Tua Vontade, pra viver do Teu Amor'),
       const Music(cipher: 'Pra fazer Tua Vontade, pra viver do Teu amor'),
@@ -68,7 +66,6 @@ class SenhorQuemEntrara extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Senhor Quem Entrará?'),
       const Music(cipher: 'Senhor, quem entrará no santuário pra te louvar?'),
       const Music(cipher: 'Senhor, quem entrará no santuário pra te louvar?'),
       const Music(cipher: ''),
@@ -107,7 +104,6 @@ class OProfeta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'O Profeta'),
       const Music(cipher: 'Dm F Am Dm'),
       const Music(cipher: 'ANTES QUE TE FORMASSES DENTRO DO VENTRE DE TUA MÃE'),
       const Music(cipher: 'Gm Dm C Am Dm A7'),
@@ -150,7 +146,6 @@ class DiaDeFesta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const MusicTitle(title: 'Dia de Festa'),
       const Music(cipher: 'D G D G'),
       const Music(cipher: 'HOJE É DIA DE CELEBRAÇÃO!'),
       const Music(cipher: 'D G C A'),
