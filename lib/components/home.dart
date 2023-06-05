@@ -17,13 +17,13 @@ class Home extends StatelessWidget {
           ],
         ),
         const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          CardHome("Aclamação"),
           CardHome("Comunhão"),
-          CardHome("Final"),
         ]),
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CardHome("Comunhão"),
+            CardHome("Final"),
           ],
         ),
       ],

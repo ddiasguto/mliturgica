@@ -1,3 +1,4 @@
+import 'package:diasguto/db/aclamacao.dart';
 import 'package:diasguto/db/entrada.dart';
 import 'package:diasguto/db/final.dart';
 import 'package:diasguto/db/ofertorio.dart';
@@ -6,11 +7,6 @@ import '../db/comunhao.dart';
 import '../db/lists.dart';
 
 class Maestro with ChangeNotifier {
-  List offersCategory = offers;
-  List entranceCategory = entrance;
-  List finalCategory = ending;
-  List comunionCategory = comunion;
-
   List localList = [
     ['Te amarei, senhor', TeAmareiSenhor()],
     ['A ti, meu Deus', AtiMeuDeus()],
@@ -25,6 +21,7 @@ class Maestro with ChangeNotifier {
   List sheet = [
     ['Te amarei, senhor', TeAmareiSenhor()],
     ['A ti, meu Deus', AtiMeuDeus()],
+    ['Buscai Primeiro', BuscaiPrimeiro()],
     ['Como és lindo', ComoEsLindo()],
     ['A escolhida', AEscolhida()]
   ];
@@ -38,16 +35,19 @@ class Maestro with ChangeNotifier {
   void setLocalList(String _category) {
     switch (_category) {
       case 'Entrada':
-        localList = entranceCategory;
+        localList = entrance;
         break;
       case 'Ofertório':
-        localList = offersCategory;
+        localList = offers;
+        break;
+      case 'Aclamação':
+        localList = aclamation;
         break;
       case 'Comunhão':
-        localList = comunionCategory;
+        localList = comunion;
         break;
       case 'Final':
-        localList = finalCategory;
+        localList = ending;
         break;
 
       default:
@@ -67,13 +67,19 @@ class Maestro with ChangeNotifier {
         sheet[1][0] = title;
         sheet[1][1] = element;
         break;
-      case 'Comunhão':
+
+      case 'Aclamação':
         sheet[2][0] = title;
         sheet[2][1] = element;
         break;
-      case 'Final':
+
+      case 'Comunhão':
         sheet[3][0] = title;
         sheet[3][1] = element;
+        break;
+      case 'Final':
+        sheet[4][0] = title;
+        sheet[4][1] = element;
         break;
       default:
     }

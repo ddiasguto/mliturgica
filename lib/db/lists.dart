@@ -1,3 +1,5 @@
+import 'package:diasguto/db/aclamacao.dart';
+
 import 'comunhao.dart';
 import 'ofertorio.dart';
 import 'final.dart';
@@ -16,6 +18,13 @@ const List offers = [
   ['Minha vida tem sentido', MinhaVidaTemSentido()],
   ['Estar em tuas mãos', EstarEmTuasMaos()],
   ['Sê bendito', SeBendito()]
+];
+
+const List aclamation = [
+  ['Quando estamos unidos', QuandoEstamosUnidos()],
+  ['Tua Palavra', TuaPalavra()],
+  ['Minha alma abrirei', MinhaAlmaAbrirei()],
+  ['Buscai Primeiro', BuscaiPrimeiro()]
 ];
 
 const List comunion = [

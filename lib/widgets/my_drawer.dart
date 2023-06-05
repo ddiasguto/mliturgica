@@ -9,6 +9,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     return Drawer(
+      shadowColor: Colors.amber,
       backgroundColor: Colors.cyan[200],
       child: ListView(
         padding: const EdgeInsets.only(left: 8.0, top: 8.0),
@@ -25,6 +26,13 @@ class MyDrawer extends StatelessWidget {
               title: const Text('Cânticos de Ofertório'),
               onTap: () {
                 maestro.setLocalList('Ofertório');
+                Navigator.pop(context);
+              }),
+          ListTile(
+              leading: const Icon(Icons.music_note_outlined),
+              title: const Text('Cânticos de Aclamação'),
+              onTap: () {
+                maestro.setLocalList('Aclamação');
                 Navigator.pop(context);
               }),
           ListTile(
