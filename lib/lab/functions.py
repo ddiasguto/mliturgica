@@ -13,8 +13,10 @@ def setingFileOut(index):
     elif index == 2:
         out='../db/ofertorio.dart'
     elif index ==3:
+        out='../db/aclamacao.dart'
+    elif index ==4:
         out='../db/comunhao.dart'
-    elif index==4:
+    elif index==5:
         out='../db/final.dart'
     return out
 
