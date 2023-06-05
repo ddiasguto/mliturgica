@@ -18,16 +18,16 @@ class MyBottomSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Cântico de Entrada: ${maestro.sheet[0][0]}',
+            Text('Cântico de Entrada: ${maestro.getSheet[0][0]}',
                 style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Ofertório: ${maestro.sheet[1][0]}',
+            Text('Cântico de Ofertório: ${maestro.getSheet[1][0]}',
                 style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Comunhão: ${maestro.sheet[2][0]}',
+            Text('Cântico de Comunhão: ${maestro.getSheet[2][0]}',
                 style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Encerramento: ${maestro.sheet[3][0]}',
+            Text('Cântico de Encerramento: ${maestro.getSheet[3][0]}',
                 style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
           ],

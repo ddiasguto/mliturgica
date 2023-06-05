@@ -57,23 +57,23 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
-  void setSheetElement(element) {
+  void setSheetElement(String title, Widget element) {
     switch (category) {
       case 'Entrada':
-        sheet[0][0] = element[0][0];
-        sheet[0][1] = element[0][1];
+        sheet[0][0] = title;
+        sheet[0][1] = element;
         break;
       case 'Ofertório':
-        sheet[1][0] = element[0][0];
-        sheet[1][1] = element[0][1];
+        sheet[1][0] = title;
+        sheet[1][1] = element;
         break;
       case 'Comunhão':
-        sheet[2][0] = element[0][0];
-        sheet[2][1] = element[0][1];
+        sheet[2][0] = title;
+        sheet[2][1] = element;
         break;
       case 'Final':
-        sheet[3][0] = element[0][0];
-        sheet[3][1] = element[0][1];
+        sheet[3][0] = title;
+        sheet[3][1] = element;
         break;
       default:
     }
