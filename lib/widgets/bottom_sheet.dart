@@ -9,29 +9,55 @@ class MyBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    return Container(
-      height: 200,
-      color: const Color.fromARGB(255, 152, 226, 233),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text('Cântico de Entrada: ${maestro.getSheet[0][0]}',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Ofertório: ${maestro.getSheet[1][0]}',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Comunhão: ${maestro.getSheet[2][0]}',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-            Text('Cântico de Encerramento: ${maestro.getSheet[3][0]}',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 116, 12, 12), fontSize: 16)),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Cânticos na Partitura:',
+          style: TextStyle(fontSize: 16, color: Colors.black),
         ),
+        backgroundColor: Colors.cyan[800],
+        elevation: 0,
+        actions: [
+          TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.close,
+                color: const Color.fromARGB(255, 116, 12, 12),
+              ))
+        ],
+        automaticallyImplyLeading: false,
+      ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          ListTile(
+            title: Text('Entrada: ${maestro.getSheet[0][0]}'),
+            iconColor: Colors.red,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Ofertório: ${maestro.getSheet[1][0]}'),
+            iconColor: Colors.red,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Aclamação: ${maestro.getSheet[2][0]}'),
+            iconColor: Colors.red,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Comunhão: ${maestro.getSheet[3][0]}'),
+            iconColor: Colors.red,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Encerramento: ${maestro.getSheet[4][0]}'),
+            iconColor: Colors.red,
+            tileColor: Colors.cyan,
+          ),
+        ],
       ),
     );
   }
