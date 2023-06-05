@@ -26,11 +26,20 @@ class Maestro with ChangeNotifier {
     ['A escolhida', AEscolhida()]
   ];
 
+  List catalogueList = [
+    ...entrance,
+    ...offers,
+    ...aclamation,
+    ...comunion,
+    ...ending
+  ];
+
   get getCurrentIndex => currentIndex;
   get getLocalList => localList;
   get getCategory => category;
   get getSheet => sheet;
   get getIsSheet => isSheet;
+  get getCatalogueList => catalogueList;
 
   void setLocalList(String _category) {
     switch (_category) {
@@ -113,7 +122,12 @@ class Maestro with ChangeNotifier {
   void setLocalListToSheet() {
     isSheet = true;
     localList = sheet;
-    debugPrint('Reached here');
+    notifyListeners();
+  }
+
+  void setLocalListToCatalogue() {
+    isSheet = true;
+    localList = catalogueList;
     notifyListeners();
   }
 }

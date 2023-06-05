@@ -1,3 +1,4 @@
+import 'package:diasguto/widgets/chants_catalogue.dart';
 import 'package:flutter/material.dart';
 
 class CataloguePage extends StatefulWidget {
@@ -10,8 +11,6 @@ class CataloguePage extends StatefulWidget {
 class _CataloguePageState extends State<CataloguePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Catálogo'),
-    );
+    return chantsCatalogue(context);
   }
 }
