@@ -1,5 +1,6 @@
-import 'package:diasguto/components/show_list_category.dart';
+import 'package:diasguto/pages/show_list_category.dart';
 import 'package:diasguto/provider/Maestro.dart';
+import 'package:diasguto/widgets/bottom_category.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,6 +27,15 @@ class CardHome extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ShowCategory()));
+            },
+            onLongPress: () {
+              maestro.setLocalList(category);
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return CategoryBottomSheet();
+                },
+              );
             },
             focusColor: Colors.black,
             child: Row(
