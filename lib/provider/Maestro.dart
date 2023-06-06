@@ -15,6 +15,7 @@ class Maestro with ChangeNotifier {
   ];
 
   int currentIndex = 0;
+  int indexCategory = 0;
   String category = '';
   bool isSheet = false;
 
@@ -35,6 +36,7 @@ class Maestro with ChangeNotifier {
   ];
 
   get getCurrentIndex => currentIndex;
+  get getIndexCategory => indexCategory;
   get getLocalList => localList;
   get getCategory => category;
   get getSheet => sheet;
@@ -45,18 +47,23 @@ class Maestro with ChangeNotifier {
     switch (_category) {
       case 'Entrada':
         localList = entrance;
+        indexCategory = 0;
         break;
       case 'Ofertório':
         localList = offers;
+        indexCategory = 1;
         break;
       case 'Aclamação':
         localList = aclamation;
+        indexCategory = 2;
         break;
       case 'Comunhão':
         localList = comunion;
+        indexCategory = 3;
         break;
       case 'Final':
         localList = ending;
+        indexCategory = 4;
         break;
 
       default:

@@ -11,6 +11,7 @@ class FloatButton extends StatelessWidget {
     List localList = maestro.getLocalList;
     int currentIndex = maestro.getCurrentIndex;
     bool isSheet = maestro.getIsSheet;
+    int indexCategory = maestro.getIndexCategory;
 
     if (!isSheet) {
       return FloatingActionButton(
@@ -25,7 +26,7 @@ class FloatButton extends StatelessWidget {
               content: Container(
                 width: 80,
                 child: Text(
-                    "Sera adicionado como cântico de ${maestro.getCategory}"),
+                    "Sera adicionado como cântico de ${maestro.getCategory}. O Cântico \"${maestro.getSheet[indexCategory][0]}\" será substituído."),
               ),
               actionsAlignment: MainAxisAlignment.spaceEvenly,
               actions: <Widget>[
