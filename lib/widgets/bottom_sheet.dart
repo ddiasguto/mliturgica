@@ -29,8 +29,7 @@ class MyBottomSheet extends StatelessWidget {
         ],
         automaticallyImplyLeading: false,
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
+      body: ListView(
         children: [
           ListTile(
             title: Text('Entrada: ${maestro.getSheet[0][0]}'),
