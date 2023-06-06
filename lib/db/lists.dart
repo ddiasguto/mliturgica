@@ -6,7 +6,7 @@ import 'final.dart';
 import 'entrada.dart';
 
 const List entrance = [
-  ['Te Amarei, Senhor', TeAmareiSenhor()],
+  ['Te amarei, Senhor', TeAmareiSenhor()],
   ['Eis me aqui, Senhor', EisMeAquiSenhor()],
   ['Senhor, quem Entrará?', SenhorQuemEntrara()],
   ['O Profeta', OProfeta()],
@@ -28,7 +28,7 @@ const List aclamation = [
 ];
 
 const List comunion = [
-  ['Como és Lindo', ComoEsLindo()],
+  ['Como és lindo', ComoEsLindo()],
   ['Pelos prados e campinas', PelosPradosECampinas()],
   ['Conheço um coração', ConhecoUmCoracao()],
   ['Pão da vida', PaoDaVida()],

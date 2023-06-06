@@ -1,4 +1,6 @@
 import 'package:diasguto/provider/Maestro.dart';
+import 'package:diasguto/widgets/add_to_sheet.dart';
+import 'package:diasguto/widgets/already_in_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,60 +10,42 @@ class FloatButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    List localList = maestro.getLocalList;
-    int currentIndex = maestro.getCurrentIndex;
     bool isSheet = maestro.getIsSheet;
-    int indexCategory = maestro.getIndexCategory;
 
     if (!isSheet) {
       return FloatingActionButton(
         onPressed: () {
           showDialog<String>(
             context: context,
-            builder: (BuildContext context) => AlertDialog(
-              title: const Text(
-                'Adicionar à Partitura?',
-                style: TextStyle(color: Colors.cyan, fontSize: 18),
-              ),
-              content: Container(
-                width: 80,
-                child: Text(
-                    "Sera adicionado como cântico de ${maestro.getCategory}. O Cântico \"${maestro.getSheet[indexCategory][0]}\" será substituído."),
-              ),
-              actionsAlignment: MainAxisAlignment.spaceEvenly,
-              actions: <Widget>[
-                TextButton(
-                  onPressed: () => Navigator.pop(context, 'Cancel'),
-                  child: const Text(
-                    'Cancelar',
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 116, 12, 12), fontSize: 18),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context, 'Confirm');
-                    maestro.setSheetElement(
-                        localList[currentIndex][0], localList[currentIndex][1]);
-                  },
-                  child: const Text(
-                    'Adicionar',
-                    style: TextStyle(color: Colors.cyan, fontSize: 18),
-                  ),
-                ),
-              ],
-            ),
+            builder: floatButton,
           );
         },
         tooltip: 'Adicionar à Partitura',
         backgroundColor: Colors.cyan,
-        child: const Icon(
+        child: Icon(
           Icons.add,
-          color: Colors.greenAccent,
+          color: Colors.green[900],
         ),
       );
     } else {
       return Container();
+    }
+  }
+
+  Widget floatButton(context) {
+    Maestro maestro = Provider.of<Maestro>(context);
+    List localList = maestro.getLocalList;
+    int currentIndex = maestro.getCurrentIndex;
+    int indexCategory = maestro.getIndexCategory;
+    List sheet = maestro.getSheet;
+
+    String str1 = localList[currentIndex][0].toString().toLowerCase();
+    String str2 = sheet[indexCategory][0].toString().toLowerCase();
+
+    if (str1 == str2) {
+      return alreadyInSheet(context);
+    } else {
+      return addToSheet(context);
     }
   }
 }
