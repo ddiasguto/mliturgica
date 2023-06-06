@@ -33,6 +33,7 @@ class CategoryBottomSheet extends StatelessWidget {
             itemBuilder: (_, index) => ListTile(
                   leading: const Icon(Icons.music_note),
                   title: Text('${maestro.getLocalList[index][0]}'),
+                  dense: true,
                   iconColor: Colors.red,
                   tileColor: Colors.cyan,
                 )));

@@ -21,12 +21,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: _title,
+      title: "Músicas Litúrgicas",
       debugShowCheckedModeBanner: false,
       home: MyStatefulWidget(),
     );

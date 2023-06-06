@@ -34,26 +34,31 @@ class MyBottomSheet extends StatelessWidget {
           ListTile(
             title: Text('Entrada: ${maestro.getSheet[0][0]}'),
             iconColor: Colors.red,
+            dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Ofertório: ${maestro.getSheet[1][0]}'),
             iconColor: Colors.red,
+            dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Aclamação: ${maestro.getSheet[2][0]}'),
             iconColor: Colors.red,
+            dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Comunhão: ${maestro.getSheet[3][0]}'),
             iconColor: Colors.red,
+            dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Encerramento: ${maestro.getSheet[4][0]}'),
             iconColor: Colors.red,
+            dense: true,
             tileColor: Colors.cyan,
           ),
         ],

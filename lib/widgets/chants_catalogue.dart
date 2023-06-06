@@ -13,6 +13,7 @@ Widget chantsCatalogue(context) {
       itemBuilder: (_, index) => ListTile(
           leading: const Icon(Icons.music_note),
           title: Text('${maestro.getCatalogueList[index][0]}'),
+          dense: true,
           iconColor: Colors.red,
           tileColor: Colors.cyan,
           selectedColor: Colors.amberAccent,
