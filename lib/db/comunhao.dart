@@ -279,3 +279,54 @@ class VouCantarTeuAmor extends StatelessWidget {
     ]);
   }
 }
+
+class QuandoTeuPaiRevelou extends StatelessWidget {
+  const QuandoTeuPaiRevelou({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      const Music(cipher: 'Quando teu Pai revelou o segredo a Maria'),
+      const Music(cipher: 'Que, pela força do Espírito, conceberia'),
+      const Music(cipher: 'A Ti, Jesus, Ela não hesitou logo em responder'),
+      const Music(cipher: 'Faça-se em mim, pobre serva o que a Deus aprouver!'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Hoje imitando a Maria que é imagem da Igreja'),
+      const Music(cipher: 'Nossa família outra vez Te recebe e deseja'),
+      const Music(
+          cipher: 'Cheia de fé, de esperança e de amor, dizer sim a Deus'),
+      const Music(cipher: 'Eis aqui os teus servos, Senhor!'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Que a graça de Deus cresça em nós sem cessar'),
+      const Music(cipher: 'E de Ti, nosso Pai, venha o Espírito Santo de amor'),
+      const Music(cipher: 'Pra gerar e formar Cristo em nós'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Por um decreto do Pai Ela foi escolhida'),
+      const Music(cipher: 'Para gerar-te, ó Senhor, que és origem da vida'),
+      const Music(cipher: 'Cheia do Espírito Santo no corpo e no coração'),
+      const Music(cipher: 'Foi quem melhor cooperou com a Tua missão'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Na comunhão recebemos o Espírito Santo'),
+      const Music(cipher: 'E vem contigo Jesus, o teu Pai sacrossanto'),
+      const Music(cipher: 'Vamos agora ajudar-te no plano da salvação'),
+      const Music(cipher: 'Eis aqui os teus servos, Senhor!'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Que a graça de Deus cresça em nós sem cessar'),
+      const Music(cipher: 'E de Ti, nosso Pai, venha o Espírito Santo de amor'),
+      const Music(cipher: 'Pra gerar e formar Cristo em nós'),
+      const Music(cipher: ''),
+      const Music(cipher: 'No coração de Maria, no olhar doce e terno'),
+      const Music(cipher: 'Sempre tiveste na vida um apoio materno'),
+      const Music(cipher: 'Desde Belém, Nazaré, só viveu para Te servir'),
+      const Music(cipher: 'Quando morrias na cruz Tua mãe estava ali'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Mãe amorosa da Igreja quer ser nosso auxílio'),
+      const Music(cipher: 'Reproduzir nos cristãos as feições de Teu Filho'),
+      const Music(cipher: 'Como Ela fez em Caná, nos convida a Te obedecer'),
+      const Music(cipher: 'Eis aqui os Teus servos, Senhor!'),
+      const Music(cipher: ''),
+      const Music(cipher: 'Que a graça de Deus cresça em nós sem cessar'),
+      const Music(cipher: 'E de Ti, nosso Pai, venha o Espírito Santo de amor'),
+      const Music(cipher: 'Pra gerar e formar Cristo em nós'),
+    ]);
+  }
+}

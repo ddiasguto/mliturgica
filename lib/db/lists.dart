@@ -34,7 +34,8 @@ const List comunion = [
   ['Pão da vida', PaoDaVida()],
   ['Cantar a Beleza da Vida', CantarABelezaDaVida()],
   ['Sacramento da Comunhão', SacramentoDaComunhao()],
-  ['Vou Cantar teu amor', VouCantarTeuAmor()]
+  ['Vou Cantar teu amor', VouCantarTeuAmor()],
+  ['Quando Teu Pai Revelou', QuandoTeuPaiRevelou()]
 ];
 
 const List ending = [
