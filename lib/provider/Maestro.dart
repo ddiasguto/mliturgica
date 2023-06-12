@@ -180,23 +180,33 @@ class Maestro with ChangeNotifier {
   }
 
   void setRandomOffer() {
+    do {
     randomOffer = Random().nextInt(offers.length);
+    } while (sheet[1][0] == offers[randomOffer][0]);
   }
 
   void setRandomEntrance() {
+    do {
     randomEntrance = Random().nextInt(entrance.length);
+    } while (sheet[0][0] == entrance[randomEntrance][0]);
   }
 
   void setRandomAclamation() {
+    do {
     randomAclamation = Random().nextInt(aclamation.length);
+    } while (sheet[2][0] == aclamation[randomAclamation][0]);
   }
 
   void setRandomComunion() {
+    do {
     randomComunion = Random().nextInt(comunion.length);
+    } while (sheet[3][0] == comunion[randomComunion][0]);
   }
 
   void setRandomEnding() {
+    do {
     randomEnding = Random().nextInt(ending.length);
+    } while (sheet[4][0] == ending[randomEnding][0]);
   }
 
   void randomSheet() {
