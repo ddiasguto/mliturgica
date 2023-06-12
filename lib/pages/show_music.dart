@@ -1,3 +1,4 @@
+import 'package:diasguto/components/change_chant_button.dart';
 import 'package:diasguto/widgets/next_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,12 @@ class ShowMusicState extends State<ShowMusic> {
     return Scaffold(
         appBar: AppBar(
           title: Text('${maestro.localList[currentIndex][0]}'),
-          actions: [Text('${currentIndex + 1}/${maestro.localList.length}')],
+          actions: [
+            ChangeChant(),
+            Container(
+              width: 20,
+            )
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.cyan,

@@ -80,6 +80,37 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void changeChant(int index) {
+    switch (index) {
+      case 0:
+        setRandomEntrance();
+        sheet[0][0] = entrance[randomEntrance][0];
+        sheet[0][1] = entrance[randomEntrance][1];
+        break;
+      case 1:
+        setRandomOffer();
+        sheet[0][0] = offers[randomOffer][0];
+        sheet[0][1] = offers[randomOffer][1];
+        break;
+      case 2:
+        setRandomAclamation();
+        sheet[0][0] = aclamation[randomAclamation][0];
+        sheet[0][1] = aclamation[randomAclamation][1];
+        break;
+      case 3:
+        setRandomComunion();
+        sheet[0][0] = aclamation[randomComunion][0];
+        sheet[0][1] = aclamation[randomComunion][1];
+        break;
+      case 4:
+        setRandomEnding();
+        sheet[0][0] = ending[randomEnding][0];
+        sheet[0][1] = ending[randomEnding][1];
+        break;
+    }
+    notifyListeners();
+  }
+
   void setSheetElement(String title, Widget element) {
     switch (category) {
       case 'Entrada':
@@ -117,6 +148,7 @@ class Maestro with ChangeNotifier {
   void nextItem() {
     if (currentIndex < localList.length - 1) {
       currentIndex++;
+      indexCategory++;
     }
     notifyListeners();
   }
@@ -124,12 +156,14 @@ class Maestro with ChangeNotifier {
   void previousItem() {
     if (currentIndex > 0) {
       currentIndex--;
+      indexCategory--;
     }
     notifyListeners();
   }
 
   void setIndexToZero() {
     currentIndex = 0;
+    indexCategory = 0;
     notifyListeners();
   }
 
