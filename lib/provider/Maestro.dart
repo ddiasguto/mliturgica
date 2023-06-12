@@ -37,6 +37,11 @@ class Maestro with ChangeNotifier {
     ...ending
   ];
 
+  void sortCatalogue() {
+    catalogueList.sort();
+    notifyListeners();
+  }
+
   get getCurrentIndex => currentIndex;
   get getIndexCategory => indexCategory;
   get getLocalList => localList;
@@ -150,7 +155,6 @@ class Maestro with ChangeNotifier {
   void nextItem() {
     if (currentIndex < localList.length - 1) {
       currentIndex++;
-      indexCategory++;
     }
     notifyListeners();
   }
@@ -158,14 +162,12 @@ class Maestro with ChangeNotifier {
   void previousItem() {
     if (currentIndex > 0) {
       currentIndex--;
-      indexCategory--;
     }
     notifyListeners();
   }
 
   void setIndexToZero() {
     currentIndex = 0;
-    indexCategory = 0;
     notifyListeners();
   }
 

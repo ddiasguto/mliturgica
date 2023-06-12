@@ -11,10 +11,11 @@ Widget chantsCatalogue(context) {
   return ListView.builder(
       itemCount: maestro.catalogueList.length,
       itemBuilder: (_, index) => ListTile(
-          leading: const Icon(Icons.music_note),
-          title: Text('${maestro.getCatalogueList[index][0]}'),
+          title: Text(
+              ' ${index + 1}. ${maestro.getCatalogueList[index][0]}'
+                  .toUpperCase(),
+              style: TextStyle(fontSize: 16)),
           dense: true,
-          iconColor: Colors.red,
           tileColor: Colors.cyan[400],
           selectedColor: Colors.amberAccent,
           onTap: () {

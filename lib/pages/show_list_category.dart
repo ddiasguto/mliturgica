@@ -16,7 +16,11 @@ class ShowCategoryState extends State<ShowCategory> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     return Scaffold(
-      appBar: AppBar(title: Text('Cânticos de ${maestro.category}')),
+      appBar: AppBar(
+        title: Text('Cânticos de ${maestro.category}'),
+        elevation: 0,
+        backgroundColor: Colors.cyan[800],
+      ),
       drawer: const MyDrawer(),
       body: chantsCategory(context),
     );
