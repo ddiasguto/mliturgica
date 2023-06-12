@@ -89,23 +89,23 @@ class Maestro with ChangeNotifier {
         break;
       case 1:
         setRandomOffer();
-        sheet[0][0] = offers[randomOffer][0];
-        sheet[0][1] = offers[randomOffer][1];
+        sheet[1][0] = offers[randomOffer][0];
+        sheet[1][1] = offers[randomOffer][1];
         break;
       case 2:
         setRandomAclamation();
-        sheet[0][0] = aclamation[randomAclamation][0];
-        sheet[0][1] = aclamation[randomAclamation][1];
+        sheet[2][0] = aclamation[randomAclamation][0];
+        sheet[2][1] = aclamation[randomAclamation][1];
         break;
       case 3:
         setRandomComunion();
-        sheet[0][0] = aclamation[randomComunion][0];
-        sheet[0][1] = aclamation[randomComunion][1];
+        sheet[3][0] = aclamation[randomComunion][0];
+        sheet[3][1] = aclamation[randomComunion][1];
         break;
       case 4:
         setRandomEnding();
-        sheet[0][0] = ending[randomEnding][0];
-        sheet[0][1] = ending[randomEnding][1];
+        sheet[4][0] = ending[randomEnding][0];
+        sheet[4][1] = ending[randomEnding][1];
         break;
     }
     notifyListeners();
