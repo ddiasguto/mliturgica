@@ -101,8 +101,8 @@ class Maestro with ChangeNotifier {
         break;
       case 3:
         setRandomComunion();
-        sheet[3][0] = aclamation[randomComunion][0];
-        sheet[3][1] = aclamation[randomComunion][1];
+        sheet[3][0] = comunion[randomComunion][0];
+        sheet[3][1] = comunion[randomComunion][1];
         break;
       case 4:
         setRandomEnding();
