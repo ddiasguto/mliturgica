@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'components/app_bars.dart';
-import 'components/home.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(
@@ -62,7 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
-        backgroundColor: const Color.fromARGB(255, 152, 226, 233),
+        backgroundColor: Colors.cyan[400],
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

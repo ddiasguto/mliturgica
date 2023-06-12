@@ -33,7 +33,14 @@ class ShowMusicState extends State<ShowMusic> {
     return Scaffold(
         appBar: AppBar(
           title: Text('${maestro.localList[currentIndex][0]}'),
+          backgroundColor: Colors.cyan[800],
+          elevation: 0,
           actions: [
+            Center(
+              child: Text(
+                  "${maestro.getCurrentIndex + 1}/${maestro.localList.length}",
+                  style: TextStyle(fontSize: 16)),
+            ),
             ChangeChant(),
             Container(
               width: 20,
@@ -41,7 +48,7 @@ class ShowMusicState extends State<ShowMusic> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.cyan[800],
           items: <BottomNavigationBarItem>[
             const BottomNavigationBarItem(
               icon: PreviousButton(),

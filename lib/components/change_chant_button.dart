@@ -15,7 +15,7 @@ class ChangeChant extends StatelessWidget {
         icon: Icon(
           Icons.refresh,
           size: 30,
-          color: Colors.green[800],
+          color: Colors.blue[100],
         ),
         onPressed: () {
           maestro.changeChant(maestro.indexCategory);

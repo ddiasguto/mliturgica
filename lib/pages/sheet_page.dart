@@ -17,83 +17,81 @@ class _SheetPageState extends State<SheetPage> {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
-    return Center(
-      child: Column(children: [
-        Container(
-          width: 300,
-          height: 45,
-          child: Card(
-            child: InkWell(
-              onTap: () {
-                maestro.setLocalListToSheet();
-                maestro.setIndexToZero();
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const ShowMusic()));
-              },
-              onLongPress: () {
-                showModalBottomSheet<void>(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return MyBottomSheet();
-                  },
-                );
-              },
-              splashColor: Color.fromARGB(255, 116, 12, 12),
-              focusColor: Colors.black,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Navegar Pela Partitura ',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 116, 12, 12),
-                      fontSize: 20,
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_circle_right,
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Container(
+        width: 300,
+        height: 45,
+        child: Card(
+          child: InkWell(
+            onTap: () {
+              maestro.setLocalListToSheet();
+              maestro.setIndexToZero();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ShowMusic()));
+            },
+            onLongPress: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return MyBottomSheet();
+                },
+              );
+            },
+            splashColor: Color.fromARGB(255, 116, 12, 12),
+            focusColor: Colors.black,
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Navegar Pela Partitura ',
+                  style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12),
-                    size: 30,
+                    fontSize: 20,
                   ),
-                ],
-              ),
+                ),
+                Icon(
+                  Icons.arrow_circle_right,
+                  color: Color.fromARGB(255, 116, 12, 12),
+                  size: 30,
+                ),
+              ],
             ),
           ),
         ),
-        Container(
-          width: 300,
-          height: 45,
-          child: Card(
-            child: InkWell(
-              onTap: () {
-                showDialog<String>(
-                  context: context,
-                  builder: randomSheetDialog,
-                );
-              },
-              splashColor: Color.fromARGB(255, 116, 12, 12),
-              focusColor: Colors.black,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Gerar Nova',
-                    style: TextStyle(
-                      color: Colors.green[800],
-                      fontSize: 20,
-                    ),
-                  ),
-                  Icon(
-                    Icons.refresh,
+      ),
+      Container(
+        width: 300,
+        height: 45,
+        child: Card(
+          child: InkWell(
+            onTap: () {
+              showDialog<String>(
+                context: context,
+                builder: randomSheetDialog,
+              );
+            },
+            splashColor: Color.fromARGB(255, 116, 12, 12),
+            focusColor: Colors.black,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Gerar Nova',
+                  style: TextStyle(
                     color: Colors.green[800],
-                    size: 30,
+                    fontSize: 20,
                   ),
-                ],
-              ),
+                ),
+                Icon(
+                  Icons.refresh,
+                  color: Colors.green[800],
+                  size: 30,
+                ),
+              ],
             ),
           ),
-        )
-      ]),
-    );
+        ),
+      )
+    ]);
   }
 }
