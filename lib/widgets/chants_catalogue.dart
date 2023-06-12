@@ -15,11 +15,13 @@ Widget chantsCatalogue(context) {
           title: Text('${maestro.getCatalogueList[index][0]}'),
           dense: true,
           iconColor: Colors.red,
-          tileColor: Colors.cyan,
+          tileColor: Colors.cyan[400],
           selectedColor: Colors.amberAccent,
           onTap: () {
             maestro.setLocalListToCatalogue();
             maestro.setCurrentIndex(index);
+            maestro.setCatalogueTrue();
+
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShowMusic()));
           }));

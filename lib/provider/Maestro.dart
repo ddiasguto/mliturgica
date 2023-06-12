@@ -19,6 +19,7 @@ class Maestro with ChangeNotifier {
   int indexCategory = 0;
   String category = '';
   bool isSheet = false;
+  bool isCatalogue = false;
 
   List sheet = [
     ['Te amarei, senhor', TeAmareiSenhor()],
@@ -43,6 +44,7 @@ class Maestro with ChangeNotifier {
   get getSheet => sheet;
   get getIsSheet => isSheet;
   get getCatalogueList => catalogueList;
+  get getIsCatalogue => isCatalogue;
 
   int randomOffer = 0;
   int randomEntrance = 0;
@@ -169,44 +171,51 @@ class Maestro with ChangeNotifier {
 
   void setLocalListToSheet() {
     isSheet = true;
+    isCatalogue = false;
     localList = sheet;
     notifyListeners();
   }
 
   void setLocalListToCatalogue() {
-    isSheet = true;
+    isCatalogue = true;
+    isSheet = false;
     localList = catalogueList;
     notifyListeners();
   }
 
   void setRandomOffer() {
     do {
-    randomOffer = Random().nextInt(offers.length);
+      randomOffer = Random().nextInt(offers.length);
     } while (sheet[1][0] == offers[randomOffer][0]);
   }
 
   void setRandomEntrance() {
     do {
-    randomEntrance = Random().nextInt(entrance.length);
+      randomEntrance = Random().nextInt(entrance.length);
     } while (sheet[0][0] == entrance[randomEntrance][0]);
   }
 
   void setRandomAclamation() {
     do {
-    randomAclamation = Random().nextInt(aclamation.length);
+      randomAclamation = Random().nextInt(aclamation.length);
     } while (sheet[2][0] == aclamation[randomAclamation][0]);
   }
 
   void setRandomComunion() {
     do {
-    randomComunion = Random().nextInt(comunion.length);
+      randomComunion = Random().nextInt(comunion.length);
     } while (sheet[3][0] == comunion[randomComunion][0]);
   }
 
   void setRandomEnding() {
     do {
-    randomEnding = Random().nextInt(ending.length);
+      randomEnding = Random().nextInt(ending.length);
     } while (sheet[4][0] == ending[randomEnding][0]);
+  }
+
+  void setCatalogueTrue() {
+    isCatalogue = true;
+    notifyListeners();
   }
 
   void randomSheet() {

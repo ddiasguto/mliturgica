@@ -9,8 +9,8 @@ class ChangeChant extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     bool isSheet = maestro.getIsSheet;
-
-    if (isSheet) {
+    bool isCatalogue = maestro.getIsCatalogue;
+    if (isSheet && !isCatalogue) {
       return IconButton(
         icon: Icon(
           Icons.refresh,
