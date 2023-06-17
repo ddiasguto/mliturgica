@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class CardHome extends StatelessWidget {
-  final String category;
+  final String category, img;
 
-  const CardHome(this.category);
+  const CardHome(this.category, this.img);
 
   @override
   Widget build(BuildContext context) {
@@ -19,37 +19,46 @@ class CardHome extends StatelessWidget {
         child: Card(
           color: Colors.cyan[200],
           shadowColor: const Color.fromARGB(255, 116, 12, 12),
-          child: InkWell(
-            onTap: () {
-              maestro.setLocalList(category);
-              maestro.setIndexToZero();
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ShowCategory()));
-            },
-            onLongPress: () {
-              maestro.setLocalList(category);
-              showModalBottomSheet<void>(
-                context: context,
-                builder: (BuildContext context) {
-                  return CategoryBottomSheet();
+          child: Row(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                child: Image.asset('assets/img/$img'),
+              ),
+              InkWell(
+                onTap: () {
+                  maestro.setLocalList(category);
+                  maestro.setIndexToZero();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ShowCategory()));
                 },
-              );
-            },
-            focusColor: Colors.black,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  category,
-                  style: const TextStyle(
-                    color: Color.fromARGB(255, 116, 12, 12),
-                    fontSize: 20,
-                  ),
+                onLongPress: () {
+                  maestro.setLocalList(category);
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return CategoryBottomSheet();
+                    },
+                  );
+                },
+                focusColor: Colors.black,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Cânticos de ${category}".toUpperCase(),
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 116, 12, 12),
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
