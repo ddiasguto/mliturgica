@@ -2,17 +2,19 @@ import 'package:diasguto/db/aclamacao.dart';
 import 'package:diasguto/db/entrada.dart';
 import 'package:diasguto/db/final.dart';
 import 'package:diasguto/db/ofertorio.dart';
+import 'package:diasguto/models/chant.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 import '../db/comunhao.dart';
 import '../db/lists.dart';
 
 class Maestro with ChangeNotifier {
-  List localList = [
-    ['Te amarei, senhor', TeAmareiSenhor()],
-    ['A ti, meu Deus', AtiMeuDeus()],
-    ['Como és lindo', ComoEsLindo()],
-    ['A escolhida', AEscolhida()]
+  List<Chant> localList = [
+    teAmareiSenhor,
+    aTiMeUDEUS,
+    buscaiPrimeiro,
+    comoEsLindo,
+    aEscolhida
   ];
 
   int currentIndex = 0;
@@ -21,15 +23,15 @@ class Maestro with ChangeNotifier {
   bool isSheet = false;
   bool isCatalogue = false;
 
-  List sheet = [
-    ['Te amarei, senhor', TeAmareiSenhor()],
-    ['A ti, meu Deus', AtiMeuDeus()],
-    ['Buscai Primeiro', BuscaiPrimeiro()],
-    ['Como és lindo', ComoEsLindo()],
-    ['A escolhida', AEscolhida()]
+  List<Chant> sheet = [
+    teAmareiSenhor,
+    aTiMeUDEUS,
+    buscaiPrimeiro,
+    comoEsLindo,
+    aEscolhida
   ];
 
-  List catalogueList = [
+  List<Chant> catalogueList = [
     ...entrance,
     ...offers,
     ...aclamation,
@@ -91,56 +93,46 @@ class Maestro with ChangeNotifier {
     switch (index) {
       case 0:
         setRandomEntrance();
-        sheet[0][0] = entrance[randomEntrance][0];
-        sheet[0][1] = entrance[randomEntrance][1];
+        sheet[0] = entrance[randomEntrance];
         break;
       case 1:
         setRandomOffer();
-        sheet[1][0] = offers[randomOffer][0];
-        sheet[1][1] = offers[randomOffer][1];
+        sheet[1] = offers[randomOffer];
         break;
       case 2:
         setRandomAclamation();
-        sheet[2][0] = aclamation[randomAclamation][0];
-        sheet[2][1] = aclamation[randomAclamation][1];
+        sheet[2] = aclamation[randomAclamation];
         break;
       case 3:
         setRandomComunion();
-        sheet[3][0] = comunion[randomComunion][0];
-        sheet[3][1] = comunion[randomComunion][1];
+        sheet[3] = comunion[randomComunion];
         break;
       case 4:
         setRandomEnding();
-        sheet[4][0] = ending[randomEnding][0];
-        sheet[4][1] = ending[randomEnding][1];
+        sheet[4] = ending[randomEnding];
         break;
     }
     notifyListeners();
   }
 
-  void setSheetElement(String title, Widget element) {
+  void setSheetElement(Chant element) {
     switch (category) {
       case 'Entrada':
-        sheet[0][0] = title;
-        sheet[0][1] = element;
+        sheet[0] = element;
         break;
       case 'Ofertório':
-        sheet[1][0] = title;
-        sheet[1][1] = element;
+        sheet[1] = element;
         break;
 
       case 'Aclamação':
-        sheet[2][0] = title;
-        sheet[2][1] = element;
+        sheet[2] = element;
         break;
 
       case 'Comunhão':
-        sheet[3][0] = title;
-        sheet[3][1] = element;
+        sheet[3] = element;
         break;
       case 'Final':
-        sheet[4][0] = title;
-        sheet[4][1] = element;
+        sheet[4] = element;
         break;
       default:
     }
@@ -156,12 +148,19 @@ class Maestro with ChangeNotifier {
     if (currentIndex < localList.length - 1) {
       currentIndex++;
     }
+    if (isSheet) {
+      indexCategory++;
+    }
     notifyListeners();
   }
 
   void previousItem() {
     if (currentIndex > 0) {
       currentIndex--;
+    }
+
+    if (isSheet) {
+      indexCategory--;
     }
     notifyListeners();
   }
@@ -172,6 +171,7 @@ class Maestro with ChangeNotifier {
   }
 
   void setLocalListToSheet() {
+    indexCategory = 0;
     isSheet = true;
     isCatalogue = false;
     localList = sheet;
@@ -188,31 +188,31 @@ class Maestro with ChangeNotifier {
   void setRandomOffer() {
     do {
       randomOffer = Random().nextInt(offers.length);
-    } while (sheet[1][0] == offers[randomOffer][0]);
+    } while (sheet[1].title == offers[randomOffer].title);
   }
 
   void setRandomEntrance() {
     do {
       randomEntrance = Random().nextInt(entrance.length);
-    } while (sheet[0][0] == entrance[randomEntrance][0]);
+    } while (sheet[0].title == entrance[randomEntrance].title);
   }
 
   void setRandomAclamation() {
     do {
       randomAclamation = Random().nextInt(aclamation.length);
-    } while (sheet[2][0] == aclamation[randomAclamation][0]);
+    } while (sheet[2].title == aclamation[randomAclamation].title);
   }
 
   void setRandomComunion() {
     do {
       randomComunion = Random().nextInt(comunion.length);
-    } while (sheet[3][0] == comunion[randomComunion][0]);
+    } while (sheet[3].title == comunion[randomComunion].title);
   }
 
   void setRandomEnding() {
     do {
       randomEnding = Random().nextInt(ending.length);
-    } while (sheet[4][0] == ending[randomEnding][0]);
+    } while (sheet[4].title == ending[randomEnding].title);
   }
 
   void setCatalogueTrue() {
@@ -226,16 +226,16 @@ class Maestro with ChangeNotifier {
     setRandomAclamation();
     setRandomComunion();
     setRandomEnding();
-    sheet[0][0] = entrance[randomEntrance][0];
-    sheet[0][1] = entrance[randomEntrance][1];
-    sheet[1][0] = offers[randomOffer][0];
-    sheet[1][1] = offers[randomOffer][1];
-    sheet[2][0] = aclamation[randomAclamation][0];
-    sheet[2][1] = aclamation[randomAclamation][1];
-    sheet[3][0] = comunion[randomComunion][0];
-    sheet[3][1] = comunion[randomComunion][1];
-    sheet[4][0] = ending[randomEnding][0];
-    sheet[4][1] = ending[randomEnding][1];
+    sheet[0] = entrance[randomEntrance];
+    sheet[0] = entrance[randomEntrance];
+    sheet[1] = offers[randomOffer];
+    sheet[1] = offers[randomOffer];
+    sheet[2] = aclamation[randomAclamation];
+    sheet[2] = aclamation[randomAclamation];
+    sheet[3] = comunion[randomComunion];
+    sheet[3] = comunion[randomComunion];
+    sheet[4] = ending[randomEnding];
+    sheet[4] = ending[randomEnding];
     notifyListeners();
   }
 }

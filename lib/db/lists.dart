@@ -1,47 +1,48 @@
 import 'package:diasguto/db/aclamacao.dart';
 
+import '../models/chant.dart';
 import 'comunhao.dart';
 import 'ofertorio.dart';
 import 'final.dart';
 import 'entrada.dart';
 
-const List entrance = [
-  ['Te amarei, Senhor', TeAmareiSenhor()],
-  ['Eis me aqui, Senhor', EisMeAquiSenhor()],
-  ['Senhor, quem Entrará?', SenhorQuemEntrara()],
-  ['O Profeta', OProfeta()],
-  ['Dia de Festa', DiaDeFesta()]
+List<Chant> entrance = [
+  teAmareiSenhor,
+  eisMeAquiSenhor,
+  senhorQuemEntrara,
+  oProfeta,
+  diaDeFesta,
 ];
 
-const List offers = [
-  ['A ti, meu Deus', AtiMeuDeus()],
-  ['Minha vida tem sentido', MinhaVidaTemSentido()],
-  ['Estar em tuas mãos', EstarEmTuasMaos()],
-  ['Sê bendito', SeBendito()]
+List<Chant> offers = [
+  aTiMeUDEUS,
+  minhaVidaTemSentido,
+  estarEmTuasMaos,
+  seBendito,
 ];
 
-const List aclamation = [
-  ['Quando estamos unidos', QuandoEstamosUnidos()],
-  ['Tua Palavra', TuaPalavra()],
-  ['Minha alma abrirei', MinhaAlmaAbrirei()],
-  ['Buscai Primeiro', BuscaiPrimeiro()]
+List<Chant> aclamation = [
+  quandoEstamosUnidos,
+  tuaPalavra,
+  minhaAlmaAbrirei,
+  buscaiPrimeiro,
 ];
 
-const List comunion = [
-  ['Como és lindo', ComoEsLindo()],
-  ['Pelos prados e campinas', PelosPradosECampinas()],
-  ['Conheço um coração', ConhecoUmCoracao()],
-  ['Pão da vida', PaoDaVida()],
-  ['Cantar a Beleza da Vida', CantarABelezaDaVida()],
-  ['Sacramento da Comunhão', SacramentoDaComunhao()],
-  ['Vou Cantar teu amor', VouCantarTeuAmor()],
-  ['Quando Teu Pai Revelou', QuandoTeuPaiRevelou()]
+List<Chant> comunion = [
+  comoEsLindo,
+  pelosPradosECampinas,
+  conhecoUmCoracao,
+  paoDaVida,
+  cantarABelezaDaVida,
+  sacramentoDaComunhao,
+  vouCantarTeuAmor,
+  quandoTeuPaiRevelou,
 ];
 
-const List ending = [
-  ['Vou Navegar', VouNavegar()],
-  ['Maria de minha infância', MariaDeMinhaInfancia()],
-  ['Pelas estradas da vida', PelasEstradasDaVida()],
-  ['A escolhida', AEscolhida()],
-  ['Chuva de graças', ChuvaDeGraca()]
+List<Chant> ending = [
+  vouNavegar,
+  mariaDeMinhaInfancia,
+  pelasEstradasDaVida,
+  aEscolhida,
+  chuvaDeGraca,
 ];
