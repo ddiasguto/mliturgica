@@ -7,9 +7,7 @@ Widget alreadyInSheet(context) {
   int indexCategory = maestro.getIndexCategory;
   return AlertDialog(
     content: Container(
-        width: 120,
-        child: Text(
-            'O cântico "${maestro.getSheet[indexCategory][0]}" já está na partitura.')),
+        width: 120, child: Text('Este cântico já está na partitura.')),
     actionsAlignment: MainAxisAlignment.spaceEvenly,
     actions: <Widget>[
       TextButton(
