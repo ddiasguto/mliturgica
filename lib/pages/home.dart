@@ -12,18 +12,18 @@ class Home extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CardHome("Entrada"),
-            CardHome("Ofertório"),
+            CardHome("Entrada", "agnus1.jpg"),
+            CardHome("Ofertório", "agnus1.jpg"),
           ],
         ),
         const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          CardHome("Aclamação"),
-          CardHome("Comunhão"),
+          CardHome("Aclamação", "samaria.jpg"),
+          CardHome("Comunhão", "corpus.jpg"),
         ]),
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CardHome("Final"),
+            CardHome("Final", "agnus1.jpg"),
           ],
         ),
       ],
