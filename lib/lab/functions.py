@@ -20,15 +20,27 @@ def setingFileOut(index):
         out='../db/final.dart'
     return out
 
-def writeHeader(out,titulo):
-    s = 'class ' + titulo + ' extends StatelessWidget {'
+
+
+def setCategory(index):
+    if index == 1:
+        out='Entrada'
+    elif index == 2:
+        out='Ofertório'
+    elif index ==3:
+        out='Aclamação'
+    elif index ==4:
+        out='Comunhão'
+    elif index==5:
+        out='Encerramento'
+    return out
+
+def writeHeader(out,className, category):
+    titulo = input(print('Titulo da Música:'))
+    s = 'Chant ' + className + ' = Chant(title: \'' +  titulo + '\',\ncategory: \'' + category + '\',\nciphers: [\n'
+    out.write('\n\n')
     out.write(s)
-    out.write('\n\t')
-    s='const ' + titulo + '({super.key});'
-    out.write(s)
-    out.write('\n\t@override')
-    out.write('\tWidget build(BuildContext context) {\n')
-    out.write('\t\treturn Column(children: [\n')
+  
 
 def check():
     if not os.path.isfile('aux.txt'):
@@ -42,4 +54,4 @@ def deleteAux():
         print("Arquivo aux.txt deletado.")
 
 def writeFooter(out):
-      out.write(']);\n}\n}')
+      out.write(']);')
