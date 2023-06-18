@@ -26,14 +26,17 @@ class Music extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text(
-            cipher.toUpperCase(),
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                cipher.toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 12,
+                ),
+              ),
+            ],
           ),
-          Text(''),
         ],
       ),
     );
@@ -48,14 +51,18 @@ class Cifra extends StatelessWidget {
     return Center(
         child: Column(
       children: [
-        Text(''),
-        Text(
-          cipher,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 12,
-            color: Color.fromARGB(255, 240, 9, 9),
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              cipher,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 8,
+                color: Color.fromARGB(255, 240, 9, 9),
+              ),
+            ),
+          ],
         ),
       ],
     ));

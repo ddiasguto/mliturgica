@@ -32,31 +32,31 @@ class MyBottomSheet extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            title: Text('Entrada: ${maestro.getSheet[0][0]}'),
+            title: Text('Entrada: ${maestro.getSheet[0].title}'),
             iconColor: Colors.red,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Ofertório: ${maestro.getSheet[1][0]}'),
+            title: Text('Ofertório: ${maestro.getSheet[1].title}'),
             iconColor: Colors.red,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Aclamação: ${maestro.getSheet[2][0]}'),
+            title: Text('Aclamação: ${maestro.getSheet[2].title}'),
             iconColor: Colors.red,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Comunhão: ${maestro.getSheet[3][0]}'),
+            title: Text('Comunhão: ${maestro.getSheet[3].title}'),
             iconColor: Colors.red,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Encerramento: ${maestro.getSheet[4][0]}'),
+            title: Text('Encerramento: ${maestro.getSheet[4].title}'),
             iconColor: Colors.red,
             dense: true,
             tileColor: Colors.cyan,

@@ -40,8 +40,7 @@ class Maestro with ChangeNotifier {
   ];
 
   void sortCatalogue() {
-    catalogueList.sort();
-    notifyListeners();
+    catalogueList.sort((a, b) => a.title.compareTo(b.title));
   }
 
   get getCurrentIndex => currentIndex;

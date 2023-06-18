@@ -10,17 +10,17 @@ Widget showRandomSheet(context) {
       'Novos Cânticos:',
       style: TextStyle(color: Colors.cyan, fontSize: 18),
     ),
-    content: Container(
+    content: SizedBox(
       width: 120,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("    ${maestro.sheet[0][0]}"),
-          Text("    ${maestro.sheet[1][0]}"),
-          Text("    ${maestro.sheet[2][0]}"),
-          Text("    ${maestro.sheet[3][0]}"),
-          Text("    ${maestro.sheet[4][0]}"),
+          Text("    ${maestro.sheet[0].title}"),
+          Text("    ${maestro.sheet[1].title}"),
+          Text("    ${maestro.sheet[2].title}"),
+          Text("    ${maestro.sheet[3].title}"),
+          Text("    ${maestro.sheet[4].title}"),
         ],
       ),
     ),

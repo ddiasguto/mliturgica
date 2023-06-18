@@ -39,8 +39,8 @@ class FloatButton extends StatelessWidget {
     int indexCategory = maestro.getIndexCategory;
     List sheet = maestro.getSheet;
 
-    String str1 = localList[currentIndex][0].toString().toLowerCase();
-    String str2 = sheet[indexCategory][0].toString().toLowerCase();
+    String str1 = localList[currentIndex].title;
+    String str2 = sheet[indexCategory].title;
 
     if (str1 == str2) {
       return alreadyInSheet(context);

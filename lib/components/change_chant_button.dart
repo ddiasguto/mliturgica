@@ -13,7 +13,7 @@ class ChangeChant extends StatelessWidget {
     if (isSheet && !isCatalogue) {
       return IconButton(
         icon: Icon(
-          Icons.refresh,
+          Icons.autorenew,
           size: 30,
           color: Colors.blue[100],
         ),

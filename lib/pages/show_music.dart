@@ -32,7 +32,7 @@ class ShowMusicState extends State<ShowMusic> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('${maestro.localList[currentIndex][0]}'),
+          title: Text(maestro.localList[currentIndex].title),
           backgroundColor: Colors.cyan[800],
           elevation: 0,
           actions: [
@@ -66,8 +66,9 @@ class ShowMusicState extends State<ShowMusic> {
               const TextStyle(color: Colors.black, fontSize: 14),
         ),
         body: SingleChildScrollView(
-          child: maestro.localList[currentIndex][1],
-        ),
+            child: Column(
+          children: maestro.localList[currentIndex].ciphers,
+        )),
         floatingActionButton: const FloatButton());
   }
 }

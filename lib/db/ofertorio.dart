@@ -21,7 +21,7 @@ Chant aTiMeUDEUS =
 ]);
 
 Chant minhaVidaTemSentido =
-    Chant(title: 'O profeta', category: 'Ofertório', ciphers: [
+    Chant(title: 'Minha vida tem sentido', category: 'Ofertório', ciphers: [
   const Cifra(cipher: 'E B E C#m F#m B E B7'),
   const Music(cipher: 'MINHA VIDA TEM SENTIDO, CADA VEZ QUE EU VENHO AQUI.'),
   const Cifra(cipher: 'E B E C#m F#m B E B7'),
@@ -45,7 +45,7 @@ Chant minhaVidaTemSentido =
 ]);
 
 Chant estarEmTuasMaos =
-    Chant(title: 'O profeta', category: 'Ofertório', ciphers: [
+    Chant(title: 'Estar em tuas Mãos', category: 'Ofertório', ciphers: [
   const Music(cipher: 'Mão na terra e o coração além deste céu)'),
   const Music(cipher: 'E a semente que brota é um germe de eternidade'),
   const Music(cipher: 'Vai brotando, crescendo, esperando'),
@@ -69,7 +69,7 @@ Chant estarEmTuasMaos =
   const Music(cipher: 'Cada dia, crescendo e aprendendo a recomeçar'),
 ]);
 
-Chant seBendito = Chant(title: 'O profeta', category: 'Ofertório', ciphers: [
+Chant seBendito = Chant(title: 'Sê bendito', category: 'Ofertório', ciphers: [
   const Music(cipher: 'Sê bendito, Senhor, para sempre'),
   const Music(cipher: 'Pelos frutos das nossas jornadas!'),
   const Music(cipher: 'Repartidos na mesa do reino'),

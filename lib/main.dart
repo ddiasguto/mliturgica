@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Maestro maestro = Provider.of<Maestro>(context);
+    maestro.sortCatalogue();
     return const MaterialApp(
       title: "Músicas Litúrgicas",
       debugShowCheckedModeBanner: false,

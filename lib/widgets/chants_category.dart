@@ -11,7 +11,7 @@ Widget chantsCategory(context) {
       itemCount: maestro.localList.length,
       itemBuilder: (_, index) => ListTile(
           leading: const Icon(Icons.music_note),
-          title: Text('${maestro.localList[index][0]}'),
+          title: Text(maestro.localList[index].title),
           iconColor: Colors.red,
           tileColor: Colors.cyan,
           selectedColor: Colors.amberAccent,

@@ -15,7 +15,7 @@ Widget addToSheet(context) {
     content: Container(
       width: 120,
       child: Text(
-          "Sera adicionado como cântico de ${maestro.getCategory}. O Cântico \"${maestro.getSheet[indexCategory][0]}\" será substituído."),
+          "Sera adicionado como cântico de ${maestro.getCategory.toString().toLowerCase()}. Substituirá \"${maestro.getSheet[indexCategory].title}\"."),
     ),
     actionsAlignment: MainAxisAlignment.spaceEvenly,
     actions: <Widget>[
@@ -31,7 +31,8 @@ Widget addToSheet(context) {
         onPressed: () {
           Navigator.pop(context, 'Confirm');
           maestro.setSheetElement(
-              localList[currentIndex][0], localList[currentIndex][1]);
+            localList[currentIndex],
+          );
         },
         child: const Text(
           'Adicionar',
