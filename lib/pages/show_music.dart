@@ -65,10 +65,15 @@ class ShowMusicState extends State<ShowMusic> {
           unselectedLabelStyle:
               const TextStyle(color: Colors.black, fontSize: 14),
         ),
-        body: SingleChildScrollView(
-            child: Column(
-          children: maestro.localList[currentIndex].ciphers,
-        )),
+        body: Column(children: [
+          LinearProgressIndicator(
+              backgroundColor: const Color.fromARGB(255, 116, 12, 12),
+              value: (maestro.currentIndex + 1) / maestro.localList.length),
+          SingleChildScrollView(
+              child: Column(
+            children: maestro.localList[currentIndex].ciphers,
+          ))
+        ]),
         floatingActionButton: const FloatButton());
   }
 }
