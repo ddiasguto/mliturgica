@@ -30,6 +30,8 @@ class CardHome extends StatelessWidget {
                 onTap: () {
                   maestro.setLocalList(category);
                   maestro.setIndexToZero();
+                  maestro.setCatalogueFalse();
+                  maestro.setSheetFalse();
                   Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -49,7 +51,7 @@ class CardHome extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Cânticos de ${category}".toUpperCase(),
+                      "Cânticos de $category".toUpperCase(),
                       style: const TextStyle(
                         color: Color.fromARGB(255, 116, 12, 12),
                         fontSize: 12,

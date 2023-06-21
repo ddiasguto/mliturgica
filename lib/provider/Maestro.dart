@@ -114,6 +114,21 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void setCatalogueFalse() {
+    isCatalogue = false;
+    notifyListeners();
+  }
+
+  void setSheetFalse() {
+    isSheet = false;
+    notifyListeners();
+  }
+
+  void setSheetTrue() {
+    isSheet = true;
+    notifyListeners();
+  }
+
   void setSheetElement(Chant element) {
     switch (category) {
       case 'Entrada':

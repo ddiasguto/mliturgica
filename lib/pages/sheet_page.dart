@@ -26,6 +26,8 @@ class _SheetPageState extends State<SheetPage> {
             onTap: () {
               maestro.setLocalListToSheet();
               maestro.setIndexToZero();
+              maestro.setCatalogueFalse();
+              maestro.setSheetTrue();
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const ShowMusic()));
             },

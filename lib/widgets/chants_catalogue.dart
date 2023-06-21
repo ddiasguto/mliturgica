@@ -28,7 +28,7 @@ Widget chantsCatalogue(context) {
             maestro.setLocalListToCatalogue();
             maestro.setCurrentIndex(index);
             maestro.setCatalogueTrue();
-
+            maestro.setSheetFalse();
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShowMusic()));
           }));
