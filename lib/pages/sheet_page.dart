@@ -43,7 +43,7 @@ class _SheetPageState extends State<SheetPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Navegar Pela Partitura ',
+                  'Navegar pela partitura ',
                   style: TextStyle(
                     color: Color.fromARGB(255, 116, 12, 12),
                     fontSize: 20,
@@ -76,7 +76,7 @@ class _SheetPageState extends State<SheetPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Gerar Nova',
+                  'Gerar nova',
                   style: TextStyle(
                     color: Colors.green[800],
                     fontSize: 20,

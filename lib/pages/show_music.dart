@@ -68,12 +68,42 @@ class ShowMusicState extends State<ShowMusic> {
         body: Column(children: [
           LinearProgressIndicator(
               backgroundColor: const Color.fromARGB(255, 116, 12, 12),
+              color: Colors.green[800],
               value: (maestro.currentIndex + 1) / maestro.localList.length),
-          SingleChildScrollView(
-              child: Column(
-            children: maestro.localList[currentIndex].ciphers,
-          ))
+          CategoryAtMusic(context),
+          Expanded(
+              child:
+                  ListView(children: maestro.localList[currentIndex].ciphers)),
         ]),
         floatingActionButton: const FloatButton());
+  }
+
+  Widget CategoryAtMusic(context) {
+    Maestro maestro = Provider.of<Maestro>(context);
+    bool isSheet = maestro.getIsSheet;
+    bool isCatalogue = maestro.getIsCatalogue;
+    int currentIndex = maestro.getCurrentIndex;
+
+    if (isSheet || isCatalogue) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            width: 15,
+            height: 30,
+          ),
+          Text(
+            maestro.localList[currentIndex].category.toUpperCase(),
+            style: TextStyle(
+                fontSize: 16, color: const Color.fromARGB(255, 116, 12, 12)),
+            textAlign: TextAlign.end,
+          ),
+        ],
+      );
+    } else {
+      return Container(
+        height: 30,
+      );
+    }
   }
 }
