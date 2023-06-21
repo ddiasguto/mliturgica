@@ -10,13 +10,14 @@ Widget chantsCatalogue(context) {
   return ListView.builder(
       itemCount: maestro.catalogueList.length,
       itemBuilder: (_, index) => ListTile(
-          title: Text(
-              '${index + 1}. ${maestro.getCatalogueList[index].title}'
-                  .toUpperCase(),
+          leading: Text(
+            '${index + 1}',
+            style: TextStyle(fontSize: 22),
+          ),
+          title: Text('${maestro.getCatalogueList[index].title}'.toUpperCase(),
               style: TextStyle(fontSize: 16)),
           subtitle: Text(
-            'Cântico de ${maestro.getCatalogueList[index].category}'
-                .toUpperCase(),
+            '${maestro.getCatalogueList[index].category}'.toUpperCase(),
             style: TextStyle(
               color: Color.fromARGB(255, 94, 32, 32),
             ),
