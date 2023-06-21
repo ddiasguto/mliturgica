@@ -28,10 +28,9 @@ Widget showRandomSheet(context) {
     actions: <Widget>[
       TextButton(
         onPressed: () => Navigator.pop(context, 'Cancel'),
-        child: const Text(
+        child: Text(
           'Ok',
-          style:
-              TextStyle(color: Color.fromARGB(255, 116, 12, 12), fontSize: 18),
+          style: TextStyle(color: Colors.cyan[700], fontSize: 18),
         ),
       ),
       TextButton(
