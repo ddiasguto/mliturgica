@@ -25,10 +25,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     maestro.sortCatalogue();
-    return const MaterialApp(
+    return MaterialApp(
       title: "Músicas Litúrgicas",
-      debugShowCheckedModeBanner: false,
       home: MyStatefulWidget(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 68, 183, 58)),
+        useMaterial3: true,
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
