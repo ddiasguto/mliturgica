@@ -12,6 +12,13 @@ List<Chant> entrance = [
   senhorQuemEntrara,
   oProfeta,
   diaDeFesta,
+  euEMinhaCasa,
+  venhamTodosAdoremos,
+  porEntreAclamacoes,
+  aJesusEMaria,
+  hosanaHei,
+  hojeETempoDeLouvar,
+  coracaoSanto
 ];
 
 List<Chant> offers = [
@@ -19,6 +26,15 @@ List<Chant> offers = [
   minhaVidaTemSentido,
   estarEmTuasMaos,
   seBendito,
+  deMaosEstendidas,
+  sabesSenhor,
+  meuCoracaoEParaTi,
+  umCoracaoParaAmar,
+  teuSou,
+  servoPorAmor,
+  paoEVinho,
+  dianteDoAltar,
+  sobeAJerusalem,
 ];
 
 List<Chant> aclamation = [
@@ -26,6 +42,14 @@ List<Chant> aclamation = [
   tuaPalavra,
   minhaAlmaAbrirei,
   buscaiPrimeiro,
+  palavraDeSalvacao,
+  versiculoDoDia,
+  euVosDouUmNovoMandamento,
+  louvorEGloriaII,
+  louvorEGloria,
+  comoSaoBelosOsPes,
+  rendeiGracasAoSenhor,
+  noPrincipioEraAPalavra
 ];
 
 List<Chant> comunion = [
@@ -37,6 +61,10 @@ List<Chant> comunion = [
   sacramentoDaComunhao,
   vouCantarTeuAmor,
   quandoTeuPaiRevelou,
+  aBarca,
+  cancaoDoEspirito,
+  tomaiComei,
+  vejamEuAndeiPelasVilas,
 ];
 
 List<Chant> ending = [
@@ -45,4 +73,11 @@ List<Chant> ending = [
   pelasEstradasDaVida,
   aEscolhida,
   chuvaDeGraca,
+  esAEscolhida,
+  quemEEsta,
+  seguraNaMaodeDeus,
+  oracaoPelaFamilia,
+  facoNovasTodasasCoisas,
+  mariaDeNazare,
+  santaMaeMaria
 ];

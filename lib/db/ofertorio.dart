@@ -90,3 +90,216 @@ Chant seBendito = Chant(title: 'Sê bendito', category: 'Ofertório', ciphers: [
   const Music(cipher: 'Tu fecundas o chão desta vida'),
   const Music(cipher: 'Que abriga uma nova semente.'),
 ]);
+
+Chant deMaosEstendidas =
+    Chant(title: 'De Mãos estendidas', category: 'Ofertório', ciphers: [
+  const Music(cipher: ''),
+  const Music(cipher: 'Dm Gm A7 Dm Gm A7 Dm'),
+  const Music(cipher: 'DE MÃOS ESTENDIDAS, OFERTAMOS O QUE DE GRAÇA RECEBEMOS'),
+  const Music(cipher: 'Dm Gm A7 Dm Gm A7 Dm D7'),
+  const Music(cipher: 'DE MÃOS ESTENDIDAS, OFERTAMOS O QUE DE GRAÇA RECEBEMOS'),
+  const Music(cipher: 'Gm C F Dm'),
+  const Music(cipher: 'A NATUREZA TÃO BELA QUE É LOUVOR, QUE É SERVIÇO'),
+  const Music(cipher: 'Gm A7 Dm D7'),
+  const Music(cipher: 'O SOL QUE ILUMINA AS TREVAS TRANSFORMANDO-AS EM LUZ'),
+  const Music(cipher: 'Gm C F Dm'),
+  const Music(cipher: 'O DIA QUE NOS TRAZ O PÃO E A NOITE QUE NOS DÁ REPOUSO'),
+  const Music(cipher: 'Gm A7 Dm'),
+  const Music(cipher: 'OFERTEMOS AO SENHOR O LOUVOR DA CRIAÇÃO'),
+  const Music(cipher: 'NOSSA VIDA TODA INTEIRA OFERTAMOS AO SENHOR'),
+  const Music(cipher: 'COMO PROVA DE AMIZADE COMO PROVA DE AMOR'),
+  const Music(cipher: 'COM O VINHO E COM O PÃO OFERTEMOS AO SENHOR'),
+  const Music(cipher: 'NOSSA VIDA TODA INTEIRA O LOUVOR DA CRIAÇÃO'),
+]);
+
+Chant sabesSenhor =
+    Chant(title: 'Sabes, Senhor', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'D G A D'),
+  const Music(cipher: 'SABES, SENHOR, O QUE TEMOS É TÃO POUCO PRA DAR.'),
+  const Music(cipher: 'D7 G A D'),
+  const Music(
+      cipher: 'MAS ESTE POUCO NÓS QUEREMOS COM OS IRMÃOS COMPARTILHAR.'),
+  const Music(cipher: 'Em A F#m Bm'),
+  const Music(cipher: 'QUEREMOS NESTA HORA, DIANTE DOS IRMÃOS,'),
+  const Music(cipher: 'Em A G A D'),
+  const Music(cipher: 'COMPROMETER A VIDA, BUSCANDO A UNIÃO.'),
+  const Music(cipher: 'SABEMOS QUE É DIFÍCIL, OS BENS COMPARTILHAR,'),
+  const Music(cipher: 'MAS COM A TUA GRAÇA, SENHOR QUEREMOS DAR.'),
+  const Music(cipher: 'OLHANDO TEU EXEMPLO, SENHOR VAMOS SEGUIR'),
+  const Music(cipher: 'FAZENDO O BEM A TODOS, SEM NADA EXIGIR'),
+]);
+
+Chant meuCoracaoEParaTi =
+    Chant(title: 'Meu coração é para ti', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'E A'),
+  const Music(cipher: 'MEU CORAÇÃO É PARA TI, SENHOR'),
+  const Music(cipher: 'B7 E'),
+  const Music(cipher: 'MEU CORAÇÃO É PARA TI, SENHOR'),
+  const Music(cipher: 'C#m F#m'),
+  const Music(cipher: 'MEU CORAÇÃO É PARA TI, SENHOR'),
+  const Music(cipher: 'B7 E E7'),
+  const Music(cipher: 'MEU CORAÇÃO É PARA TI.'),
+  const Music(cipher: 'A B7'),
+  const Music(cipher: 'PORQUE TU ME DESTE A VIDA'),
+  const Music(cipher: 'E G#7 C#m'),
+  const Music(cipher: 'PORQUE TU ME DESTE O EXISTIR'),
+  const Music(cipher: 'F#m B7'),
+  const Music(cipher: 'PORQUE TU ME DESTE O CARINHO'),
+  const Music(cipher: 'E E7'),
+  const Music(cipher: 'ME DESTE O AMOR (2X)'),
+  const Music(cipher: 'A MINHA VIDA É PARA TI, SENHOR'),
+  const Music(cipher: 'A MINHA VIDA É PARA TI, SENHOR'),
+  const Music(cipher: 'A MINHA VIDA É PARA TI, SENHOR'),
+  const Music(cipher: 'A MINHA VIDA É PARA TI.'),
+  const Music(cipher: 'PÃO E VINHO SÃO PRA TI, SENHOR'),
+  const Music(cipher: 'PÃO E VINHO SÃO PRA TI, SENHOR'),
+  const Music(cipher: 'PÃO E VINHO SÃO PRA TI, SENHOR'),
+  const Music(cipher: 'PÃO E VINHO SÃO PRA TI.'),
+]);
+
+Chant umCoracaoParaAmar =
+    Chant(title: 'Um coração para amar', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'G Am7'),
+  const Music(cipher: 'UM CORAÇÃO PARA AMAR, PRA PERDOAR E SENTIR'),
+  const Music(cipher: 'C D7 C G'),
+  const Music(cipher: 'PARA CHORAR E SORRIR AO ME CRIAR TU ME DESTES'),
+  const Music(cipher: 'Am7'),
+  const Music(cipher: 'UM CORAÇÃO PRA SONHAR, INQUIETO E SEMPRE A BATER'),
+  const Music(cipher: 'C D7 C G'),
+  const Music(cipher: 'ANSIOSO POR ENTENDER AS COISAS QUE TU DISSESTE'),
+  const Music(cipher: 'G7 C'),
+  const Music(cipher: 'EIS O QUE EU VENHO TE DAR'),
+  const Music(cipher: 'D/C Bm'),
+  const Music(cipher: 'EIS O QUE EU PONHO NO ALTAR'),
+  const Music(cipher: 'Em Am'),
+  const Music(cipher: 'TOMA SENHOR QUE ELE É TEU'),
+  const Music(cipher: 'D7 G'),
+  const Music(cipher: 'MEU CORAÇÃO NÃO É MEU'),
+  const Music(cipher: 'QUERO QUE O MEU CORAÇÃO, SEJA TÃO CHEIO DE PAZ'),
+  const Music(cipher: 'QUE NÃO SE SINTA CAPAZ, DE SENTIR ÓDIO OU RANCOR'),
+  const Music(cipher: 'QUERO QUE A MINHA ORAÇÃO, POSSA ME AMADURECER'),
+  const Music(cipher: 'LEVE-ME A COMPREENDER AS CONSEQUENCIAS DO AMOR'),
+]);
+
+Chant teuSou = Chant(title: 'Teu sou', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'D A/C# Bm D'),
+  const Music(cipher: 'EU NÃO SOU NADA E DO PÓ NASCI'),
+  const Music(cipher: 'G D/F# Em A7'),
+  const Music(cipher: 'MAS TU ME AMAS E MORRESTES POR MIM'),
+  const Music(cipher: 'D A/C# Bm D'),
+  const Music(cipher: 'DIANTE DA CRUZ SÓ POSSO EXCLAMAR'),
+  const Music(cipher: 'G Em A7'),
+  const Music(cipher: 'TEU SOU, TEU SOU'),
+  const Music(cipher: 'D D7'),
+  const Music(cipher: 'TOMA AS MINHAS MÃOS, TE PEÇO'),
+  const Music(cipher: 'G Gm'),
+  const Music(cipher: 'TOMA MEUS LÁBIOS, TE AMO'),
+  const Music(cipher: 'D Bm Em A'),
+  const Music(cipher: 'TOMA A MINHA VIDA, OH PAI TEU SOU'),
+  const Music(cipher: 'D Bm Em A7 D A7'),
+  const Music(cipher: 'TEU SOU, TEU SOU, TEU SOU'),
+  const Music(cipher: 'QUANDO DE JOELHOS TE OLHO, OH JESUS'),
+  const Music(cipher: 'VEJO TUA GRANDEZA E A MINHA PEQUENEZ'),
+  const Music(cipher: 'QUE POSSO DAR-TE EU? SÓ MEU SER'),
+  const Music(cipher: 'TEU SOU, TEU SOU'),
+]);
+
+Chant servoPorAmor =
+    Chant(title: 'Servo por amor', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'Bm D'),
+  const Music(cipher: 'NUMA NOITE DE FADIGA, SOBRE O BARCO EM ALTO MAR'),
+  const Music(cipher: 'A Bbo Bm'),
+  const Music(cipher: 'O CÉU COMEÇA A CLAREAR, A TUA REDE ESTÁ VAZIA'),
+  const Music(cipher: 'D A Bm'),
+  const Music(cipher: 'MAS A VOZ QUE TE CHAMA, TE MOSTRARÁ UM OUTRO MAR'),
+  const Music(cipher: 'G D Em Bm'),
+  const Music(cipher: 'E SOBRE MUITOS CORAÇÕES A TUA REDE LANÇARÁ.'),
+  const Music(cipher: 'Bm D A Bbo Bm'),
+  const Music(cipher: 'DOA A TUA VIDA , COMO MARIA, AOS PÉS DA CRUZ (E SERÁS)'),
+  const Music(cipher: 'D A G Em G A7'),
+  const Music(
+      cipher: 'SERVO DE CADA HOMEM, SERVO POR AMOR, SACERDOTE DA HUMANIDADE.'),
+  const Music(cipher: 'CAMINHAVAS NO SILÊNCIO, ESPERANDO ALÉM DA DOR'),
+  const Music(
+      cipher: 'QUE A SEMENTE QUE TU LANÇAVAS, NUM BOM TERRENO GERMINASSE.'),
+  const Music(cipher: 'MAS O CORAÇÃO EXULTA PORQUE O CAMPO JÁ ESTÁ DOURADO'),
+  const Music(cipher: 'O GRÃO MADURO PELO SOL NO CELEIRO PODE ENTRAR.'),
+]);
+
+Chant paoEVinho = Chant(title: 'Pão e Vinho', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'A E F#m'),
+  const Music(cipher: 'PÃO E VINHO TE APRESENTAMOS NESSE ALTAR'),
+  const Music(cipher: 'C#m7 D9 C#m7'),
+  const Music(cipher: 'COMO SINAL QUE TU RECOLHES NOSSA OFERTA'),
+  const Music(cipher: 'Bm7 E'),
+  const Music(cipher: 'TUDO O QUE SOMOS DEIXAMOS AQUI. (2X)'),
+  const Music(cipher: 'D9 C#m7'),
+  const Music(cipher: 'É UM MILAGRE QUE SE DÁ'),
+  const Music(cipher: 'D9 F#m7'),
+  const Music(cipher: 'O PÃO E O VINHO EM CORPO E SANGUE,'),
+  const Music(cipher: 'Bm7 E'),
+  const Music(cipher: 'VÃO SE TRANSFORMAR'),
+  const Music(cipher: 'D9 C#m7'),
+  const Music(cipher: 'NÃO HA LIMITES PARA O AMOR'),
+  const Music(cipher: 'D9 F#m7'),
+  const Music(cipher: 'VEM TRANSFORMAR TAMBÉM MINHA VIDA'),
+  const Music(cipher: 'Bm7 E A4 A/C#'),
+  const Music(cipher: 'OH SENHOR, É TEU ESSE MILAGRE DE AMOR'),
+  const Music(cipher: 'D A Bm'),
+  const Music(cipher: 'PÃO E VINHO TE APRESENTAMOS NESSE ALTAR'),
+  const Music(cipher: 'F#m7 G9 F#m7'),
+  const Music(cipher: 'COMO SINAL QUE TU RECOLHES NOSSA OFERTA'),
+  const Music(cipher: 'Em7 A7'),
+  const Music(cipher: 'TUDO O QUE SOMOS DEIXAMOS AQUI.'),
+  const Music(cipher: 'G9 F#m7'),
+  const Music(cipher: 'É UM MILAGRE QUE SE DÁ'),
+  const Music(cipher: 'G9 Bm7'),
+  const Music(cipher: 'O PÃO E O VINHO EM CORPO E SANGUE,'),
+  const Music(cipher: 'Em7 A'),
+  const Music(cipher: 'VÃO SE TRANSFORMAR'),
+  const Music(cipher: 'G9 F#m7'),
+  const Music(cipher: 'NÃO HA LIMITES PARA O AMOR'),
+  const Music(cipher: 'G9 Bm7'),
+  const Music(cipher: 'VEM TRANSFORMAR TAMBÉM MINHA VIDA'),
+  const Music(cipher: 'Em7 A D Bm Em'),
+  const Music(cipher: 'OH SENHOR, É TEU ESSE MILAGRE DE AMOR'),
+  const Music(cipher: 'A D'),
+  const Music(cipher: 'É TEU ESSE MILAGRE DE AMOR.'),
+]);
+
+Chant dianteDoAltar =
+    Chant(title: 'Diante do altar', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'D A G D'),
+  const Music(cipher: 'OS GRÃOS QUE FORMAM A ESPIGA SE UNEM PRA SEREM PÃO;'),
+  const Music(cipher: 'F#m Bm Em A D'),
+  const Music(cipher: 'OS HOMENS QUE SÃO IGREJA, SE UNEM PELA OBLAÇÃO.'),
+  const Music(cipher: 'Am D7 G A D'),
+  const Music(cipher: 'DIANTE DO ALTAR, SENHOR, ENTENDO MINHA VOCAÇÃO:'),
+  const Music(cipher: 'Bm G A D'),
+  const Music(cipher: 'DEVO SACRIFICAR A VIDA POR MEU IRMÃO.'),
+  const Music(cipher: 'O GRÃO CAÍDO NA TERRA SÓ VIVE SE VAI MORRER'),
+  const Music(cipher: 'É DANDO QUE SE RECEBE, MORRENDO SE VAI VIVER.'),
+  const Music(cipher: 'O VINHO E O PÃO OFERTAMOS, SÃO NOSSA RESPOSTA DE AMOR.'),
+  const Music(cipher: 'PEDIMOS HUMILDEMENTE: ACEITA-NOS, Ó SENHOR'),
+]);
+
+Chant sobeAJerusalem =
+    Chant(title: 'Sobe à Jerusalém', category: 'Ofertório', ciphers: [
+  const Music(cipher: 'D F# Bm G A7 D'),
+  const Music(cipher: 'SOBE A JERUSALÉM, VIRGEM OFERENTE SEM IGUAL.'),
+  const Music(cipher: 'F# Bm Em G A7'),
+  const Music(
+      cipher: 'VAI, APRESENTA AO PAI SEU MENINO-LUZ QUE CHEGOU NO NATAL.'),
+  const Music(cipher: 'D F# Bm G A7 D'),
+  const Music(cipher: 'E JUNTO A SUA CRUZ, QUANDO DEUS MORRER, FICA DE PÉ.'),
+  const Music(cipher: 'F# Bm Em A7 D'),
+  const Music(
+      cipher: 'SIM, ELE TE SALVOU, MAS O OFERECESTE POR NÓS COM TODA FÉ.'),
+  const Music(cipher: ''),
+  const Music(cipher: 'NÓS VAMOS RENOVAR ESTE SACRIFÍCIO DE JESUS.'),
+  const Music(
+      cipher: 'MORTE E RESSURREIÇÃO, VIDA QUE BROTOU DE SUA OFERTA NA CRUZ.'),
+  const Music(cipher: 'MÃE, VEM NOS ENSINAR A FAZER DA VIDA UMA OBLAÇÃO,'),
+  const Music(
+      cipher: 'CULTO AGRADÁVEL A DEUS É FAZER OFERTA DO PRÓPRIO CORAÇÃO.'),
+]);

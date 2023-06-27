@@ -3,3 +3,6 @@
 touch aux.txt
 
 kate aux.txt
+
+./generator.py
+
