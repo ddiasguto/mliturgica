@@ -1,6 +1,7 @@
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:text_scroll/text_scroll.dart';
 
 Widget showRandomSheet(context) {
   Maestro maestro = Provider.of<Maestro>(context);
@@ -16,11 +17,41 @@ Widget showRandomSheet(context) {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("    ${maestro.sheet[0].title}"),
-          Text("    ${maestro.sheet[1].title}"),
-          Text("    ${maestro.sheet[2].title}"),
-          Text("    ${maestro.sheet[3].title}"),
-          Text("    ${maestro.sheet[4].title}"),
+          TextScroll(
+            "    ${maestro.sheet[0].title}",
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            delayBefore: Duration(seconds: 2),
+          ),
+          TextScroll(
+            "    ${maestro.sheet[1].title}",
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            delayBefore: Duration(seconds: 2),
+          ),
+          TextScroll(
+            "    ${maestro.sheet[2].title}",
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            delayBefore: Duration(seconds: 2),
+          ),
+          TextScroll(
+            "    ${maestro.sheet[3].title}",
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            delayBefore: Duration(seconds: 2),
+          ),
+          TextScroll(
+            "    ${maestro.sheet[4].title}",
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            delayBefore: Duration(seconds: 2),
+          ),
         ],
       ),
     ),

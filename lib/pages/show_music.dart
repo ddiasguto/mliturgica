@@ -2,6 +2,7 @@ import 'package:diasguto/components/change_chant_button.dart';
 import 'package:diasguto/widgets/next_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:text_scroll/text_scroll.dart';
 import '../provider/Maestro.dart';
 import '../widgets/float_button.dart';
 import '../widgets/previous_button.dart';
@@ -32,9 +33,14 @@ class ShowMusicState extends State<ShowMusic> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-            maestro.localList[currentIndex].title.toUpperCase(),
+          title: TextScroll(
+            "${maestro.localList[currentIndex].title.toUpperCase()}                ",
             style: TextStyle(fontSize: 18),
+            velocity: Velocity(
+              pixelsPerSecond: Offset(15, 0),
+            ),
+            pauseOnBounce: Duration(seconds: 2),
+            delayBefore: Duration(seconds: 3),
           ),
           backgroundColor: Colors.cyan[800],
           elevation: 0,
