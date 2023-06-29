@@ -13,8 +13,13 @@ class _SheetPageState extends State<SheetPage> {
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       navigateThroughSheet(context),
-      generateButton(context),
-      acessShared(context),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          generateButton(context),
+          acessShared(context),
+        ],
+      ),
     ]);
   }
 }

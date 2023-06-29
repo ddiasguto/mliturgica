@@ -7,7 +7,7 @@ import '../../widgets/random_sheet_dialog.dart';
 
 Widget generateButton(context) {
   return Container(
-    width: 300,
+    width: 150,
     height: 45,
     child: Card(
       child: InkWell(
@@ -43,7 +43,7 @@ Widget generateButton(context) {
 
 Widget acessShared(context) {
   return Container(
-    width: 300,
+    width: 150,
     height: 45,
     child: Card(
       child: InkWell(
