@@ -29,7 +29,6 @@ class CardHome extends StatelessWidget {
               InkWell(
                 onTap: () {
                   maestro.setLocalList(category);
-                  maestro.setIndexToZero();
                   maestro.setCatalogueFalse();
                   maestro.setSheetFalse();
                   Navigator.push(

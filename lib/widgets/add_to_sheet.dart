@@ -57,6 +57,11 @@ Widget addToSheet(context) {
           maestro.setSheetElement(
             localList[currentIndex],
           );
+          final snackbar = SnackBar(
+            content: const Text('Adicionado.'),
+            backgroundColor: Colors.green[800],
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
         },
         child: const Text(
           'Adicionar',

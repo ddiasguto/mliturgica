@@ -130,26 +130,7 @@ class Maestro with ChangeNotifier {
   }
 
   void setSheetElement(Chant element) {
-    switch (category) {
-      case 'Entrada':
-        sheet[0] = element;
-        break;
-      case 'Ofertório':
-        sheet[1] = element;
-        break;
-
-      case 'Aclamação':
-        sheet[2] = element;
-        break;
-
-      case 'Comunhão':
-        sheet[3] = element;
-        break;
-      case 'Final':
-        sheet[4] = element;
-        break;
-      default:
-    }
+    sheet[indexCategory] = element;
     notifyListeners();
   }
 

@@ -32,7 +32,10 @@ class ShowMusicState extends State<ShowMusic> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(maestro.localList[currentIndex].title),
+          title: Text(
+            maestro.localList[currentIndex].title.toUpperCase(),
+            style: TextStyle(fontSize: 18),
+          ),
           backgroundColor: Colors.cyan[800],
           elevation: 0,
           actions: [
