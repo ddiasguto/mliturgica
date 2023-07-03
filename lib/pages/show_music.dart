@@ -93,7 +93,7 @@ class ShowMusicState extends State<ShowMusic> {
     bool isCatalogue = maestro.getIsCatalogue;
     int currentIndex = maestro.getCurrentIndex;
 
-    if (isSheet || isCatalogue) {
+    if (isCatalogue) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -103,6 +103,30 @@ class ShowMusicState extends State<ShowMusic> {
           ),
           Text(
             maestro.localList[currentIndex].category.toUpperCase(),
+            style: TextStyle(
+                fontSize: 16, color: const Color.fromARGB(255, 116, 12, 12)),
+            textAlign: TextAlign.end,
+          ),
+        ],
+      );
+    }
+    if (isSheet) {
+      List<String> categories = [
+        'Entrada',
+        'Ofertório',
+        'Aclamação',
+        'Comunhão',
+        'Encerramento'
+      ];
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            width: 15,
+            height: 30,
+          ),
+          Text(
+            categories.elementAt(currentIndex).toUpperCase(),
             style: TextStyle(
                 fontSize: 16, color: const Color.fromARGB(255, 116, 12, 12)),
             textAlign: TextAlign.end,

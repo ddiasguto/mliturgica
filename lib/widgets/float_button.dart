@@ -1,6 +1,7 @@
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:diasguto/widgets/add_to_sheet.dart';
 import 'package:diasguto/widgets/already_in_sheet.dart';
+import 'package:diasguto/widgets/radio_catalogue.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -11,8 +12,8 @@ class FloatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     bool isSheet = maestro.getIsSheet;
-
-    if (!isSheet) {
+    bool isCatalogue = maestro.getIsCatalogue;
+    if (!isSheet || isCatalogue) {
       return FloatingActionButton(
         onPressed: () {
           showDialog<String>(
@@ -38,14 +39,18 @@ class FloatButton extends StatelessWidget {
     int currentIndex = maestro.getCurrentIndex;
     int indexCategory = maestro.getIndexCategory;
     List sheet = maestro.getSheet;
+    bool isCatalogue = maestro.getIsCatalogue;
 
-    String str1 = localList[currentIndex].title;
-    String str2 = sheet[indexCategory].title;
-
-    if (str1 == str2) {
-      return alreadyInSheet(context);
+    if (!isCatalogue) {
+      String str1 = localList[currentIndex].title;
+      String str2 = sheet[indexCategory].title;
+      if (str1 == str2) {
+        return alreadyInSheet(context);
+      } else {
+        return addToSheet(context);
+      }
     } else {
-      return addToSheet(context);
+      return addOnCatalogue(context);
     }
   }
 }

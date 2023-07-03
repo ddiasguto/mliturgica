@@ -18,7 +18,7 @@ class ChangeChant extends StatelessWidget {
           color: Colors.green[900],
         ),
         onPressed: () {
-          maestro.changeChant(maestro.indexCategory);
+          maestro.changeChant(maestro.getIndexCategory);
         },
       );
     } else {

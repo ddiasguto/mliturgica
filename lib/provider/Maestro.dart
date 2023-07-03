@@ -19,6 +19,7 @@ class Maestro with ChangeNotifier {
 
   int currentIndex = 0;
   int indexCategory = 0;
+  int indexCatalogue = 0;
   String category = '';
   bool isSheet = false;
   bool isCatalogue = false;
@@ -51,6 +52,7 @@ class Maestro with ChangeNotifier {
   get getIsSheet => isSheet;
   get getCatalogueList => catalogueList;
   get getIsCatalogue => isCatalogue;
+  get getIndexCatalogue => indexCatalogue;
 
   int randomOffer = 0;
   int randomEntrance = 0;
@@ -84,7 +86,6 @@ class Maestro with ChangeNotifier {
       default:
     }
     category = _category;
-    isSheet = false;
     notifyListeners();
   }
 
@@ -129,8 +130,17 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void setIndexCatalogue(int index) {
+    indexCatalogue = index;
+    notifyListeners();
+  }
+
   void setSheetElement(Chant element) {
-    sheet[indexCategory] = element;
+    if (isCatalogue) {
+      sheet[indexCatalogue] = element;
+    } else {
+      sheet[indexCategory] = element;
+    }
     notifyListeners();
   }
 
