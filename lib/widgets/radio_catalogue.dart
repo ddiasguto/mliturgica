@@ -8,72 +8,59 @@ Widget addOnCatalogue(context) {
   int currentIndex = maestro.getCurrentIndex;
   List localList = maestro.getLocalList;
   int index = maestro.getIndexCatalogue;
+
   return AlertDialog(
     title: const Text(
       'Adicionar como:',
       style: TextStyle(color: Colors.cyan, fontSize: 18),
     ),
-    content: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        ListTile(
-          dense: true,
-          title: const Text('Entrada'),
-          leading: Radio<int>(
-            value: 0,
-            groupValue: index,
-            onChanged: (value) {
-              maestro.setIndexCatalogue(0);
-            },
+    content: DropdownButton<int>(
+      value: index,
+      elevation: 16,
+      style: TextStyle(
+        color: Color.fromARGB(255, 116, 12, 12),
+      ),
+      onChanged: (int? value) {
+        maestro.setIndexCatalogue(value!);
+      },
+      items: [
+        DropdownMenuItem<int>(
+          value: 0,
+          child: Text(
+            '  Entrada'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
           ),
         ),
-        ListTile(
-          dense: true,
-          title: const Text('Ofertório'),
-          leading: Radio<int>(
-            value: 1,
-            groupValue: index,
-            onChanged: (value) {
-              maestro.setIndexCatalogue(1);
-            },
+        DropdownMenuItem<int>(
+          value: 1,
+          child: Text(
+            '  Ofertório'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
           ),
         ),
-        ListTile(
-          dense: true,
-          title: const Text('Aclamação'),
-          leading: Radio<int>(
-            value: 2,
-            groupValue: index,
-            onChanged: (value) {
-              maestro.setIndexCatalogue(2);
-            },
+        DropdownMenuItem<int>(
+          value: 2,
+          child: Text(
+            '  Aclamação'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
           ),
         ),
-        ListTile(
-          dense: true,
-          title: const Text('Comunhão'),
-          leading: Radio<int>(
-            value: 3,
-            groupValue: index,
-            onChanged: (value) {
-              maestro.setIndexCatalogue(3);
-            },
+        DropdownMenuItem<int>(
+          value: 3,
+          child: Text(
+            '  Comunhão'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
           ),
         ),
-        ListTile(
-          dense: true,
-          title: const Text('Encerramento'),
-          leading: Radio<int>(
-            value: 4,
-            groupValue: index,
-            onChanged: (value) {
-              maestro.setIndexCatalogue(4);
-            },
+        DropdownMenuItem<int>(
+          value: 4,
+          child: Text(
+            '  Encerramento'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
           ),
         ),
       ],
     ),
-    actionsAlignment: MainAxisAlignment.spaceEvenly,
     actions: <Widget>[
       TextButton(
         onPressed: () => Navigator.pop(context, 'Cancel'),
