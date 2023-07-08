@@ -1,5 +1,20 @@
+import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
-import '../models/chant.dart';
+
+List<Chant> ending = [
+  vouNavegar,
+  mariaDeMinhaInfancia,
+  pelasEstradasDaVida,
+  aEscolhida,
+  chuvaDeGraca,
+  esAEscolhida,
+  quemEEsta,
+  seguraNaMaodeDeus,
+  oracaoPelaFamilia,
+  facoNovasTodasasCoisas,
+  mariaDeNazare,
+  santaMaeMaria
+];
 
 Chant vouNavegar =
     Chant(title: 'Vou navegar', category: 'Encerramento', ciphers: [

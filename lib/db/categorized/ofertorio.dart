@@ -1,5 +1,21 @@
+import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
-import '../models/chant.dart';
+
+List<Chant> offers = [
+  aTiMeUDEUS,
+  minhaVidaTemSentido,
+  estarEmTuasMaos,
+  seBendito,
+  deMaosEstendidas,
+  sabesSenhor,
+  meuCoracaoEParaTi,
+  umCoracaoParaAmar,
+  teuSou,
+  servoPorAmor,
+  paoEVinho,
+  dianteDoAltar,
+  sobeAJerusalem,
+];
 
 Chant aTiMeUDEUS =
     Chant(title: 'A ti, Meu Deus', category: 'Ofertório', ciphers: [

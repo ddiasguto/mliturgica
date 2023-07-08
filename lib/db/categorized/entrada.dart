@@ -1,5 +1,28 @@
+import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
-import '../models/chant.dart';
+
+List<Chant> entrance = [
+  teAmareiSenhor,
+  eisMeAquiSenhor,
+  senhorQuemEntrara,
+  oProfeta,
+  diaDeFesta,
+  euEMinhaCasa,
+  venhamTodosAdoremos,
+  porEntreAclamacoes,
+  aJesusEMaria,
+  hosanaHei,
+  hojeETempoDeLouvar,
+  coracaoSanto,
+  derramaTeuEspirito,
+  reinasSenhor,
+  reunidosAqui,
+  levantaEsIgreja,
+  queroLouvarTe,
+  louvadoSejasMeuSenhor,
+  abreSenhorNossosLabios,
+  olhosFirmesEmDeus
+];
 
 Chant teAmareiSenhor =
     Chant(title: 'Te amarei, Senhor', category: 'Entrada', ciphers: [
@@ -300,13 +323,13 @@ Chant venhamTodosAdoremos =
   const Music(cipher: 'Dm Am Em Am A7'),
   const Music(cipher: 'É A VOZ DO PAI QUE RESSOA EM NOSSA HISTÓRIA.'),
   const Music(cipher: 'Dm G C E7 Am'),
-  const Music(cipher: 'VENHAM TODOS, ADORE-E--MOS!'),
+  const Music(cipher: 'VENHAM TODOS, ADOREMOS!'),
   const Music(cipher: 'Dm/B G Am G/B C'),
-  const Music(cipher: '“EIS MEU FILHO MUITO AMA-A-----DO!”'),
+  const Music(cipher: '“EIS MEU FILHO MUITO AMADO!”'),
   const Music(cipher: 'Dm G C E7 Am'),
-  const Music(cipher: 'VENHAM TODOS, ADORE-E--MOS!'),
+  const Music(cipher: 'VENHAM TODOS, ADOREMOS!'),
   const Music(cipher: 'F Dm/B Am Em Am'),
-  const Music(cipher: 'DEUS TEM NELE O SEU AGRA-A--DO.'),
+  const Music(cipher: 'DEUS TEM NELE O SEU AGRADO.'),
   const Music(cipher: 'JOÃO BATISTA APONTA O CORDEIRO,'),
   const Music(cipher: 'QUE LAVA O MUNDO E TIRA TODA A CULPA:'),
   const Music(cipher: '“EU VI O FILHO DE DEUS E TESTEMUNHO”'),
@@ -351,4 +374,136 @@ Chant hosanaHei = Chant(title: 'Hosana Hei', category: 'Entrada', ciphers: [
   const Music(cipher: 'SANTO É O SEU NOME É O SENHOR DEUS DO UNIVERSO'),
   const Music(cipher: 'GLORIA DEUS DE ISRAEL'),
   const Music(cipher: 'NOSSO REI E SALVADOR'),
+]);
+
+Chant derramaTeuEspirito =
+    Chant(title: 'Derrama teu Espírito', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          'Senhor eu quero obedecer a tua voz, derrama o teu Espirito sobre todos nós!'),
+  Music(
+      cipher:
+          'Senhor eu quero mergulhar, me comprometer, entrar na intimidade do teu coração derrama em nós tua unção!'),
+  Music(
+      cipher:
+          'REF.: Derrama o teu amor aqui, derrama o teu amor aqui, faz chover sobre nós água viva. (bis)'),
+]);
+
+Chant reinasSenhor =
+    Chant(title: 'Reinas, Senhor', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          'Senhor eu sei que é teu este lugar, todos querem te adorar toma a tua direção.'),
+  Music(
+      cipher:
+          "Sim oh vem oh santo Espirito os espaços preencher, reverência a tua voz vamos fazer."),
+  Music(
+      cipher:
+          'REF.:Podes reinar. Senhor Jesus oh sim, o teu poder teu povo sentirá. Que bom Senhor saber que estás presente aqui reina Senhor neste lugar.'),
+  Music(
+      cipher:
+          '2. Visita cada irmão oh meu Senhor, dai-lhe paz interior e razões pra te louvar.'),
+  Music(
+      cipher:
+          'Desfaz todas tristezas, incertezas, desamor, glorifica o teu Nome oh meu Senhor.'),
+]);
+
+Chant reunidosAqui =
+    Chant(title: 'Reunidos aqui', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          'Reunidos aqui só pra louvar ao Senhor, novamente aqui em união.'),
+  const Music(cipher: 'Algo bom há de acontecer, algo bom Deus tem para nós'),
+  const Music(cipher: 'Reunidos aqui so pra louvar ao Senhor.'),
+  const Music(cipher: ''),
+  const Music(cipher: '(bis)'),
+]);
+
+Chant levantaEsIgreja =
+    Chant(title: 'Levanta, és Igreja', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          ' Levanta! És igreja também e Deus quer fazer uma obra acontecer na tua vida...'),
+  const Music(
+      cipher:
+          ' Desperta! Tu que dormes! E a luz do Senhor encherá de esplendor a tua vida...'),
+  const Music(cipher: ''),
+  const Music(
+      cipher:
+          ' REF: Somos povo de Deus, Ele espera de nós uma resposta: nosso sim!'),
+  const Music(
+      cipher:
+          ' Somos povo de Deus. Ele luta por nós! E a vitória já foi conquistada!'),
+]);
+
+Chant queroLouvarTe =
+    Chant(title: 'Quero louvar-te', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          'Quero louvar-te sempre mais e mais quero louvar-te sempre mais e mais.'),
+  const Music(
+      cipher: 'Buscar o teu querer, tua graça conhecer Quero louvar-te.'),
+  const Music(
+      cipher:
+          'REF.: As aves do céu cantam para ti, as feras do campo refletem teu'),
+  const Music(
+      cipher: 'poder quero cantar, quero levantar as minhas mãos a ti(bis)'),
+  const Music(cipher: '2.Quero amar-te sempre mais, quero amar-te sempre mais'),
+  const Music(
+      cipher:
+          'e mais, buscar o teu querer, tua graça conhecer, quero amar-te.'),
+  const Music(cipher: '3.Quero servir-te sempre mais...'),
+  const Music(cipher: '4.Quero buscar-te sempre mais...'),
+]);
+
+Chant louvadoSejasMeuSenhor =
+    Chant(title: 'Louvado sejas meu Senhor', category: 'Entrada', ciphers: [
+  const Music(cipher: 'Louvado seja meu Senhor (04 vezes)'),
+  const Music(cipher: ''),
+  const Music(cipher: '1.Por todas as suas criaturas, pelo sol e pela lua,'),
+  const Music(cipher: 'pelas estrelas do firmamento, pela água e pelo fogo.'),
+  const Music(cipher: ''),
+  const Music(cipher: '2.Por aqueles que agora são felizes,'),
+  const Music(cipher: 'por aqueles que agora choram,'),
+  const Music(cipher: 'por aqueles que agora nascem'),
+  const Music(cipher: 'por aqueles que agora morrem.'),
+  const Music(cipher: ''),
+  const Music(cipher: '3.0 que dá sentido a vida é amar-te e louvar-te,'),
+  const Music(cipher: 'para que a nossa vida seja sempre uma canção.'),
+]);
+
+Chant abreSenhorNossosLabios =
+    Chant(title: 'Abre Senhor, nossos lábios', category: 'Entrada', ciphers: [
+  const Music(
+      cipher:
+          'Abre Senhor nossos lábios, pra que nossa boca te cante eternamente'),
+  const Music(cipher: 'os teus louvores em tons e acordes vibrantes.'),
+  const Music(cipher: ''),
+  const Music(cipher: '1.Tu és Senhor, o caminho que os nossos passos conduz.'),
+  const Music(
+      cipher: 'Queremos que a tua palavra nas trevas pra nós seja luz.'),
+  const Music(cipher: ''),
+  const Music(
+      cipher: '2.Tu és Senhor a verdade, em quem professamos a crença.'),
+  const Music(
+      cipher: 'Queremos que a tua palavra do teu grande amor nos convença.'),
+  const Music(cipher: ''),
+  const Music(cipher: '3.Tu és Senhor plena vida, a qual nos devemos viver.'),
+  const Music(cipher: 'Queremos que a tua palavra em nós possa permanecer.'),
+]);
+
+Chant olhosFirmesEmDeus =
+    Chant(title: 'Olhos firmes em Deus', category: 'Entrada', ciphers: [
+  const Music(
+      cipher: '''Olhos firmes em Deus Olhos firmes em Deus, para não desanimar
+   Olhos firmes em Deus Olhos firmes em Deus, sim agora vou amar.
+  
+   1.Não desanimar ao peso da cruz, olhe para o seu Jesus.
+  Não desanimar ao ser deixado, Deus estar do seu lado
+  
+  2.E a Virgem Mãe poder abraçar e com ela suportar.
+  Toda dor tristeza e humilhação, fortaleza no coração.
+  
+  3.E do altar então se aproximar e do pão se alimentar.
+  Eucaristia o próprio Deus, comunhão experimentar.'''),
 ]);

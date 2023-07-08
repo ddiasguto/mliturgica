@@ -1,5 +1,20 @@
-import '../models/chant.dart';
-import '../templates/cipher.dart';
+import 'package:diasguto/models/chant.dart';
+import 'package:diasguto/templates/cipher.dart';
+
+List<Chant> aclamation = [
+  quandoEstamosUnidos,
+  tuaPalavra,
+  minhaAlmaAbrirei,
+  buscaiPrimeiro,
+  palavraDeSalvacao,
+  versiculoDoDia,
+  euVosDouUmNovoMandamento,
+  louvorEGloriaII,
+  louvorEGloria,
+  comoSaoBelosOsPes,
+  rendeiGracasAoSenhor,
+  noPrincipioEraAPalavra
+];
 
 Chant quandoEstamosUnidos =
     Chant(title: 'Quando estamos unidos', category: 'Aclamação', ciphers: [

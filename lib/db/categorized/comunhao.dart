@@ -1,5 +1,20 @@
+import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
-import '../models/chant.dart';
+
+List<Chant> comunion = [
+  comoEsLindo,
+  pelosPradosECampinas,
+  conhecoUmCoracao,
+  paoDaVida,
+  cantarABelezaDaVida,
+  sacramentoDaComunhao,
+  vouCantarTeuAmor,
+  quandoTeuPaiRevelou,
+  aBarca,
+  cancaoDoEspirito,
+  tomaiComei,
+  vejamEuAndeiPelasVilas,
+];
 
 Chant pelosPradosECampinas =
     Chant(title: 'Pelos prados e campinas', category: 'Comunhão', ciphers: [
