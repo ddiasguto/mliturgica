@@ -1,19 +1,22 @@
-import 'package:diasguto/db/aclamacao.dart';
-import 'package:diasguto/db/entrada.dart';
-import 'package:diasguto/db/final.dart';
-import 'package:diasguto/db/ofertorio.dart';
+import 'package:diasguto/db/categorized/aclamacao.dart';
+import 'package:diasguto/db/categorized/entrada.dart';
+import 'package:diasguto/db/categorized/final.dart';
+import 'package:diasguto/db/hymns.dart';
+import 'package:diasguto/db/categorized/ofertorio.dart';
+import 'package:diasguto/db/categorized/penitencial.dart';
+import 'package:diasguto/db/categorized/pos_comunion.dart';
+import 'package:diasguto/db/categorized/saint.dart';
+import 'package:diasguto/db/categorized/comunhao.dart';
 import 'package:diasguto/models/chant.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
-import '../db/comunhao.dart';
-import '../db/lists.dart';
 
 class Maestro with ChangeNotifier {
   List<Chant> localList = [
     teAmareiSenhor,
-    aTiMeUDEUS,
     buscaiPrimeiro,
     comoEsLindo,
+    aTiMeUDEUS,
     aEscolhida
   ];
 
@@ -26,10 +29,11 @@ class Maestro with ChangeNotifier {
 
   List<Chant> sheet = [
     teAmareiSenhor,
-    aTiMeUDEUS,
     buscaiPrimeiro,
+    aTiMeUDEUS,
+    santo,
     comoEsLindo,
-    aEscolhida
+    aEscolhida,
   ];
 
   List<Chant> catalogueList = [
@@ -37,7 +41,9 @@ class Maestro with ChangeNotifier {
     ...offers,
     ...aclamation,
     ...comunion,
-    ...ending
+    ...ending,
+    ...hymns,
+    ...saint
   ];
 
   void sortCatalogue() {
@@ -54,10 +60,13 @@ class Maestro with ChangeNotifier {
   get getIsCatalogue => isCatalogue;
   get getIndexCatalogue => indexCatalogue;
 
-  int randomOffer = 0;
   int randomEntrance = 0;
+  int randomPenitencial = 0;
   int randomAclamation = 0;
+  int randomOffer = 0;
   int randomComunion = 0;
+  int randomPosComunion = 0;
+  int randomSaint = 0;
   int randomEnding = 0;
 
   void setLocalList(String _category) {
@@ -66,26 +75,48 @@ class Maestro with ChangeNotifier {
         localList = entrance;
         indexCategory = 0;
         break;
-      case 'Ofertório':
-        localList = offers;
+      case 'Ato Penitencial':
+        localList = penitencial;
         indexCategory = 1;
         break;
+
       case 'Aclamação':
         localList = aclamation;
         indexCategory = 2;
         break;
-      case 'Comunhão':
-        localList = comunion;
+
+      case 'Oferório':
+        localList = offers;
         indexCategory = 3;
         break;
-      case 'Final':
-        localList = ending;
+
+      case 'Santo':
+        localList = saint;
         indexCategory = 4;
+        break;
+
+      case 'Comunhão':
+        localList = comunion;
+        indexCategory = 5;
+        break;
+
+      case 'Pos Comunhão':
+        localList = comunion;
+        indexCategory = 6;
+        break;
+      case 'Encerramento':
+        localList = ending;
+        indexCategory = 7;
         break;
 
       default:
     }
     category = _category;
+    notifyListeners();
+  }
+
+  void setHymnToLocalist() {
+    localList = hymns;
     notifyListeners();
   }
 
@@ -96,20 +127,34 @@ class Maestro with ChangeNotifier {
         sheet[0] = entrance[randomEntrance];
         break;
       case 1:
-        setRandomOffer();
-        sheet[1] = offers[randomOffer];
+        setRandomPenitencial();
+        sheet[1] = penitencial[randomPenitencial];
         break;
       case 2:
         setRandomAclamation();
         sheet[2] = aclamation[randomAclamation];
         break;
       case 3:
-        setRandomComunion();
-        sheet[3] = comunion[randomComunion];
+        setRandomOffer();
+        sheet[3] = offers[randomOffer];
         break;
       case 4:
+        setRandomSaint();
+        sheet[4] = saint[randomSaint];
+        break;
+      case 5:
+        setRandomComunion();
+        sheet[5] = comunion[randomComunion];
+        break;
+
+      case 6:
+        setRandomPosComunion();
+        sheet[6] = posComunion[randomPosComunion];
+        break;
+
+      case 7:
         setRandomEnding();
-        sheet[4] = ending[randomEnding];
+        sheet[7] = ending[randomEnding];
         break;
     }
     notifyListeners();
@@ -193,13 +238,25 @@ class Maestro with ChangeNotifier {
   void setRandomOffer() {
     do {
       randomOffer = Random().nextInt(offers.length);
-    } while (sheet[1].title == offers[randomOffer].title);
+    } while (sheet[3].title == offers[randomOffer].title);
+  }
+
+  void setRandomPenitencial() {
+    do {
+      randomOffer = Random().nextInt(penitencial.length);
+    } while (sheet[1].title == offers[randomPenitencial].title);
   }
 
   void setRandomEntrance() {
     do {
       randomEntrance = Random().nextInt(entrance.length);
     } while (sheet[0].title == entrance[randomEntrance].title);
+  }
+
+  void setRandomSaint() {
+    do {
+      randomEntrance = Random().nextInt(entrance.length);
+    } while (sheet[4].title == entrance[randomSaint].title);
   }
 
   void setRandomAclamation() {
@@ -211,13 +268,19 @@ class Maestro with ChangeNotifier {
   void setRandomComunion() {
     do {
       randomComunion = Random().nextInt(comunion.length);
-    } while (sheet[3].title == comunion[randomComunion].title);
+    } while (sheet[5].title == comunion[randomComunion].title);
+  }
+
+  void setRandomPosComunion() {
+    do {
+      randomComunion = Random().nextInt(comunion.length);
+    } while (sheet[6].title == comunion[randomPosComunion].title);
   }
 
   void setRandomEnding() {
     do {
       randomEnding = Random().nextInt(ending.length);
-    } while (sheet[4].title == ending[randomEnding].title);
+    } while (sheet[6].title == ending[randomEnding].title);
   }
 
   void setCatalogueTrue() {
@@ -227,20 +290,29 @@ class Maestro with ChangeNotifier {
 
   void randomSheet() {
     setRandomEntrance();
-    setRandomOffer();
+    setRandomPenitencial();
     setRandomAclamation();
+    setRandomOffer();
+    setRandomSaint();
     setRandomComunion();
+    setRandomPosComunion();
     setRandomEnding();
     sheet[0] = entrance[randomEntrance];
     sheet[0] = entrance[randomEntrance];
-    sheet[1] = offers[randomOffer];
-    sheet[1] = offers[randomOffer];
+    sheet[1] = penitencial[randomPenitencial];
+    sheet[1] = penitencial[randomPenitencial];
     sheet[2] = aclamation[randomAclamation];
     sheet[2] = aclamation[randomAclamation];
-    sheet[3] = comunion[randomComunion];
-    sheet[3] = comunion[randomComunion];
-    sheet[4] = ending[randomEnding];
-    sheet[4] = ending[randomEnding];
+    sheet[3] = offers[randomOffer];
+    sheet[3] = offers[randomOffer];
+    sheet[4] = saint[randomSaint];
+    sheet[4] = saint[randomSaint];
+    sheet[5] = comunion[randomComunion];
+    sheet[5] = comunion[randomComunion];
+    sheet[6] = posComunion[randomPosComunion];
+    sheet[6] = posComunion[randomPosComunion];
+    sheet[7] = ending[randomEnding];
+    sheet[7] = ending[randomEnding];
     notifyListeners();
   }
 }
