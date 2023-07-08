@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +20,7 @@ Widget chantsCatalogue(context) {
           subtitle: Text(
             '${maestro.getCatalogueList[index].category}'.toUpperCase(),
             style: TextStyle(
-              color: Color.fromARGB(255, 94, 32, 32),
+              color: redApp,
             ),
           ),
           tileColor: Colors.cyan[400],

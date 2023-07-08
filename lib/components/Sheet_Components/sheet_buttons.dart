@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ Widget generateButton(context) {
             builder: randomSheetDialog,
           );
         },
-        splashColor: Color.fromARGB(255, 116, 12, 12),
+        splashColor: redApp,
         focusColor: Colors.black,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +52,7 @@ Widget acessShared(context) {
           /*Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ShowMusic()));*/
         },
-        splashColor: Color.fromARGB(255, 116, 12, 12),
+        splashColor: redApp,
         focusColor: Colors.black,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +100,7 @@ Widget navigateThroughSheet(context) {
             },
           );
         },
-        splashColor: Color.fromARGB(255, 116, 12, 12),
+        splashColor: redApp,
         focusColor: Colors.black,
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -107,13 +108,13 @@ Widget navigateThroughSheet(context) {
             Text(
               'Navegar pela partitura ',
               style: TextStyle(
-                color: Color.fromARGB(255, 116, 12, 12),
+                color: redApp,
                 fontSize: 20,
               ),
             ),
             Icon(
               Icons.arrow_circle_right,
-              color: Color.fromARGB(255, 116, 12, 12),
+              color: redApp,
               size: 30,
             ),
           ],

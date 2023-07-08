@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
@@ -86,7 +87,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green[900],
-        unselectedItemColor: const Color.fromARGB(255, 116, 12, 12),
+        unselectedItemColor: redApp,
         onTap: _onItemTapped,
       ),
     );

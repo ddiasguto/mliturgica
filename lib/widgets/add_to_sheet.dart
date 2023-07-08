@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,7 @@ Widget addToSheet(context) {
               Text(
                 "\"${maestro.getSheet[indexCategory].title}\"",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 116, 12, 12),
+                  color: redApp,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -47,8 +48,7 @@ Widget addToSheet(context) {
         onPressed: () => Navigator.pop(context, 'Cancel'),
         child: const Text(
           'Cancelar',
-          style:
-              TextStyle(color: Color.fromARGB(255, 116, 12, 12), fontSize: 18),
+          style: TextStyle(color: redApp, fontSize: 18),
         ),
       ),
       TextButton(

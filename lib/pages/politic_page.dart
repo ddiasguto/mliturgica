@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:flutter/material.dart';
 
 class PoliticPage extends StatefulWidget {
@@ -25,37 +26,28 @@ class _PoliticPageState extends State<PoliticPage> {
               'Licenças de Código aberto'.toUpperCase(),
               style: TextStyle(
                 fontSize: 16,
-                color: const Color.fromARGB(255, 116, 12, 12),
+                color: redApp,
               ),
             )),
         ListTile(
           leading: Icon(Icons.book),
           title: Text(
             'Sobre'.toUpperCase(),
-            style: TextStyle(
-              fontSize: 16,
-              color: const Color.fromARGB(255, 116, 12, 12),
-            ),
+            style: TextStyle(fontSize: 16, color: redApp),
           ),
         ),
         ListTile(
           leading: Icon(Icons.book),
           title: Text(
             'Política de Privacidade'.toUpperCase(),
-            style: TextStyle(
-              fontSize: 16,
-              color: const Color.fromARGB(255, 116, 12, 12),
-            ),
+            style: TextStyle(fontSize: 16, color: redApp),
           ),
         ),
         ListTile(
           leading: Icon(Icons.book),
           title: Text(
             'Contato'.toUpperCase(),
-            style: TextStyle(
-              fontSize: 16,
-              color: const Color.fromARGB(255, 116, 12, 12),
-            ),
+            style: TextStyle(fontSize: 16, color: redApp),
           ),
         )
       ]),

@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +25,7 @@ class MyBottomSheet extends StatelessWidget {
               },
               child: Icon(
                 Icons.close,
-                color: const Color.fromARGB(255, 116, 12, 12),
+                color: redApp,
               ))
         ],
         automaticallyImplyLeading: false,
@@ -33,31 +34,31 @@ class MyBottomSheet extends StatelessWidget {
         children: [
           ListTile(
             title: Text('Entrada: ${maestro.getSheet[0].title}'),
-            iconColor: Colors.red,
+            iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Ofertório: ${maestro.getSheet[1].title}'),
-            iconColor: Colors.red,
+            iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Aclamação: ${maestro.getSheet[2].title}'),
-            iconColor: Colors.red,
+            iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Comunhão: ${maestro.getSheet[3].title}'),
-            iconColor: Colors.red,
+            iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
             title: Text('Encerramento: ${maestro.getSheet[4].title}'),
-            iconColor: Colors.red,
+            iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),

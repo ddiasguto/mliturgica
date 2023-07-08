@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,7 @@ Widget chantsCategory(context) {
       itemBuilder: (_, index) => ListTile(
           leading: const Icon(Icons.music_note),
           title: Text(maestro.localList[index].title),
-          iconColor: Colors.red,
+          iconColor: redApp,
           tileColor: Colors.cyan,
           selectedColor: Colors.amberAccent,
           onTap: () {

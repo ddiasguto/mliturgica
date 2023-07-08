@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../provider/Maestro.dart';
@@ -23,7 +24,7 @@ class CategoryBottomSheet extends StatelessWidget {
                 },
                 child: Icon(
                   Icons.close,
-                  color: const Color.fromARGB(255, 116, 12, 12),
+                  color: redApp,
                 ))
           ],
           automaticallyImplyLeading: false,
@@ -34,7 +35,7 @@ class CategoryBottomSheet extends StatelessWidget {
                   leading: const Icon(Icons.music_note),
                   title: Text('${maestro.getLocalList[index].title}'),
                   dense: true,
-                  iconColor: Colors.red,
+                  iconColor: redApp,
                   tileColor: Colors.cyan,
                 )));
   }

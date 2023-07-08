@@ -76,7 +76,7 @@ class ShowMusicState extends State<ShowMusic> {
         ),
         body: Column(children: [
           LinearProgressIndicator(
-              backgroundColor: const Color.fromARGB(255, 116, 12, 12),
+              backgroundColor: redApp,
               color: Colors.green[800],
               value: (maestro.currentIndex + 1) / maestro.localList.length),
           CategoryAtMusic(context),
@@ -103,8 +103,7 @@ class ShowMusicState extends State<ShowMusic> {
           ),
           Text(
             maestro.localList[currentIndex].category.toUpperCase(),
-            style: TextStyle(
-                fontSize: 16, color: const Color.fromARGB(255, 116, 12, 12)),
+            style: TextStyle(fontSize: 16, color: redApp),
             textAlign: TextAlign.end,
           ),
         ],
@@ -127,8 +126,7 @@ class ShowMusicState extends State<ShowMusic> {
           ),
           Text(
             categories.elementAt(currentIndex).toUpperCase(),
-            style: TextStyle(
-                fontSize: 16, color: const Color.fromARGB(255, 116, 12, 12)),
+            style: TextStyle(fontSize: 16, color: redApp),
             textAlign: TextAlign.end,
           ),
         ],
