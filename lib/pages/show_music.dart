@@ -1,4 +1,5 @@
 import 'package:diasguto/components/change_chant_button.dart';
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/widgets/next_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -112,9 +113,12 @@ class ShowMusicState extends State<ShowMusic> {
     if (isSheet) {
       List<String> categories = [
         'Entrada',
-        'Ofertório',
+        'Ato Penitencial',
         'Aclamação',
+        'Ofertório',
+        'Santo',
         'Comunhão',
+        'Pós Comunhão',
         'Encerramento'
       ];
       return Row(
