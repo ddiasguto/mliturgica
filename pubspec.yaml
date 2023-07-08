@@ -69,6 +69,11 @@ flutter:
      - assets/img/agnus1.jpg
      - assets/img/corpus.jpg
      - assets/img/samaria.jpg
+     - assets/img/holymary.jpg
+     - assets/img/vatican.jpg
+     - assets/img/vatican2.jpg
+     - assets/img/vatican3.jpg
+     - assets/img/family.jpg
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

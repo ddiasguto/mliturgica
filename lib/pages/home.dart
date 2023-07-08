@@ -9,6 +9,15 @@ class Home extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(10),
       children: [
+        imgHome[builder.setHomeIMG()],
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Text(
+            'Liturgia da Missa'.toUpperCase(),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 22, color: redApp),
+          ),
+        ),
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

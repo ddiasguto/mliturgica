@@ -4,7 +4,7 @@ import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:diasguto/provider/Design.dart';
 import 'components/app_bars.dart';
 import 'pages/home.dart';
 
@@ -13,6 +13,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Maestro()),
+        ChangeNotifierProvider(create: (_) => Design())
       ],
       child: const MyApp(),
     ),
