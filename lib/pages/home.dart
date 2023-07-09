@@ -1,20 +1,17 @@
 import 'package:diasguto/components/cards_home.dart';
 import 'package:diasguto/components/home_img.dart';
-import 'package:diasguto/provider/Design.dart';
 import 'package:flutter/material.dart';
 import 'package:diasguto/models/colors.dart';
-import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Design builder = Provider.of<Design>(context);
     return ListView(
       padding: const EdgeInsets.all(10),
       children: [
-        imgHome[builder.setHomeIMG()],
+        Holymary(),
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Text(

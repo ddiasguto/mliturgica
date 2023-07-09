@@ -13,7 +13,6 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Maestro()),
-        ChangeNotifierProvider(create: (_) => Design())
       ],
       child: const MyApp(),
     ),
