@@ -11,9 +11,9 @@ List<Widget> imgHome = [
 class Holymary extends StatelessWidget {
   Widget build(context) {
     return Image.asset(
-      'assets/img/holymary.jpg',
-      width: 600,
-      height: 150,
+      'assets/img/holymary2.jpg',
+      width: MediaQuery.of(context).size.width * .95,
+      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
       fit: BoxFit.cover,
     );
   }
