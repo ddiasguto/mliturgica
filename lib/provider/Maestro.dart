@@ -33,10 +33,12 @@ class Maestro with ChangeNotifier {
 
   List<Chant> sheet = [
     teAmareiSenhor,
+    aJesusEMaria,
     buscaiPrimeiro,
     aTiMeUDEUS,
     santo,
     comoEsLindo,
+    estasEntreNos,
     aEscolhida,
   ];
 
@@ -49,7 +51,9 @@ class Maestro with ChangeNotifier {
     ...hymns,
     ...saint,
     ...marianos,
-    ...adoration
+    ...adoration,
+    ...posComunion,
+    ...penitencial
   ];
 
   void sortCatalogue() {
@@ -112,8 +116,8 @@ class Maestro with ChangeNotifier {
         indexCategory = 5;
         break;
 
-      case 'Pos Comunhão':
-        localList = comunion;
+      case 'Pós Comunhão':
+        localList = posComunion;
         indexCategory = 6;
         break;
       case 'Encerramento':
