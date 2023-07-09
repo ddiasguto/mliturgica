@@ -1,7 +1,7 @@
 import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
 
-List<Chant> marianos = [regacoAcolhedor];
+List<Chant> marianos = [regacoAcolhedor, imaculadaMariaDeDeus, maezinha];
 
 Chant regacoAcolhedor =
     Chant(title: 'Regaço acolhedor', category: 'Cântico Mariano', ciphers: [
@@ -76,3 +76,63 @@ Chant imaculadaMariaDeDeus = Chant(
       const Refrao(cipher: 'Imaculada, Maria do povo'),
       const Refrao(cipher: 'Mãe dos aflitos que estão junto à cruz'),
     ]);
+
+Chant perfe = Chant(
+    title: 'Perfeito é quem te criou',
+    category: 'Cântico Mariano',
+    ciphers: [
+      const Music(cipher: 'Se um dia um anjo declarou'),
+      const Music(cipher: 'que tu era cheia de Deus'),
+      const Music(cipher: 'agora penso quem sou eu'),
+      const Music(cipher: 'para não te dizer também,'),
+      const Music(cipher: 'cheia de graça ó mãe'),
+      const Music(cipher: 'cheia de graça o mãe, agraciada.'),
+      verse(),
+      const Music(cipher: 'Se a palavra ensinou'),
+      const Music(cipher: 'que todos hão de concordar'),
+      const Music(cipher: 'e as gerações te proclamar'),
+      const Music(cipher: 'agora eu também direi'),
+      const Music(cipher: 'tu és bendita ó mãe,'),
+      const Music(cipher: 'tu és bendita ó mãe bem aventurada.'),
+      verse(),
+      const Music(cipher: 'Surgiu um grande sinal no céu'),
+      const Music(cipher: 'uma mulher revestida de sol'),
+      const Music(cipher: 'a lua debaixo dos seus pés'),
+      const Music(cipher: 'e na cabeça uma coroa.'),
+      verse(),
+      const Music(cipher: 'Não há como se comparar'),
+      const Music(cipher: 'perfeito é quem te criou'),
+      const Music(cipher: 'se o criador te coroou:'),
+      verse(),
+      const Refrao(cipher: 'Te coroamos ó mãe.'),
+      const Refrao(cipher: 'Te coroamos ó mãe.'),
+      const Refrao(cipher: 'Te coroamos ó mãe.'),
+      const Refrao(cipher: 'Nossa rainha. (3x)'),
+    ]);
+
+Chant maezinha =
+    Chant(title: 'Mãezinha do céu', category: 'Cântico Mariano', ciphers: [
+  const Music(cipher: 'Mãezinha do céu, eu não sei rezar'),
+  const Music(cipher: 'eu só sei dizer, que eu quero te amar'),
+  verse(),
+  const Refrao(cipher: 'Azul é teu manto;'),
+  const Refrao(cipher: 'branco é teu véu;'),
+  const Refrao(cipher: 'mãezinha eu quero, te ver lá no céu'),
+  verse(),
+  const Music(cipher: 'Mãezinha do céu, mão do puro amor'),
+  const Music(cipher: 'Jesus é teu filho e eu tambem sou'),
+  verse(),
+  const Refrao(cipher: 'Azul é teu manto;'),
+  const Refrao(cipher: 'branco é teu véu;'),
+  const Refrao(cipher: 'mãezinha eu quero, te ver lá no céu'),
+  verse(),
+  const Music(cipher: 'Mãezinha do céu'),
+  const Music(cipher: 'vou te consagrar,'),
+  const Music(cipher: 'a minha inocência'),
+  const Music(cipher: 'guarda sem cessar'),
+  verse(),
+  const Refrao(cipher: 'Azul é teu manto;'),
+  const Refrao(cipher: 'branco é teu véu;'),
+  const Refrao(cipher: 'mãezinha eu quero, te ver lá no céu'),
+  verse(),
+]);
