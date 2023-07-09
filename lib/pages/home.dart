@@ -39,16 +39,24 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CardHome("Entrada", "agnus1.jpg", false),
-                  CardHome("Ofertório", "agnus1.jpg", false),
+                  CardHome("Ato Penitencial", "agnus1.jpg", false),
                 ],
               ),
               const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 CardHome("Aclamação", "samaria.jpg", false),
-                CardHome("Comunhão", "corpus.jpg", false),
+                CardHome("Ofertório", "corpus.jpg", false),
               ]),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  CardHome("Santo", "agnus1.jpg", false),
+                  CardHome("Comunhão", "santissimo.jpg", false),
+                ],
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CardHome("Pós Comunhão", "agnus1.jpg", false),
                   CardHome("Encerramento", "agnus1.jpg", false),
                 ],
               ),
@@ -64,14 +72,14 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GenericCard('Hinos de Louvor', 'agnus1.jpg', true),
-                  GenericCard("Espirito Santo", 'agnus1.jpg', false)
+                  GenericCard("Espirito Santo", 'holyspirit2.jpg', false)
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GenericCard('Adoração', 'agnus1.jpg', true),
-                  GenericCard('Marianos', 'agnus1.jpg', true)
+                  GenericCard('Marianos', 'mary1.jpg', true)
                 ],
               )
             ],
