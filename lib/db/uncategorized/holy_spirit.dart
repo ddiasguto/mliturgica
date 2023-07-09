@@ -5,7 +5,8 @@ List<Chant> holy_spirit = [
   divinoEspiritoSanto,
   osDevotos,
   euNavegarei,
-  aNosDescei
+  aNosDescei,
+  moveTeEmMim
 ];
 
 Chant divinoEspiritoSanto = Chant(
@@ -72,30 +73,80 @@ Chant osDevotos = Chant(
       const Music(cipher: 'Ele nascerá do povo'),
     ]);
 
-Chant euNavegarei =
-    Chant(title: 'Eu navegarei', category: 'Encerramento', ciphers: [
-  const Music(cipher: 'Eu navegarei no oceano do Espírito'),
-  const Music(cipher: 'e ali adorarei ao Deus de meu amor.(2x)'),
-  verse(),
-  const Music(cipher: 'Espirito, Espirito,'),
-  const Music(cipher: 'que desce como fogo,'),
-  const Music(cipher: 'vem como em Pentecostes'),
-  const Music(cipher: 'e enche-me de novo! (bis)'),
-]);
+Chant euNavegarei = Chant(
+    title: 'Eu navegarei',
+    category: 'Louvor ao Santo Espírito',
+    ciphers: [
+      const Music(cipher: 'Eu navegarei no oceano do Espírito'),
+      const Music(cipher: 'e ali adorarei ao Deus de meu amor.(2x)'),
+      verse(),
+      const Music(cipher: 'Espirito, Espirito,'),
+      const Music(cipher: 'que desce como fogo,'),
+      const Music(cipher: 'vem como em Pentecostes'),
+      const Music(cipher: 'e enche-me de novo! (bis)'),
+    ]);
 
-Chant aNosDescei =
-    Chant(title: 'A nós descei Divina Luz', category: 'Encerramento', ciphers: [
-  const Music(cipher: 'A nós descei, divina luz! (bis)'),
-  const Music(
-      cipher: 'Em nossas almas acendei. O amor, o amor de Jesus! (bis)'),
-  verse(),
-  const Music(cipher: '1. Vós sois a alma da igreja,'),
-  const Music(cipher: 'vós sois a vida, sois o amor,'),
-  const Music(cipher: 'vós sois a graça benfazeja'),
-  const Music(cipher: 'que nos irmana no Senhor. (bis)'),
-  verse(),
-  const Music(cipher: '2. Divino Espírito descei.'),
-  const Music(cipher: 'Os corações vinde inflamar,'),
-  const Music(cipher: 'e nossas almas preparar'),
-  const Music(cipher: 'para o que deus nos quer falar. (bis)'),
-]);
+Chant aNosDescei = Chant(
+    title: 'A nós descei Divina Luz',
+    category: 'Louvor ao Santo Espírito',
+    ciphers: [
+      const Music(cipher: 'A nós descei, divina luz! (bis)'),
+      const Music(
+          cipher: 'Em nossas almas acendei. O amor, o amor de Jesus! (bis)'),
+      verse(),
+      const Music(cipher: '1. Vós sois a alma da igreja,'),
+      const Music(cipher: 'vós sois a vida, sois o amor,'),
+      const Music(cipher: 'vós sois a graça benfazeja'),
+      const Music(cipher: 'que nos irmana no Senhor. (bis)'),
+      verse(),
+      const Music(cipher: '2. Divino Espírito descei.'),
+      const Music(cipher: 'Os corações vinde inflamar,'),
+      const Music(cipher: 'e nossas almas preparar'),
+      const Music(cipher: 'para o que deus nos quer falar. (bis)'),
+    ]);
+
+Chant moveTeEmMim = Chant(
+    title: 'Move-te em mim',
+    category: 'Louvor ao Santo Espírito',
+    ciphers: [
+      const Music(cipher: 'O Espírito de Deus está neste lugar'),
+      const Music(cipher: 'O Espírito de Deus se move neste lugar'),
+      const Music(cipher: 'Está aqui para consolar'),
+      const Music(cipher: 'Está aqui para libertar'),
+      const Music(cipher: 'Está aqui para guiar'),
+      const Music(cipher: 'O Espírito de Deus está aqui'),
+      verse(),
+      const Music(cipher: 'O Espírito de Deus está neste lugar'),
+      const Music(cipher: 'O Espírito de Deus se move neste lugar'),
+      const Music(cipher: 'Está aqui para consolar'),
+      const Music(cipher: 'Está aqui para libertar'),
+      const Music(cipher: 'Está aqui para guiar'),
+      const Music(cipher: 'O Espírito de Deus está aqui'),
+      verse(),
+      const Refrao(cipher: 'Move-te em mim! Move-te em mim!'),
+      const Refrao(cipher: 'Toca a minha mente e o meu coração'),
+      const Refrao(cipher: 'Enche a minha vida com o teu amor!'),
+      const Refrao(cipher: 'Move-te em mim!'),
+      const Refrao(cipher: 'Deus Espírito, move-te em mim!'),
+      verse(),
+      const Music(cipher: 'O Espírito de Deus está neste lugar'),
+      const Music(cipher: 'O Espírito de Deus se move neste lugar'),
+      const Music(cipher: 'Está aqui para consolar'),
+      const Music(cipher: 'Está aqui para libertar'),
+      const Music(cipher: 'Está aqui para guiar'),
+      const Music(cipher: 'O Espírito de Deus está aqui'),
+      verse(),
+      const Music(cipher: 'O Espírito de Deus está neste lugar'),
+      const Music(cipher: 'O Espírito de Deus se move neste lugar'),
+      const Music(cipher: 'Está aqui para consolar'),
+      const Music(cipher: 'Está aqui para libertar'),
+      const Music(cipher: 'Está aqui para guiar'),
+      const Music(cipher: 'O Espírito de Deus está aqui'),
+      verse(),
+      const Refrao(cipher: 'Move-te em mim! Move-te em mim!'),
+      const Refrao(cipher: 'Toca a minha mente e o meu coração'),
+      const Refrao(cipher: 'Enche a minha vida com o teu amor!'),
+      const Refrao(cipher: 'Move-te em mim!'),
+      const Refrao(cipher: 'Deus Espírito, move-te em mim!'),
+      verse(),
+    ]);

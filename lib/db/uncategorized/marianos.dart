@@ -1,7 +1,14 @@
 import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
 
-List<Chant> marianos = [regacoAcolhedor, imaculadaMariaDeDeus, maezinha];
+List<Chant> marianos = [
+  regacoAcolhedor,
+  imaculadaMariaDeDeus,
+  maezinha,
+  cenaculoDeAmor,
+  hinoAAbadia,
+  hinoAAparecida
+];
 
 Chant regacoAcolhedor =
     Chant(title: 'Regaço acolhedor', category: 'Cântico Mariano', ciphers: [
@@ -135,4 +142,84 @@ Chant maezinha =
   const Refrao(cipher: 'branco é teu véu;'),
   const Refrao(cipher: 'mãezinha eu quero, te ver lá no céu'),
   verse(),
+]);
+
+Chant cenaculoDeAmor =
+    Chant(title: 'Cenáculo de amor', category: 'Cântico Mariano', ciphers: [
+  const Music(cipher: '52. Reunidos aqui, num Cenáculo de amor,'),
+  const Music(cipher: 'pedimos forças pelas mãos de Maria.'),
+  const Music(cipher: 'Ela conhece bem todos seus queridos'),
+  const Music(cipher: 'filhos e não deixará faltar para nós seu auxílio.'),
+  verse(),
+  Music(cipher: 'Vinde, Espírito Santo! Vinde'),
+  const Music(cipher: 'por meio da poderosa intercessão'),
+  const Music(cipher: 'do Imaculado Coração de Maria.'),
+  const Music(cipher: 'Vossa amadíssima Esposa.'),
+  verse(),
+]);
+
+Chant hinoAAbadia = Chant(
+    title: "Hino à nossa Senhora D'abadia",
+    category: 'Cântico Mariano',
+    ciphers: [
+      const Music(cipher: '1. Óh! Filha do eterno Pai,'),
+      const Music(cipher: 'de deus Filho Mãe pia,'),
+      const Music(cipher: 'do Espírito Santo esposa...'),
+      const Music(cipher: "OH Senhora D'Abadia. (Bis)"),
+      verse(),
+      Music(cipher: '2-Agora vos invocamos,'),
+      const Music(cipher: 'em devota melodia.'),
+      const Music(cipher: 'Levai ao Céu nossos votos...'),
+      const Music(cipher: "OH Senhora D'Abadia. (Bis)"),
+      verse(),
+      Music(cipher: '3- Sois a alegria dos céus.'),
+      const Music(cipher: 'Sois luz na noite sombria.'),
+      const Music(cipher: 'Sois o terror do inferno...'),
+      const Music(cipher: "OH Senhora D'Abadia.(bis)"),
+      verse(),
+      Music(cipher: '4- Sois a Torre de Davi.'),
+      const Music(cipher: 'Dos fortes a valentia.'),
+      const Music(cipher: 'Sois a chave que abre os céu...'),
+      const Music(cipher: "OH Senhora D'Abadia. (bis)"),
+      verse(),
+      Music(cipher: '5- Se o vosso nome invocarmos.'),
+      const Music(cipher: 'Nos momentos de agonia.'),
+      const Music(cipher: 'Mostrais que sois nossa Mãe...'),
+      const Music(cipher: "OH Senhora D'Abadia.(Bis)"),
+      verse(),
+      Music(cipher: '6- E por vossa intercessão'),
+      const Music(cipher: 'e poderosa valia alcançai-nos Glória eterna...'),
+      const Music(cipher: "OH Senhora D'Abadia.(Bis)"),
+    ]);
+
+Chant hinoAAparecida =
+    Chant(title: 'Hino à Aparecida', category: 'Cântico Mariano', ciphers: [
+  const Music(cipher: 'Viva a Mãe de Deus e nossa'),
+  const Music(cipher: 'sem pecado concebida'),
+  const Music(cipher: 'viva a Virgem Imaculada'),
+  const Music(cipher: 'oh Senhora Aparecida'),
+  verse(),
+  Music(cipher: '1.No calvário junto a cruz'),
+  const Music(cipher: 'com a alma de dor ferida'),
+  const Music(cipher: 'Jesus vos fez nossa Mãe,'),
+  const Music(cipher: 'Ó Senhora Aparecida.'),
+  verse(),
+  Music(cipher: '2.Protegei a Santa Igreja'),
+  const Music(cipher: 'Ó Mãe terna e compadecida,'),
+  const Music(cipher: 'protegei a nossa pátria'),
+  const Music(cipher: 'Ó Senhora Aparecida.'),
+  verse(),
+  Music(cipher: '3.Aqui estão vossos devotos'),
+  const Music(cipher: 'cheios de fé incendida'),
+  const Music(cipher: 'de conforto e de esperança'),
+  const Music(cipher: 'Ó Senhora Aparecida.'),
+  verse(),
+  Music(cipher: '4. Virgem santa, virgem bela,'),
+  const Music(cipher: 'Mãe amável, Mãe querida amparai-nos,'),
+  const Music(cipher: 'socorrei-nos Ó Senhora Aparecida.'),
+  verse(),
+  Music(cipher: '5. Velai por nossas famílias'),
+  const Music(cipher: 'pela infância desvalida'),
+  const Music(cipher: 'pelo povo brasileiro'),
+  const Music(cipher: 'Ó Senhora Aparecida.'),
 ]);
