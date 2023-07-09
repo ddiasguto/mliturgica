@@ -80,6 +80,10 @@ flutter:
      - assets/home_img/patrus.jpg
      - assets/home_img/family.jpg
      - assets/home_img/teresinha1.jpg
+     - assets/img/mary1.jpg
+     - assets/img/holyspirit.jpg
+     - assets/img/holyspirit2.jpg
+     - assets/img/santissimo.jpg
      
 
   # An image asset can refer to one or more resolution-specific "variants", see
