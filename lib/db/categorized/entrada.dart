@@ -21,7 +21,8 @@ List<Chant> entrance = [
   queroLouvarTe,
   louvadoSejasMeuSenhor,
   abreSenhorNossosLabios,
-  olhosFirmesEmDeus
+  olhosFirmesEmDeus,
+  deixaALuzDoCeuEntrar
 ];
 
 Chant teAmareiSenhor =
