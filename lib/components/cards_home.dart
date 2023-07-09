@@ -1,3 +1,4 @@
+import 'package:diasguto/functions/navigator.dart';
 import 'package:diasguto/pages/show_list_category.dart';
 import 'package:diasguto/pages/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
@@ -7,8 +8,9 @@ import 'package:provider/provider.dart';
 
 class CardHome extends StatelessWidget {
   final String category, img;
+  final bool direct;
 
-  const CardHome(this.category, this.img);
+  const CardHome(this.category, this.img, this.direct);
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +34,11 @@ class CardHome extends StatelessWidget {
                   maestro.setLocalList(category);
                   maestro.setCatalogueFalse();
                   maestro.setSheetFalse();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ShowCategory()));
+                  if (direct) {
+                    navigator(context, ShowMusic());
+                  } else {
+                    navigator(context, ShowCategory());
+                  }
                 },
                 onLongPress: () {
                   maestro.setLocalList(category);
@@ -68,10 +71,11 @@ class CardHome extends StatelessWidget {
   }
 }
 
-class Card2 extends StatelessWidget {
+class GenericCard extends StatelessWidget {
   final String category, img;
+  final direct;
 
-  const Card2(this.category, this.img);
+  const GenericCard(this.category, this.img, this.direct);
 
   @override
   Widget build(BuildContext context) {
@@ -92,13 +96,14 @@ class Card2 extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  maestro.setHymnToLocalist();
+                  maestro.setLocalListUncategorized(category);
                   maestro.setCatalogueTrue();
                   maestro.setSheetFalse();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ShowMusic()));
+                  if (direct) {
+                    navigator(context, ShowMusic());
+                  } else {
+                    navigator(context, ShowCategory());
+                  }
                 },
                 focusColor: Colors.black,
                 child: Row(
