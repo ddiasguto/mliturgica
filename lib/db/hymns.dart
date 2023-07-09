@@ -4,7 +4,7 @@ import 'package:diasguto/templates/cipher.dart';
 List<Chant> hymns = [hinoDeLouvor, gloriaADeusNosAltosCeus, hinoDeLouvor2];
 
 Chant gloriaADeusNosAltosCeus =
-    Chant(title: 'Glória a Deus nos altos céus', category: 'Entrada', ciphers: [
+    Chant(title: 'Glória a Deus nos altos céus', category: '', ciphers: [
   const Music(
       cipher:
           '76. Glória a Deus nos altos céus, paz na terra aos seus amados. A vós louvam Rei celeste os que foram libertados.'),
@@ -32,8 +32,7 @@ Chant gloriaADeusNosAltosCeus =
           '5.Vos somente sois o Santo, o altissimo o Senhor. Com o Espírito Divino de Deus paino esplendor.'),
 ]);
 
-Chant hinoDeLouvor =
-    Chant(title: 'Hino de Louvor', category: 'Entrada', ciphers: [
+Chant hinoDeLouvor = Chant(title: 'Hino de Louvor', category: '', ciphers: [
   const Music(
       cipher:
           ' Glória a Deus nas Alturas e Paz na Terra aos homens por Ele amados.'),
@@ -54,8 +53,7 @@ Chant hinoDeLouvor =
           'Só Vós o Senhor. Só Vós o Altíssimo, Jesus Cristo, com o Espírito Santo, na glória de Deus Pai. Amém! (4x)'),
 ]);
 
-Chant hinoDeLouvor2 =
-    Chant(title: 'Hino de Louvor 2', category: 'Entrada', ciphers: [
+Chant hinoDeLouvor2 = Chant(title: 'Hino de Louvor 2', category: '', ciphers: [
   const Music(
       cipher:
           'Glória, gloria a Deus nas alturas....ôô....gloria, e a nós a sua Paz.(Bis)'),
