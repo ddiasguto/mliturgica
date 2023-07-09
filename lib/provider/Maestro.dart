@@ -1,7 +1,8 @@
+import 'package:diasguto/components/home_img.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/entrada.dart';
 import 'package:diasguto/db/categorized/final.dart';
-import 'package:diasguto/db/hymns.dart';
+import 'package:diasguto/db/uncategorized/hymns.dart';
 import 'package:diasguto/db/categorized/ofertorio.dart';
 import 'package:diasguto/db/categorized/penitencial.dart';
 import 'package:diasguto/db/categorized/pos_comunion.dart';
@@ -59,6 +60,7 @@ class Maestro with ChangeNotifier {
   get getCatalogueList => catalogueList;
   get getIsCatalogue => isCatalogue;
   get getIndexCatalogue => indexCatalogue;
+  get getRandomImg => randomImg;
 
   int randomEntrance = 0;
   int randomPenitencial = 0;
@@ -68,6 +70,11 @@ class Maestro with ChangeNotifier {
   int randomPosComunion = 0;
   int randomSaint = 0;
   int randomEnding = 0;
+  int randomImg = 0;
+
+  void randomImgHome() {
+    randomImg = Random().nextInt(imgHome.length);
+  }
 
   void setLocalList(String _category) {
     switch (_category) {

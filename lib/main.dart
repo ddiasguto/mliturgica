@@ -4,7 +4,6 @@ import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:diasguto/provider/Design.dart';
 import 'components/app_bars.dart';
 import 'pages/home.dart';
 
@@ -26,6 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     maestro.sortCatalogue();
+    maestro.randomImgHome();
+
     return MaterialApp(
       title: "Músicas Litúrgicas",
       home: MyStatefulWidget(),
