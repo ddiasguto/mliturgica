@@ -85,7 +85,7 @@ class Maestro with ChangeNotifier {
         indexCategory = 2;
         break;
 
-      case 'Oferório':
+      case 'Ofertório':
         localList = offers;
         indexCategory = 3;
         break;
