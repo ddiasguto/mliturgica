@@ -2,12 +2,15 @@ import 'package:diasguto/components/home_img.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/entrada.dart';
 import 'package:diasguto/db/categorized/final.dart';
+import 'package:diasguto/db/uncategorized/adoration.dart';
+import 'package:diasguto/db/uncategorized/holy_spirit.dart';
 import 'package:diasguto/db/uncategorized/hymns.dart';
 import 'package:diasguto/db/categorized/ofertorio.dart';
 import 'package:diasguto/db/categorized/penitencial.dart';
 import 'package:diasguto/db/categorized/pos_comunion.dart';
 import 'package:diasguto/db/categorized/saint.dart';
 import 'package:diasguto/db/categorized/comunhao.dart';
+import 'package:diasguto/db/uncategorized/marianos.dart';
 import 'package:diasguto/models/chant.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
@@ -44,7 +47,9 @@ class Maestro with ChangeNotifier {
     ...comunion,
     ...ending,
     ...hymns,
-    ...saint
+    ...saint,
+    ...marianos,
+    ...adoration
   ];
 
   void sortCatalogue() {
@@ -119,6 +124,32 @@ class Maestro with ChangeNotifier {
       default:
     }
     category = _category;
+    notifyListeners();
+  }
+
+  void setLocalListUncategorized(String _category) {
+    switch (_category) {
+      case 'Marianos':
+        localList = marianos;
+        category = _category;
+        break;
+      case 'Espirito Santo':
+        localList = holy_spirit;
+        category = _category;
+        break;
+
+      case 'Hinos de Louvor':
+        localList = hymns;
+        category = _category;
+        break;
+
+      case 'Adoração':
+        localList = adoration;
+        category = _category;
+        break;
+
+      default:
+    }
     notifyListeners();
   }
 
