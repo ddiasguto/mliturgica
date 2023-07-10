@@ -30,6 +30,7 @@ class Maestro with ChangeNotifier {
   String category = '';
   bool isSheet = false;
   bool isCatalogue = false;
+  bool showCipher = false;
 
   List<Chant> sheet = [
     teAmareiSenhor,
@@ -53,7 +54,8 @@ class Maestro with ChangeNotifier {
     ...marianos,
     ...adoration,
     ...posComunion,
-    ...penitencial
+    ...penitencial,
+    ...holy_spirit
   ];
 
   void sortCatalogue() {
@@ -70,6 +72,7 @@ class Maestro with ChangeNotifier {
   get getIsCatalogue => isCatalogue;
   get getIndexCatalogue => indexCatalogue;
   get getRandomImg => randomImg;
+  get getShowCipher => showCipher;
 
   int randomEntrance = 0;
   int randomPenitencial = 0;
@@ -80,6 +83,11 @@ class Maestro with ChangeNotifier {
   int randomSaint = 0;
   int randomEnding = 0;
   int randomImg = 0;
+
+  void setShowCipher() {
+    showCipher = !showCipher;
+    notifyListeners();
+  }
 
   void randomImgHome() {
     randomImg = Random().nextInt(imgHome.length);

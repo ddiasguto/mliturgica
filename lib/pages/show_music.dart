@@ -1,4 +1,6 @@
 import 'package:diasguto/components/change_chant_button.dart';
+import 'package:diasguto/components/show_cipher_button.dart';
+import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/widgets/next_button.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +33,7 @@ class ShowMusicState extends State<ShowMusic> {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     int currentIndex = maestro.getCurrentIndex;
+    List<Chant> localList = maestro.getLocalList;
 
     return Scaffold(
         appBar: AppBar(
@@ -52,6 +55,7 @@ class ShowMusicState extends State<ShowMusic> {
                   style: TextStyle(fontSize: 16)),
             ),
             ChangeChant(),
+            showCipher(context),
             Container(
               width: 20,
             )
@@ -82,8 +86,10 @@ class ShowMusicState extends State<ShowMusic> {
               value: (maestro.currentIndex + 1) / maestro.localList.length),
           CategoryAtMusic(context),
           Expanded(
-              child:
-                  ListView(children: maestro.localList[currentIndex].ciphers)),
+              child: ListView(
+                  children: localList[currentIndex].hasCypher
+                      ? localList[currentIndex].ciphers
+                      : localList[currentIndex].lyrics)),
         ]),
         floatingActionButton: const FloatButton());
   }
