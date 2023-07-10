@@ -40,7 +40,29 @@ Chant regacoAcolhedor = Chant(
       const Music(cipher: "Oh, minh'alma"),
       const Music(cipher: 'Retorna à tua paz'),
     ],
-    hasCypher: false);
+    ciphers: [
+      Cifra(cipher: "G7M      A9       Bm7"),
+      Music(cipher: "Oh, minh'alma retorna à tua paz"),
+      Cifra(cipher: "G7M         A9"),
+      Music(cipher: "Como criança bem tranquila"),
+      Cifra(cipher: "D7M   A/C#       Bm7"),
+      Music(cipher: "No regaço acolhedor de sua mãe.(2x)"),
+      Cifra(cipher: "G7M A            D7M"),
+      Music(cipher: "Minha Mãe é a Virgem Maria"),
+      Cifra(cipher: "A/C#    Bm7  Bm/A      G7M         A9"),
+      Music(cipher: "É ela que agora vai me acolher, me abraçar,"),
+      Cifra(cipher: "D7M   A/C#      Bm7"),
+      Music(cipher: "me perdoar, me compreender,"),
+      Cifra(cipher: "G7M         A"),
+      Music(cipher: "me acalmar, me ensinar,"),
+      Cifra(cipher: "       Bm7"),
+      Music(cipher: "me educar,"),
+      Cifra(cipher: "      G7M A9  Bm7"),
+      Music(cipher: "me formar, me amar. (2x)"),
+      Cifra(cipher: "G7M      A        Bm7"),
+      Music(cipher: "Oh, minh'alma retorna à tua paz..."),
+    ],
+    hasCypher: true);
 
 Chant imaculadaMariaDeDeus = Chant(
     title: 'Imaculada Maria de Deus',
@@ -81,7 +103,8 @@ Chant imaculadaMariaDeDeus = Chant(
       const Refrao(cipher: 'Imaculada, Maria do povo'),
       const Refrao(cipher: 'Mãe dos aflitos que estão junto à cruz'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant perfe = Chant(
     title: 'Perfeito é quem te criou',
@@ -115,7 +138,8 @@ Chant perfe = Chant(
       const Refrao(cipher: 'Te coroamos ó mãe.'),
       const Refrao(cipher: 'Nossa rainha. (3x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant maezinha = Chant(
     title: 'Mãezinha do céu',
@@ -145,7 +169,8 @@ Chant maezinha = Chant(
       const Refrao(cipher: 'mãezinha eu quero, te ver lá no céu'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant cenaculoDeAmor = Chant(
     title: 'Cenáculo de amor',
@@ -162,7 +187,8 @@ Chant cenaculoDeAmor = Chant(
       const Music(cipher: 'Vossa amadíssima Esposa.'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hinoAAbadia = Chant(
     title: "Hino à nossa Senhora D'abadia",
@@ -197,7 +223,8 @@ Chant hinoAAbadia = Chant(
       const Music(cipher: 'e poderosa valia alcançai-nos Glória eterna...'),
       const Music(cipher: "OH Senhora D'Abadia.(Bis)"),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hinoAAparecida = Chant(
     title: 'Hino à Aparecida',
@@ -232,4 +259,5 @@ Chant hinoAAparecida = Chant(
       const Music(cipher: 'pelo povo brasileiro'),
       const Music(cipher: 'Ó Senhora Aparecida.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

@@ -49,7 +49,8 @@ Chant pelosPradosECampinas = Chant(
       const Music(cipher: 'E NA CASA DO SENHOR EU IREI HABITAR'),
       const Music(cipher: 'E ESTE CANTO PARA SEMPRE IREI CANTAR'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant sacramentoDaComunhao = Chant(
     title: 'Sacramento da comunhão',
@@ -86,7 +87,8 @@ Chant sacramentoDaComunhao = Chant(
       const Music(cipher: 'Jesus, rosto divino do homem'),
       const Music(cipher: 'Jesus, rosto humano de Deus'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant cantarABelezaDaVida = Chant(
     title: 'Cantar a beleza da vida',
@@ -140,7 +142,8 @@ Chant cantarABelezaDaVida = Chant(
           cipher:
               'MISSÃO DO TEU POVO ESCOLHIDO, SENHOR, VEM NUTRIR NOSSA LIDA!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant conhecoUmCoracao = Chant(
     title: 'Conheço um coração',
@@ -173,7 +176,8 @@ Chant conhecoUmCoracao = Chant(
       const Music(cipher: 'DERRAMA SOBRE NÓS, A ÁGUA DO AMOR,'),
       const Music(cipher: 'O ESPÍRITO DE DEUS NOSSO SENHOR!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant paoDaVida = Chant(
     title: 'Pão da vida',
@@ -198,7 +202,8 @@ Chant paoDaVida = Chant(
       const Music(cipher: 'NA EUCARISITA, O VINHO SE TORNA SANGUE'),
       const Music(cipher: 'VERDADEIRA BEBIDA, NOSSA ALEGRIA.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant comoEsLindo = Chant(
     title: 'Como és lindo',
@@ -221,7 +226,8 @@ Chant comoEsLindo = Chant(
           cipher:
               'SOU EM TI, ÉS EM MIM. MINH\'ALMA DIZ: MEU DEUS, COMO ÉS LINDO! (2X)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant vouCantarTeuAmor = Chant(
     title: 'Vou cantar teu amor',
@@ -269,7 +275,8 @@ Chant vouCantarTeuAmor = Chant(
       const Music(cipher: 'PROCLAMAR QUE A VIDA É BEM MAIS'),
       const Music(cipher: 'DO QUE AQUILO QUE O MUNDO ENSINA E CANTAR '),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant quandoTeuPaiRevelou = Chant(
     title: 'Quando teu pai revelou',
@@ -318,7 +325,8 @@ Chant quandoTeuPaiRevelou = Chant(
       const Music(cipher: 'E de Ti, nosso Pai, venha o Espírito Santo de amor'),
       const Music(cipher: 'Pra gerar e formar Cristo em nós'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant vejamEuAndeiPelasVilas = Chant(
     title: 'Vejam, eu andei pelas vilas',
@@ -359,7 +367,8 @@ Chant vejamEuAndeiPelasVilas = Chant(
       const Music(cipher: 'NÃO PRECISA DE REI. TRONOS, OUTRO JEITO MAIS RARO'),
       const Music(cipher: 'DE JUNTAR OS DISPERSOS O MEU PAI TEM POR LEI.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant tomaiComei = Chant(
     title: 'Tomai, comei',
@@ -384,7 +393,8 @@ Chant tomaiComei = Chant(
       const Music(cipher: '5. DE DEUS VIRÁ O ESPÍRITO SANTO,'),
       const Music(cipher: 'QUE VOU MANDAR PRA ENXUGAR VOSSO PRANTO.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant cancaoDoEspirito = Chant(
     title: 'Canção do espírito',
@@ -417,7 +427,8 @@ Chant cancaoDoEspirito = Chant(
       const Music(cipher: 'A ELE DÁ TUAS TRISTEZAS, DESILUSÕES E TUA CRUZ,'),
       const Music(cipher: 'ENTÃO TERÁS A VIDA EM NOME DE JESUS.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant aBarca = Chant(
     title: 'A Barca',
@@ -447,4 +458,5 @@ Chant aBarca = Chant(
       const Music(cipher: 'ÂNSIA ETERNA DE ALMAS QUE ESPERAM,'),
       const Music(cipher: 'BONDOSO AMIGO QUE ASSIM ME CHAMAS'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

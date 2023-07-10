@@ -46,7 +46,8 @@ Chant vouNavegar = Chant(
       const Music(cipher: 'E me ajuda a ser fiel'),
       const Music(cipher: 'Só Cristo é luz e paz!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant mariaDeMinhaInfancia = Chant(
     title: 'Maria de minha infância',
@@ -86,7 +87,8 @@ Chant mariaDeMinhaInfancia = Chant(
       const Music(cipher: 'E embora cansado, sem rezar como eu devo'),
       const Music(cipher: 'Eu de Ti Maria, não me esqueço'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant pelasEstradasDaVida = Chant(
     title: 'Pelas estradas da vida',
@@ -116,7 +118,8 @@ Chant pelasEstradasDaVida = Chant(
       const Refrao(cipher: 'Ó vem conosco, vem caminhar,'),
       const Refrao(cipher: 'Santa Maria vem (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant aEscolhida = Chant(
     title: 'A escolhida',
@@ -140,7 +143,8 @@ Chant aEscolhida = Chant(
       const Refrao(cipher: 'Nossa mãe sempre será (bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant chuvaDeGraca = Chant(
     title: 'Chuva de graças',
@@ -161,7 +165,8 @@ Chant chuvaDeGraca = Chant(
       const Refrao(cipher: 'Chuva de graça neste lugar'),
       const Refrao(cipher: 'Derrama! (2x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant esAEscolhida = Chant(
     title: 'És a escolhida',
@@ -180,7 +185,8 @@ Chant esAEscolhida = Chant(
       const Music(cipher: 'Maria és a escolhida de Deus'),
       const Music(cipher: 'Maria roga pelos filhos teus (2x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant quemEEsta = Chant(
     title: 'Quem é esta que avança como a aurora',
@@ -194,7 +200,8 @@ Chant quemEEsta = Chant(
       const Music(cipher: 'AH, AH, AH, MINHA ALMA GLORIFICA AO SENHOR,'),
       const Music(cipher: 'MEU ESPÍRITO EXULTA EM DEUS, MEU SALVADOR.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant seguraNaMaodeDeus = Chant(
     title: 'Segura na mão de Deus',
@@ -220,7 +227,8 @@ Chant seguraNaMaodeDeus = Chant(
       const Music(cipher: 'Jesus Cristo prometeu que jamais te deixará'),
       const Music(cipher: 'Segura na mão de Deus e vai'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant oracaoPelaFamilia = Chant(
     title: 'Oração pela família',
@@ -281,7 +289,8 @@ Chant oracaoPelaFamilia = Chant(
       const Refrao(cipher: 'Abençoa, Senhor, a minha também (2x)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant facoNovasTodasasCoisas = Chant(
     title: 'Faço novas todas as coisas',
@@ -316,7 +325,8 @@ Chant facoNovasTodasasCoisas = Chant(
       const Refrao(cipher: 'Que faço novas todas as coisas. (2x)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant mariaDeNazare = Chant(
     title: 'Maria de Nazaré',
@@ -356,7 +366,8 @@ Chant mariaDeNazare = Chant(
       const Refrao(cipher: 'Ave Maria, Mãe de Jesus! (bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant santaMaeMaria = Chant(
     title: 'Santa Mãe Maria',
@@ -395,4 +406,5 @@ Chant santaMaeMaria = Chant(
       const Refrao(cipher: 'Ave, Maria! Ave, Maria! (bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

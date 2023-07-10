@@ -32,7 +32,8 @@ Chant quandoEstamosUnidos = Chant(
       const Music(cipher: 'Aleluia, aleluia, aleluia'),
       const Music(cipher: 'Aleluia, aleluia, aleluia'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant tuaPalavra = Chant(
     title: 'Tua palavra',
@@ -53,7 +54,8 @@ Chant tuaPalavra = Chant(
       const Music(cipher: 'Aleluia, aleluia, aleluia!'),
       const Music(cipher: 'Aleluia, aleluia, aleluia!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant minhaAlmaAbrirei = Chant(
     title: 'Minha alma abrirei',
@@ -68,7 +70,8 @@ Chant minhaAlmaAbrirei = Chant(
       const Music(cipher: 'D A/C# Bm F#m G A D'),
       const Music(cipher: 'ALE LUIA, ALE LUIA, CRISTO É MEU REI.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant buscaiPrimeiro = Chant(
     title: 'Buscai primeiro',
@@ -91,7 +94,8 @@ Chant buscaiPrimeiro = Chant(
       const Music(cipher: 'NÃO É O SERVO MAIOR QUE O SENHOR'),
       const Music(cipher: 'ALELUIA! ALELUIA!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant palavraDeSalvacao = Chant(
     title: 'Palavra de Salvação',
@@ -118,7 +122,8 @@ Chant palavraDeSalvacao = Chant(
       const Music(cipher: 'MAS NÃO HÁ OUTRO NA TERRA E NO CÉU'),
       const Music(cipher: 'MAIS COMPANHEIRO, MAIS SANTO E FIEL'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant versiculoDoDia = Chant(
     title: 'Versiculo do Dia',
@@ -131,7 +136,8 @@ Chant versiculoDoDia = Chant(
       const Music(cipher: 'Em A7'),
       const Music(cipher: 'MAS DE TODA A PALAVRA DA BOCA DE DEUS'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant euVosDouUmNovoMandamento = Chant(
     title: 'Eu vos dou um novo mandamento',
@@ -146,7 +152,8 @@ Chant euVosDouUmNovoMandamento = Chant(
       const Music(cipher: 'D E7 A'),
       const Music(cipher: 'DISSE O SENHOR. (2X)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant louvorEGloriaII = Chant(
     title: 'Louvor e Gloria 2',
@@ -163,7 +170,8 @@ Chant louvorEGloriaII = Chant(
       const Music(cipher: 'G D'),
       const Music(cipher: '“EIS MEU FILHO MUITO AMADO, ESCUTAI-O TODOS VÓS”'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant louvorEGloria = Chant(
     title: 'Louvor e Glória',
@@ -178,7 +186,8 @@ Chant louvorEGloria = Chant(
       const Music(cipher: 'Em A'),
       const Music(cipher: 'MAS DE TODA PALAVRA DA BOCA DE DEUS'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant comoSaoBelosOsPes = Chant(
     title: 'Como São belos os pés do Mensageiro',
@@ -215,7 +224,8 @@ Chant comoSaoBelosOsPes = Chant(
       const Music(cipher: 'Ele é Deus e Senhor'),
       const Music(cipher: ''),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant rendeiGracasAoSenhor = Chant(
     title: 'Rendei Graças ao Senhor',
@@ -240,7 +250,8 @@ Chant rendeiGracasAoSenhor = Chant(
       const Music(cipher: 'G Em A'),
       const Music(cipher: 'QUE SEU AMOR É SEM FIM!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant noPrincipioEraAPalavra = Chant(
     title: 'No princípio era a palavra',
@@ -258,4 +269,5 @@ Chant noPrincipioEraAPalavra = Chant(
       const Music(cipher: 'D G D7'),
       const Music(cipher: 'SEU AMOR NOS LIBERTOU'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

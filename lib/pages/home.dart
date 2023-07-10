@@ -71,15 +71,15 @@ class Home extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GenericCard('Hinos de Louvor', 'agnus1.jpg', true),
+                  GenericCard('Hinos de Louvor', 'agnus1.jpg', false),
                   GenericCard("Espirito Santo", 'holyspirit2.jpg', false)
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GenericCard('Adoração', 'agnus1.jpg', true),
-                  GenericCard('Marianos', 'mary1.jpg', true)
+                  GenericCard('Adoração', 'agnus1.jpg', false),
+                  GenericCard('Marianos', 'mary1.jpg', false)
                 ],
               )
             ],

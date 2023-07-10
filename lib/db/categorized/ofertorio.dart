@@ -50,7 +50,8 @@ Chant aTiMeUDEUS = Chant(
       const Refrao(cipher: 'E Te dar o meu coração'),
       const Refrao(cipher: 'Eu quero sentir o calor, de Tuas mãos'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant minhaVidaTemSentido = Chant(
     title: 'Minha vida tem sentido',
@@ -80,7 +81,8 @@ Chant minhaVidaTemSentido = Chant(
       const Music(cipher: 'Eu te ofereço vinho e pão,'),
       const Music(cipher: 'Eu te ofereço meu amor. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant estarEmTuasMaos = Chant(
     title: 'Estar em tuas Mãos',
@@ -108,7 +110,8 @@ Chant estarEmTuasMaos = Chant(
       const Music(cipher: 'E do sol que traz vida e calor'),
       const Music(cipher: 'Cada dia, crescendo e aprendendo a recomeçar'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant seBendito = Chant(
     title: 'Sê bendito',
@@ -144,7 +147,8 @@ Chant seBendito = Chant(
       const Refrao(cipher: 'Ao prepararmos a tua mesa'),
       const Refrao(cipher: 'Em ti buscamos ressurreição!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant deMaosEstendidas = Chant(
     title: 'De Mãos estendidas',
@@ -179,7 +183,8 @@ Chant deMaosEstendidas = Chant(
       const Refrao(cipher: 'De mãos estendidas'),
       const Refrao(cipher: 'Ofertamos o que de graça recebemos (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant sabesSenhor = Chant(
     title: 'Sabes, Senhor',
@@ -221,7 +226,8 @@ Chant sabesSenhor = Chant(
       const Refrao(cipher: 'Nós queremos com os irmãos compartilhar'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant meuCoracaoEParaTi = Chant(
     title: 'Meu coração é para ti',
@@ -257,7 +263,8 @@ Chant meuCoracaoEParaTi = Chant(
       const Refrao(cipher: 'Porque Tu me deste o carinho'),
       const Refrao(cipher: 'Me deste o amor (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant umCoracaoParaAmar = Chant(
     title: 'Um coração para amar',
@@ -283,7 +290,8 @@ Chant umCoracaoParaAmar = Chant(
       const Refrao(cipher: 'Toma, Senhor, que ele é teu'),
       const Refrao(cipher: 'Meu coração não é meu (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant teuSou = Chant(
     title: 'Teu sou',
@@ -308,7 +316,8 @@ Chant teuSou = Chant(
       const Refrao(cipher: 'Toma minha vida, ó Pai Teu sou.'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant servoPorAmor = Chant(
     title: 'Servo por amor',
@@ -336,7 +345,8 @@ Chant servoPorAmor = Chant(
       const Refrao(cipher: 'Servo por amor'),
       const Refrao(cipher: 'Sacerdote da humanidade'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant paoEVinho = Chant(
     title: 'Pão e Vinho',
@@ -353,7 +363,8 @@ Chant paoEVinho = Chant(
       const Music(cipher: 'Vem transformar também minha vida'),
       const Music(cipher: 'Ó senhor, é teu esse milagre de amor. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant dianteDoAltar = Chant(
     title: 'Diante do altar',
@@ -379,7 +390,8 @@ Chant dianteDoAltar = Chant(
       const Refrao(cipher: 'Diante do altar, Senhor, entendo minha vocação'),
       const Refrao(cipher: 'Devo sacrificar a vida por meus irmãos (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant sobeAJerusalem = Chant(
     title: 'Sobe à Jerusalém',
@@ -400,4 +412,5 @@ Chant sobeAJerusalem = Chant(
       const Music(
           cipher: 'Culto agradável a Deus é fazer a oferta do próprio coração'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

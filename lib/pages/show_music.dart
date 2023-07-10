@@ -34,6 +34,7 @@ class ShowMusicState extends State<ShowMusic> {
     Maestro maestro = Provider.of<Maestro>(context);
     int currentIndex = maestro.getCurrentIndex;
     List<Chant> localList = maestro.getLocalList;
+    bool showCipher = maestro.getShowCipher;
 
     return Scaffold(
         appBar: AppBar(
@@ -55,7 +56,7 @@ class ShowMusicState extends State<ShowMusic> {
                   style: TextStyle(fontSize: 16)),
             ),
             ChangeChant(),
-            showCipher(context),
+            buttonCipher(context),
             Container(
               width: 20,
             )
@@ -88,7 +89,9 @@ class ShowMusicState extends State<ShowMusic> {
           Expanded(
               child: ListView(
                   children: localList[currentIndex].hasCypher
-                      ? localList[currentIndex].ciphers
+                      ? (showCipher
+                          ? localList[currentIndex].ciphers
+                          : localList[currentIndex].lyrics)
                       : localList[currentIndex].lyrics)),
         ]),
         floatingActionButton: const FloatButton());

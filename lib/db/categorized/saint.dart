@@ -17,7 +17,8 @@ Chant santoE = Chant(
           cipher:
               'Bendito o que vem em nome do Senhor Hosana, hosana nas alturas, hosana, hosana ao rei. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant saanto = Chant(
     title: 'Saaanto, Saaanto',
@@ -32,7 +33,8 @@ Chant saanto = Chant(
       const Music(cipher: ' 2-Bendito o que vem em'),
       const Music(cipher: 'nome do Senhor. Hosana nas alturas'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant oSenhorESanto = Chant(
     title: 'O Senhor é Santo',
@@ -50,7 +52,8 @@ Chant oSenhorESanto = Chant(
               '2.Bendito o que vem/ em nome do Senhor, hosana nas alturas / Hosana ao'),
       const Music(cipher: 'Senhor.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant santo = Chant(
     title: 'Santo',
@@ -64,4 +67,5 @@ Chant santo = Chant(
       const Music(cipher: ''),
       const Music(cipher: 'Bendito aquele que vem, em nome do Senhor (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

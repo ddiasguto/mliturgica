@@ -50,13 +50,14 @@ Widget verseCipher() {
 class Cifra extends StatelessWidget {
   final String cipher;
   Widget build(BuildContext context) {
-    return Text(
-      textAlign: TextAlign.center,
-      cipher,
-      style: const TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: 8,
-        color: redApp,
+    return Padding(
+      padding: const EdgeInsets.only(top: 12, left: 22),
+      child: Text(
+        cipher,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          color: redApp,
+        ),
       ),
     );
   }

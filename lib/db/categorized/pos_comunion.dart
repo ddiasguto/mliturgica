@@ -39,7 +39,8 @@ Chant estasEntreNos = Chant(
           cipher:
               '4. Ó Senhor da vida, creio sempre em ti! Filho Salvador, eu espero em ti! Santo Espírito de Amor, desce sobre nós. Tu de mil caminhos nos conduzes a uma fé, e por mil estradas onde andarmos nós, qual semente nos levarás!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant teLouvoEmVerdade = Chant(
     title: 'Te louvo em verdade',
@@ -66,7 +67,8 @@ Chant teLouvoEmVerdade = Chant(
       const Refrao(cipher: 'Te louvo, te louvo em verdade.'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant amarComoJesusAmou = Chant(
     title: 'Amar como Jesus amou',
@@ -124,7 +126,8 @@ Chant amarComoJesusAmou = Chant(
       const Refrao(cipher: 'eu sei que eu dormiria muito mais feliz.(Bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant qualAChave = Chant(
     title: 'Qual é a chave',
@@ -146,7 +149,8 @@ Chant qualAChave = Chant(
       const Refrao(cipher: 'Deixa Jesus Te dar'),
       const Refrao(cipher: 'a tua salvação.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant soPorTiJesus = Chant(
     title: 'Só por Ti, Jesus',
@@ -167,7 +171,8 @@ Chant soPorTiJesus = Chant(
       const Music(
           cipher: 'não vacilarei e mesmo na dor quero seguir, até o fim.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant noitesTraicoeiras = Chant(
     title: 'Noites traiçoeiras',
@@ -195,7 +200,8 @@ Chant noitesTraicoeiras = Chant(
       const Music(cipher: 'Após a dor vem a alegria'),
       const Music(cipher: 'Deus amor é não te deixará sofrer.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant ninguemTeAma = Chant(
     title: 'Ninguém te ama como eu',
@@ -230,7 +236,8 @@ Chant ninguemTeAma = Chant(
       const Music(cipher: 'Eu te levo em meus braços,'),
       const Music(cipher: 'pois sou teu melhor amigo.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant alfaOmega = Chant(
     title: 'Alfa, ômega',
@@ -248,7 +255,8 @@ Chant alfaOmega = Chant(
       const Music(cipher: 'a Ele o domínio,'),
       const Music(cipher: 'ele é o Senhor (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant tudoEDoPai = Chant(
     title: 'Tudo é do Pai',
@@ -274,7 +282,8 @@ Chant tudoEDoPai = Chant(
       const Refrao(cipher: 'bem mais forte é o meu Senhor'),
       const Refrao(cipher: 'que me cura por amor! (Bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant amarTeMais = Chant(
     title: 'Amar-te mais',
@@ -292,4 +301,5 @@ Chant amarTeMais = Chant(
       const Music(cipher: 'amar-te, amar-te, amar-te'),
       const Music(cipher: 'e dar a vida só pó ti!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

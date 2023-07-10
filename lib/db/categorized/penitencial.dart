@@ -25,7 +25,8 @@ Chant senhorQueViestesSalvar = Chant(
           cipher:
               '3.Senhor que intercedei por nós junto a Deus pai que nos perdoa.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant senhorPiedade = Chant(
     title: 'Senhor, piedade',
@@ -36,7 +37,8 @@ Chant senhorPiedade = Chant(
       const Music(cipher: 'Cristo piedade, Cristo piedade de nós.'),
       const Music(cipher: 'Senhor piedade, Senhor piedade de nós, piedade.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant seEuPossoFalarMeuDeus = Chant(
     title: 'Se eu posso falar',
@@ -61,7 +63,8 @@ Chant seEuPossoFalarMeuDeus = Chant(
       const Music(cipher: 'senhor tende de piedade'),
       const Music(cipher: 'de nós perdão senhor perdão.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant comoAOvelhaPerdida = Chant(
     title: 'Como a ovelha perdida',
@@ -84,7 +87,8 @@ Chant comoAOvelhaPerdida = Chant(
       const Music(cipher: 'vê as lagrimas do meu coração e salva-me!'),
       const Music(cipher: 'Kyrie Eleison (3x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant senhorTendePiedadeEPerdoai = Chant(
     title: 'Senhor tende piedade e perdoai as nossas culpas',
@@ -111,4 +115,5 @@ Chant senhorTendePiedadeEPerdoai = Chant(
       const Music(cipher: 'Porque nós somos vosso povo,'),
       const Music(cipher: 'que vem pedir vosso perdão.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

@@ -21,7 +21,8 @@ Chant taoSublime = Chant(
       const Music(cipher: 'Ao Deus Uno e Trino demos'),
       const Music(cipher: 'a alegria do louvor. Amém! (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant emTuaPresenca = Chant(
     title: 'Em tua presença',
@@ -41,7 +42,8 @@ Chant emTuaPresenca = Chant(
       const Refrao(cipher: 'O meu ser se alegra'),
       const Refrao(cipher: 'Quando estou em tua presença, Senhor'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant gloriaAJesus = Chant(
     title: 'Glória a Jesus na hóstia santa',
@@ -78,7 +80,8 @@ Chant gloriaAJesus = Chant(
       const Refrao(cipher: 'nesta terra de Santa Cruz. (bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant dianteDoRei = Chant(
     title: 'Diante do Rei',
@@ -103,4 +106,5 @@ Chant dianteDoRei = Chant(
       const Music(cipher: 'diante do Rei dos reis'),
       const Music(cipher: 'todo joelho se dobrará. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

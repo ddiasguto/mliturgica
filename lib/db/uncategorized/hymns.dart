@@ -34,7 +34,8 @@ Chant gloriaADeusNosAltosCeus = Chant(
           cipher:
               '5.Vos somente sois o Santo, o altissimo o Senhor. Com o Espírito Divino de Deus paino esplendor.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hinoDeLouvor = Chant(
     title: 'Hino de Louvor',
@@ -59,7 +60,8 @@ Chant hinoDeLouvor = Chant(
           cipher:
               'Só Vós o Senhor. Só Vós o Altíssimo, Jesus Cristo, com o Espírito Santo, na glória de Deus Pai. Amém! (4x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hinoDeLouvor2 = Chant(
     title: 'Hino de Louvor 2',
@@ -81,4 +83,5 @@ Chant hinoDeLouvor2 = Chant(
           cipher:
               '3.Só vos, sois o santo o senhor, o altíssimo só vos. Jesus Cristo, com Espirito e o Pai.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

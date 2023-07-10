@@ -58,7 +58,8 @@ Chant teAmareiSenhor = Chant(
       const Refrao(cipher: 'Bem perto de ti (bis)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant eisMeAquiSenhor = Chant(
     title: 'Eis me aqui, Senhor',
@@ -79,7 +80,8 @@ Chant eisMeAquiSenhor = Chant(
       const Music(cipher: 'Pra fazer Tua Vontade, pra viver do Teu amor'),
       const Music(cipher: 'Eis-me aqui, Senhor!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant senhorQuemEntrara = Chant(
     title: 'Senhor, quem entrará?',
@@ -106,7 +108,8 @@ Chant senhorQuemEntrara = Chant(
       const Music(cipher: 'o espírito santo inunda meu ser (bis)'),
       verse()
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant oProfeta = Chant(
     title: 'O profeta',
@@ -156,7 +159,8 @@ Chant oProfeta = Chant(
       const Refrao(cipher: 'SE TUA VOZ ARDE EM MEU PEITO?'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant diaDeFesta = Chant(
     title: 'Dia festa',
@@ -175,7 +179,8 @@ Chant diaDeFesta = Chant(
       const Music(
           cipher: 'Então derrama sobre este lugar a tua unção e o teu poder!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant euEMinhaCasa = Chant(
     title: 'Eu e minha casa serviremos ao Senhor',
@@ -210,7 +215,8 @@ Chant euEMinhaCasa = Chant(
       const Music(cipher: 'Eu e minha casa serviremos ao Senhor'),
       const Music(cipher: 'Eu e minha casa serviremos ao Senhor')
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant coracaoSanto = Chant(
     title: 'Coração santo',
@@ -274,7 +280,8 @@ Chant coracaoSanto = Chant(
       const Music(cipher: 'Não a conserves, reconcentrada'),
       const Music(cipher: 'Mas dilatada, na Cristandade!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hojeETempoDeLouvar = Chant(
     title: 'Hoje é tempo de louvar a Deus',
@@ -304,7 +311,8 @@ Chant hojeETempoDeLouvar = Chant(
       const Refrao(cipher: 'Vem louvar,vem louvar'),
       const Refrao(cipher: 'Glória a Deus, glória a Deus (2x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant aJesusEMaria = Chant(
     title: 'A Jesus e Maria',
@@ -331,7 +339,8 @@ Chant aJesusEMaria = Chant(
       const Music(cipher: 'Assim vivendo encontraremos'),
       const Music(cipher: 'A trilha e veremos o amor que brilha.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant porEntreAclamacoes = Chant(
     title: 'Por entre aclamações',
@@ -354,7 +363,8 @@ Chant porEntreAclamacoes = Chant(
           cipher: 'Com os anjos, com os santos, com a Virgem Mãe de Deus'),
       const Music(cipher: 'Renderemos louvores Àquele que venceu.(2x)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant venhamTodosAdoremos = Chant(
     title: 'Venham todos, adoremos',
@@ -391,7 +401,8 @@ Chant venhamTodosAdoremos = Chant(
       const Refrao(cipher: 'Deus tem nele o seu agrado!'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant hosanaHei = Chant(
     title: 'Hosana Hei',
@@ -453,7 +464,8 @@ Chant hosanaHei = Chant(
       const Refrao(cipher: 'Hosana ha! (2x)'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant derramaTeuEspirito = Chant(
     title: 'Derrama teu Espírito',
@@ -470,7 +482,8 @@ Chant derramaTeuEspirito = Chant(
           cipher:
               'Derrama o teu amor aqui, derrama o teu amor aqui, faz chover sobre nós água viva. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant reinasSenhor = Chant(
     title: 'Reinas, Senhor',
@@ -499,7 +512,8 @@ Chant reinasSenhor = Chant(
               'Podes reinar. Senhor Jesus oh sim, o teu poder teu povo sentirá. Que bom Senhor saber que estás presente aqui reina Senhor neste lugar.'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant reunidosAqui = Chant(
     title: 'Reunidos aqui',
@@ -512,7 +526,8 @@ Chant reunidosAqui = Chant(
           cipher: 'Algo bom há de acontecer, algo bom Deus tem para nós'),
       const Music(cipher: 'Reunidos aqui so pra louvar ao Senhor.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant levantaEsIgreja = Chant(
     title: 'Levanta, és Igreja',
@@ -532,7 +547,8 @@ Chant levantaEsIgreja = Chant(
           cipher:
               ' Somos povo de Deus. Ele luta por nós! E a vitória já foi conquistada!'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 //#TODO verificar na internet letra do cantico quero louvarte
 Chant queroLouvarTe = Chant(
@@ -558,7 +574,8 @@ Chant queroLouvarTe = Chant(
       const Music(cipher: '3.Quero servir-te sempre mais...'),
       const Music(cipher: '4.Quero buscar-te sempre mais...'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant louvadoSejasMeuSenhor = Chant(
     title: 'Louvado sejas meu Senhor',
@@ -597,7 +614,8 @@ Chant louvadoSejasMeuSenhor = Chant(
       const Refrao(cipher: 'Louvado seja meu Senhor'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant abreSenhorNossosLabios = Chant(
     title: 'Abre Senhor, nossos lábios',
@@ -624,7 +642,8 @@ Chant abreSenhorNossosLabios = Chant(
       const Music(
           cipher: 'Queremos que a tua palavra em nós possa permanecer.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant olhosFirmesEmDeus = Chant(
     title: 'Olhos firmes em Deus',
@@ -664,7 +683,8 @@ Chant olhosFirmesEmDeus = Chant(
           cipher: '3.E do altar então se aproximar e do pão se alimentar.'),
       const Music(cipher: 'Eucaristia o próprio Deus, comunhão experimentar.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant deixaALuzDoCeuEntrar = Chant(
     title: 'Deixa a luz do céu entrar',
@@ -707,4 +727,5 @@ Chant deixaALuzDoCeuEntrar = Chant(
       const Refrao(cipher: 'E deixa a luz do céu entrar'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);

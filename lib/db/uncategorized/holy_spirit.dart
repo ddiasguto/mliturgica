@@ -37,7 +37,8 @@ Chant divinoEspiritoSanto = Chant(
       const Music(cipher: 'É pra ver se o povo tem'),
       const Music(cipher: 'verdadeira devoção.'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant osDevotos = Chant(
     title: 'Os devotos do Divino',
@@ -73,7 +74,8 @@ Chant osDevotos = Chant(
       const Music(cipher: 'e o Rei será bendito,'),
       const Music(cipher: 'Ele nascerá do povo'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant euNavegarei = Chant(
     title: 'Eu navegarei',
@@ -87,7 +89,8 @@ Chant euNavegarei = Chant(
       const Music(cipher: 'vem como em Pentecostes'),
       const Music(cipher: 'e enche-me de novo! (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant aNosDescei = Chant(
     title: 'A nós descei Divina Luz',
@@ -107,7 +110,8 @@ Chant aNosDescei = Chant(
       const Music(cipher: 'e nossas almas preparar'),
       const Music(cipher: 'para o que deus nos quer falar. (bis)'),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
 
 Chant moveTeEmMim = Chant(
     title: 'Move-te em mim',
@@ -154,4 +158,5 @@ Chant moveTeEmMim = Chant(
       const Refrao(cipher: 'Deus Espírito, move-te em mim!'),
       verse(),
     ],
-    hasCypher: false);
+    hasCypher: false,
+    ciphers: []);
