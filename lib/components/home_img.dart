@@ -1,76 +1,27 @@
+import 'package:diasguto/models/imgHome.dart';
 import 'package:flutter/material.dart';
 
 List<Widget> imgHome = [
-  Holymary(),
-  Family(),
-  Samaria(),
-  Vatican(),
-  Vatican2(),
-  Teresinha1()
+  Holymary,
+  Family,
+  Samaria,
+  Vatican,
+  Vatican2,
+  Teresinha1
 ];
 
-class Holymary extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/holymary2.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Holymary = ImgHome(filename: 'holymary2');
 
-class Family extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/family.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Family = ImgHome(filename: 'family');
 
-class Samaria extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/samaria2.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Samaria = ImgHome(filename: 'samaria2');
 
-class Vatican extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/vatican3.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Vatican = ImgHome(filename: 'vatican3');
 
-class Vatican2 extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/vatican4.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Vatican2 = ImgHome(filename: 'vatican4');
 
-class Teresinha1 extends StatelessWidget {
-  Widget build(context) {
-    return Image.asset(
-      'assets/home_img/teresinha1.jpg',
-      width: MediaQuery.of(context).size.width * .95,
-      height: MediaQuery.of(context).size.width * 0.473632812 * .95,
-      fit: BoxFit.cover,
-    );
-  }
-}
+ImgHome Teresinha1 = ImgHome(filename: 'teresinha1');
+
+ImgHome TeresaAvila1 = ImgHome(filename: 'teresadavila1');
+
+ImgHome TeresaAvila2 = ImgHome(filename: 'teresadavila2');
