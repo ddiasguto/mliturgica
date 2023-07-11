@@ -11,7 +11,8 @@ List<ImgHome> imgHome = [
   Teresinha1,
   TeresaAvila1,
   TeresaAvila2,
-  JesusPensante
+  JesusPensante,
+  faustina
 ];
 
 String putLegend(ImgHome element) {
@@ -52,12 +53,12 @@ ImgHome Teresinha1 = ImgHome(
     filename: 'teresinha1',
     hasLegend: true,
     description:
-        "Santa Teresinha do Menino Jesus e da Sagrada face (1873-1897), carmelita doutora da Igreja");
+        "Santa Teresinha do Menino Jesus e da Sagrada face (1873-1897)\n Carmelita doutora da Igreja");
 
 ImgHome TeresaAvila1 = ImgHome(
   filename: 'teresadavila1',
   hasLegend: true,
-  description: "santa Teresa d'Ávila (1515-182), carmelita doutora da Igreja",
+  description: "Santa Teresa d'Ávila (1515-182)\n Carmelita doutora da Igreja",
 );
 
 ImgHome TeresaAvila2 = ImgHome(
@@ -70,4 +71,11 @@ ImgHome JesusPensante = ImgHome(
   filename: 'jesuspensante',
   hasLegend: false,
   description: '',
+);
+
+ImgHome faustina = ImgHome(
+  filename: 'faustina',
+  hasLegend: true,
+  description:
+      "Santa Faustina Kowaska (1905-1938)\n Apostola da Divina Misericórida",
 );
