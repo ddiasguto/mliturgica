@@ -18,7 +18,7 @@ Widget sentOration(context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Oração',
+                    'Oração'.toUpperCase(),
                     style: TextStyle(
                       color: Colors.green[800],
                       fontSize: 20,
