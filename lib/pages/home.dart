@@ -1,6 +1,7 @@
 import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/cards_home.dart';
 import 'package:diasguto/components/home_img.dart';
+import 'package:diasguto/models/legend_home.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:diasguto/models/colors.dart';
@@ -20,7 +21,12 @@ class Home extends StatelessWidget {
           color: Colors.black,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: imgHome[randomImg],
+            child: Column(children: [
+              imgHome[randomImg],
+              imgHome[randomImg].hasLegend
+                  ? LegendHome(description: putLegend(imgHome[randomImg]))
+                  : Container()
+            ]),
           ),
         ),
         Expanded(

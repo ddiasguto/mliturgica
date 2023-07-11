@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class ImgHome extends StatelessWidget {
   final String filename;
+  final bool hasLegend;
+  final String description;
 
   Widget build(context) {
     return Image.asset(
@@ -12,5 +14,9 @@ class ImgHome extends StatelessWidget {
     );
   }
 
-  const ImgHome({super.key, required this.filename});
+  const ImgHome(
+      {super.key,
+      required this.filename,
+      required this.hasLegend,
+      required this.description});
 }
