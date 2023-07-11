@@ -15,6 +15,10 @@ Widget chantsCategory(context) {
           title: Text(maestro.localList[index].title),
           iconColor: redApp,
           tileColor: Colors.cyan,
+          trailing: Icon(Icons.queue_music_outlined,
+              color: maestro.localList[index].hasCypher
+                  ? Colors.green[800]
+                  : Colors.black26),
           selectedColor: Colors.amberAccent,
           onTap: () {
             maestro.setCurrentIndex(index);
