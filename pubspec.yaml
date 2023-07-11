@@ -87,6 +87,7 @@ flutter:
      - assets/home_img/teresadavila2.jpg
      - assets/home_img/jesuspensante.jpg
      - assets/home_img/faustina.jpg
+     - assets/home_img/jesus-sermao-da-montanha.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
