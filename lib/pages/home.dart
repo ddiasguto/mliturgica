@@ -1,6 +1,7 @@
 import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/cards_home.dart';
 import 'package:diasguto/components/home_img.dart';
+import 'package:diasguto/components/oration.dart';
 import 'package:diasguto/models/legend_home.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +88,11 @@ class Home extends StatelessWidget {
                   GenericCard('Adoração', 'agnus1.jpg', false),
                   GenericCard('Marianos', 'mary1.jpg', false)
                 ],
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [sentOration(context)],
+              ),
             ],
           ),
         ),
