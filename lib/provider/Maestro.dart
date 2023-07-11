@@ -293,8 +293,8 @@ class Maestro with ChangeNotifier {
 
   void setRandomPenitencial() {
     do {
-      randomOffer = Random().nextInt(penitencial.length);
-    } while (sheet[1].title == offers[randomPenitencial].title);
+      randomPenitencial = Random().nextInt(penitencial.length);
+    } while (sheet[1].title == penitencial[randomPenitencial].title);
   }
 
   void setRandomEntrance() {
@@ -305,8 +305,8 @@ class Maestro with ChangeNotifier {
 
   void setRandomSaint() {
     do {
-      randomEntrance = Random().nextInt(entrance.length);
-    } while (sheet[4].title == entrance[randomSaint].title);
+      randomSaint = Random().nextInt(saint.length);
+    } while (sheet[4].title == saint[randomSaint].title);
   }
 
   void setRandomAclamation() {
@@ -323,14 +323,14 @@ class Maestro with ChangeNotifier {
 
   void setRandomPosComunion() {
     do {
-      randomComunion = Random().nextInt(comunion.length);
-    } while (sheet[6].title == comunion[randomPosComunion].title);
+      randomPosComunion = Random().nextInt(posComunion.length);
+    } while (sheet[6].title == posComunion[randomPosComunion].title);
   }
 
   void setRandomEnding() {
     do {
       randomEnding = Random().nextInt(ending.length);
-    } while (sheet[6].title == ending[randomEnding].title);
+    } while (sheet[7].title == ending[randomEnding].title);
   }
 
   void setCatalogueTrue() {
@@ -348,20 +348,12 @@ class Maestro with ChangeNotifier {
     setRandomPosComunion();
     setRandomEnding();
     sheet[0] = entrance[randomEntrance];
-    sheet[0] = entrance[randomEntrance];
-    sheet[1] = penitencial[randomPenitencial];
     sheet[1] = penitencial[randomPenitencial];
     sheet[2] = aclamation[randomAclamation];
-    sheet[2] = aclamation[randomAclamation];
-    sheet[3] = offers[randomOffer];
     sheet[3] = offers[randomOffer];
     sheet[4] = saint[randomSaint];
-    sheet[4] = saint[randomSaint];
-    sheet[5] = comunion[randomComunion];
     sheet[5] = comunion[randomComunion];
     sheet[6] = posComunion[randomPosComunion];
-    sheet[6] = posComunion[randomPosComunion];
-    sheet[7] = ending[randomEnding];
     sheet[7] = ending[randomEnding];
     notifyListeners();
   }

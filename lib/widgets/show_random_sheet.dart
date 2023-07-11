@@ -1,3 +1,4 @@
+import 'package:diasguto/models/show_random_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,7 +9,7 @@ Widget showRandomSheet(context) {
 
   return AlertDialog(
     title: const Text(
-      'Novos Cânticos:',
+      'Novos cânticos:',
       style: TextStyle(color: Colors.cyan, fontSize: 18),
     ),
     content: SizedBox(
@@ -17,41 +18,14 @@ Widget showRandomSheet(context) {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextScroll(
-            "    ${maestro.sheet[0].title}",
-            velocity: Velocity(
-              pixelsPerSecond: Offset(15, 0),
-            ),
-            delayBefore: Duration(seconds: 2),
-          ),
-          TextScroll(
-            "    ${maestro.sheet[1].title}",
-            velocity: Velocity(
-              pixelsPerSecond: Offset(15, 0),
-            ),
-            delayBefore: Duration(seconds: 2),
-          ),
-          TextScroll(
-            "    ${maestro.sheet[2].title}",
-            velocity: Velocity(
-              pixelsPerSecond: Offset(15, 0),
-            ),
-            delayBefore: Duration(seconds: 2),
-          ),
-          TextScroll(
-            "    ${maestro.sheet[3].title}",
-            velocity: Velocity(
-              pixelsPerSecond: Offset(15, 0),
-            ),
-            delayBefore: Duration(seconds: 2),
-          ),
-          TextScroll(
-            "    ${maestro.sheet[4].title}",
-            velocity: Velocity(
-              pixelsPerSecond: Offset(15, 0),
-            ),
-            delayBefore: Duration(seconds: 2),
-          ),
+          showNewMusic(context, 0),
+          showNewMusic(context, 1),
+          showNewMusic(context, 2),
+          showNewMusic(context, 3),
+          showNewMusic(context, 4),
+          showNewMusic(context, 5),
+          showNewMusic(context, 6),
+          showNewMusic(context, 7),
         ],
       ),
     ),
@@ -69,7 +43,7 @@ Widget showRandomSheet(context) {
           maestro.randomSheet();
         },
         child: Text(
-          'Gerar Nova',
+          'Gerar nova',
           style: TextStyle(color: Colors.green[800], fontSize: 18),
         ),
       ),

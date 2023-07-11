@@ -69,7 +69,7 @@ class MyBottomSheet extends StatelessWidget {
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Comunhão: ${maestro.getSheet[6].title}'),
+            title: Text('Pós Comunhão: ${maestro.getSheet[6].title}'),
             iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
