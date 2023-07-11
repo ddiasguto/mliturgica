@@ -23,6 +23,20 @@ class MyDrawer extends StatelessWidget {
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
+              title: const Text('Ato Penitencial'),
+              onTap: () {
+                maestro.setLocalList('Ato Penitencial');
+                Navigator.pop(context);
+              }),
+          ListTile(
+              leading: const Icon(Icons.music_note_outlined),
+              title: const Text('Aclamação'),
+              onTap: () {
+                maestro.setLocalList('Aclamação');
+                Navigator.pop(context);
+              }),
+          ListTile(
+              leading: const Icon(Icons.music_note_outlined),
               title: const Text('Cânticos de Ofertório'),
               onTap: () {
                 maestro.setLocalList('Ofertório');
@@ -30,9 +44,9 @@ class MyDrawer extends StatelessWidget {
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
-              title: const Text('Cânticos de Aclamação'),
+              title: const Text('Santo'),
               onTap: () {
-                maestro.setLocalList('Aclamação');
+                maestro.setLocalList('Santo');
                 Navigator.pop(context);
               }),
           ListTile(
@@ -44,9 +58,16 @@ class MyDrawer extends StatelessWidget {
               }),
           ListTile(
               leading: const Icon(Icons.music_note_outlined),
+              title: const Text('Cânticos de Pós Comunhão'),
+              onTap: () {
+                maestro.setLocalList('Pós Comunhão');
+                Navigator.pop(context);
+              }),
+          ListTile(
+              leading: const Icon(Icons.music_note_outlined),
               title: const Text('Cânticos Finais'),
               onTap: () {
-                maestro.setLocalList('Final');
+                maestro.setLocalList('Encerramento');
                 Navigator.pop(context);
               }),
           Divider(),
@@ -54,7 +75,6 @@ class MyDrawer extends StatelessWidget {
               leading: const Icon(Icons.home),
               title: const Text('Página Inicial'),
               onTap: () {
-                maestro.setLocalList('Final');
                 Navigator.pop(context);
                 Navigator.pop(context);
               }),

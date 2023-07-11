@@ -39,7 +39,7 @@ class MyBottomSheet extends StatelessWidget {
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Ofertório: ${maestro.getSheet[1].title}'),
+            title: Text('Ato Penitencial: ${maestro.getSheet[1].title}'),
             iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
@@ -51,13 +51,31 @@ class MyBottomSheet extends StatelessWidget {
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Comunhão: ${maestro.getSheet[3].title}'),
+            title: Text('Ofertório: ${maestro.getSheet[3].title}'),
             iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
           ),
           ListTile(
-            title: Text('Encerramento: ${maestro.getSheet[4].title}'),
+            title: Text('Santo: ${maestro.getSheet[4].title}'),
+            iconColor: redApp,
+            dense: true,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Comunhão: ${maestro.getSheet[5].title}'),
+            iconColor: redApp,
+            dense: true,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Comunhão: ${maestro.getSheet[6].title}'),
+            iconColor: redApp,
+            dense: true,
+            tileColor: Colors.cyan,
+          ),
+          ListTile(
+            title: Text('Encerramento: ${maestro.getSheet[7].title}'),
             iconColor: redApp,
             dense: true,
             tileColor: Colors.cyan,
