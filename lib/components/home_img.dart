@@ -13,7 +13,9 @@ List<ImgHome> imgHome = [
   TeresaAvila2,
   JesusPensante,
   faustina,
-  sermao
+  sermao,
+  edith,
+  agostinho
 ];
 
 String putLegend(ImgHome element) {
@@ -86,3 +88,13 @@ ImgHome sermao = ImgHome(
   hasLegend: true,
   description: "Sermão sobre a montanha (Mt 5)",
 );
+
+ImgHome agostinho = ImgHome(
+    filename: 'agostinho',
+    hasLegend: true,
+    description: 'Santo Agostinho de Hipona (354 - 430)\n Doutor da graça');
+
+ImgHome edith = ImgHome(
+    filename: 'edith',
+    hasLegend: true,
+    description: 'Santa Edith Stein (1891-1942)\n Doutora da Igreja');
