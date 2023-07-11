@@ -6,7 +6,8 @@ List<Chant> penitencial = [
   senhorPiedade,
   seEuPossoFalarMeuDeus,
   comoAOvelhaPerdida,
-  senhorTendePiedadeEPerdoai
+  senhorTendePiedadeEPerdoai,
+  tendePiedade
 ];
 
 Chant senhorQueViestesSalvar = Chant(
@@ -117,3 +118,55 @@ Chant senhorTendePiedadeEPerdoai = Chant(
     ],
     hasCypher: false,
     ciphers: []);
+
+Chant tendePiedade = Chant(
+    title: 'Tende piedade',
+    category: 'Ato Penitencial',
+    lyrics: [
+      const Music(cipher: 'Senhor, que oferecestes o vosso perdão'),
+      const Music(cipher: 'A Pedro arrependido'),
+      verse(),
+      const Music(cipher: 'Tende piedade, tende piedade'),
+      const Music(cipher: 'Senhor tende piedade de nós'),
+      verse(),
+      const Music(cipher: 'Cristo, que prometestes o paraíso'),
+      const Music(cipher: 'Ao bom ladrão'),
+      verse(),
+      const Music(cipher: 'Tende piedade, tende piedade'),
+      const Music(cipher: 'Oh Cristo tem piedade de nós'),
+      verse(),
+      const Music(cipher: 'Senhor, que acolheis toda pessoa que confia'),
+      const Music(cipher: 'Na vossa misericórdia'),
+      verse(),
+      const Music(cipher: 'Tende piedade, tende piedade'),
+      const Music(cipher: 'Senhor tende piedade de nós'),
+      verse(),
+    ],
+    hasCypher: true,
+    ciphers: [
+      const Cifra(cipher: 'D9 Em7 Bm7'),
+      const Music(cipher: 'SENHOR, QUE OFERECESTES O VOSSO PERDÃO'),
+      const Cifra(cipher: 'G D/F# Em7'),
+      const Music(cipher: 'A PEDRO ARREPENDIDO'),
+      verse(),
+      const Cifra(cipher: 'Bm7 G'),
+      const Music(cipher: 'TENDE PIEDADE, TENDE PIEDADE,'),
+      const Cifra(cipher: 'Em7 A G'),
+      const Music(cipher: 'SENHOR TENDE PIEDADE DE NÓS'),
+      const Cifra(cipher: 'Bm7 A/C# D'),
+      const Music(cipher: 'TENDE PIEDADE, TENDE PIEDADE,'),
+      const Cifra(cipher: 'Em7 A Bm7 G'),
+      const Music(cipher: 'SENHOR TENDE PIEDADE DE NÓS'),
+      verse(),
+      const Music(cipher: 'CRISTO, QUE PROMETESTES O PARAÍSO'),
+      const Music(cipher: 'AO BOM LADRÃO'),
+      verse(),
+      const Music(cipher: 'TENDE PIEDADE, TENDE PIEDADE,'),
+      const Music(cipher: 'Ó CRISTO TEM PIEDADE DE NÓS (bis)'),
+      verse(),
+      const Music(cipher: 'SENHOR, QUE ACOLHEIS TODA PESSOA QUE CONFIA'),
+      const Music(cipher: 'NA VOSSA MISERICÓRDIA'),
+      verse(),
+      const Music(cipher: 'TENDE PIEDADE, TENDE PIEDADE,'),
+      const Music(cipher: 'SENHOR TENDE PIEDADE DE NÓS (bis)'),
+    ]);
