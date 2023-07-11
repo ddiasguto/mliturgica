@@ -53,7 +53,7 @@ ImgHome Teresinha1 = ImgHome(
     filename: 'teresinha1',
     hasLegend: true,
     description:
-        "Santa Teresinha do Menino Jesus e da Sagrada face (1873-1897)\n Carmelita doutora da Igreja");
+        "Santa Teresinha do Menino Jesus (1873-1897)\n Carmelita doutora da Igreja");
 
 ImgHome TeresaAvila1 = ImgHome(
   filename: 'teresadavila1',

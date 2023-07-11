@@ -34,7 +34,7 @@ Widget addOnCatalogue(context) {
         DropdownMenuItem<int>(
           value: 1,
           child: Text(
-            '  Ofertório'.toUpperCase(),
+            '  Ato Penitencial'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
@@ -48,12 +48,33 @@ Widget addOnCatalogue(context) {
         DropdownMenuItem<int>(
           value: 3,
           child: Text(
-            '  Comunhão'.toUpperCase(),
+            '  Ofertório'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
           value: 4,
+          child: Text(
+            '  Santo'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
+        DropdownMenuItem<int>(
+          value: 5,
+          child: Text(
+            '  Comunhão'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
+        DropdownMenuItem<int>(
+          value: 6,
+          child: Text(
+            '  Pós Comunhão'.toUpperCase(),
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
+        DropdownMenuItem<int>(
+          value: 7,
           child: Text(
             '  Encerramento'.toUpperCase(),
             style: TextStyle(fontSize: 16),
