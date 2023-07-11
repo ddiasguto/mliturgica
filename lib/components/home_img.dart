@@ -7,7 +7,10 @@ List<Widget> imgHome = [
   Samaria,
   Vatican,
   Vatican2,
-  Teresinha1
+  Teresinha1,
+  TeresaAvila1,
+  TeresaAvila2,
+  JesusPensante
 ];
 
 ImgHome Holymary = ImgHome(filename: 'holymary2');
@@ -25,3 +28,5 @@ ImgHome Teresinha1 = ImgHome(filename: 'teresinha1');
 ImgHome TeresaAvila1 = ImgHome(filename: 'teresadavila1');
 
 ImgHome TeresaAvila2 = ImgHome(filename: 'teresadavila2');
+
+ImgHome JesusPensante = ImgHome(filename: 'jesuspensante');
