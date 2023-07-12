@@ -1,3 +1,5 @@
+import 'package:diasguto/models/chant.dart';
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:diasguto/widgets/add_to_sheet.dart';
 import 'package:diasguto/widgets/already_in_sheet.dart';
@@ -13,6 +15,8 @@ class FloatButton extends StatelessWidget {
     Maestro maestro = Provider.of<Maestro>(context);
     bool isSheet = maestro.getIsSheet;
     bool isCatalogue = maestro.getIsCatalogue;
+    List<Chant> localList = maestro.getLocalList;
+    int currentIndex = maestro.getCurrentIndex;
     if (!isSheet || isCatalogue) {
       return FloatingActionButton(
         onPressed: () {
@@ -29,7 +33,20 @@ class FloatButton extends StatelessWidget {
         ),
       );
     } else {
-      return Container();
+      if (localList[currentIndex].hasCypher) {
+        return FloatingActionButton(
+          onPressed: () {
+            maestro.setShowCipher();
+          },
+          backgroundColor: Colors.cyan,
+          child: Icon(
+            Icons.queue_music_outlined,
+            color: maestro.getShowCipher ? Colors.green[800] : redApp,
+          ),
+        );
+      } else {
+        return Container();
+      }
     }
   }
 

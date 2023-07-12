@@ -8,8 +8,9 @@ Widget buttonCipher(context) {
   Maestro maestro = Provider.of<Maestro>(context);
   List<Chant> localList = maestro.getLocalList;
   int currentIndex = maestro.getCurrentIndex;
+  bool isSheet = maestro.getIsSheet;
   String str = maestro.getShowCipher ? "ON" : "OFF";
-  if (localList[currentIndex].hasCypher) {
+  if (localList[currentIndex].hasCypher && !isSheet) {
     return TextButton(
         onPressed: () {
           maestro.setShowCipher();

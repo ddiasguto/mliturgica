@@ -183,7 +183,7 @@ class Maestro with ChangeNotifier {
         sheet[1] = penitencial[randomPenitencial];
         break;
       case 2:
-        setRandomPenitencial();
+        setRandomHymn();
         sheet[2] = hymns[randomHymn];
         break;
       case 3:
