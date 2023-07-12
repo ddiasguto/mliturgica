@@ -87,29 +87,56 @@ Chant senhorQuemEntrara = Chant(
     title: 'Senhor, quem entrará?',
     category: 'Entrada',
     lyrics: [
-      const Music(
-          cipher: 'Senhor, quem entrará no santuário pra te louvar? (bis)'),
+      const Music(cipher: 'Senhor, quem entrará '),
+      const Music(cipher: 'no santuário pra te louvar? (bis)'),
       verse(),
-      const Music(
-          cipher:
-              'Quem tem as mãos limpas, e o coração puro, quem não é vaidoso, e sabe amar (bis)'),
+      const Music(cipher: 'Quem tem as mãos limpas, e o coração puro, '),
+      const Music(cipher: 'quem não é vaidoso, e sabe amar (bis)'),
       verse(),
-      const Music(
-          cipher: 'Senhor, eu quero entrar no santuário pra te louvar (bis)'),
+      const Music(cipher: 'Senhor, eu quero entrar'),
+      const Music(cipher: 'no santuário pra te louvar (bis)'),
       verse(),
-      const Music(
-          cipher:
-              'Ó dá-me mãos limpas, e um coração puro, arranca a vaidade, ensina-me a amar (bis)'),
+      const Music(cipher: 'Ó dá-me mãos limpas, e um coração puro,'),
+      const Music(cipher: ' arranca a vaidade, ensina-me a amar (bis)'),
       verse(),
-      const Music(
-          cipher: 'Senhor, já posso entrar no santuário pra te louvar (bis)'),
+      const Music(cipher: 'Senhor, já posso entrar'),
+      const Music(cipher: ' no santuário pra te louvar (bis)'),
       verse(),
       const Music(cipher: 'Teu sangue me lava, teu fogo me queima, '),
       const Music(cipher: 'o espírito santo inunda meu ser (bis)'),
       verse()
     ],
-    hasCypher: false,
-    ciphers: []);
+    hasCypher: true,
+    ciphers: [
+      const Cifra(cipher: '  C            Am'),
+      const Music(cipher: 'SENHOR, QUEM ENTRARÁ'),
+      const Cifra(cipher: '         F    G        C          C7'),
+      const Music(cipher: 'NO SANTUÁRIO PRA TE LOUVAR? (2X)'),
+      verse(),
+      const Cifra(cipher: '                   F G               Em Am'),
+      const Music(cipher: 'QUEM TEM AS MÃOS LIMPAS E O CORAÇÃO PURO,'),
+      const Cifra(cipher: '              Dm   G        C    C7'),
+      const Music(cipher: 'QUEM NÃO É VAIDOSO E SABE AMAR. (2X)'),
+      verse(),
+      const Cifra(cipher: '  C               Am'),
+      const Music(cipher: 'SENHOR, EU QUERO ENTRAR'),
+      const Cifra(cipher: '      F       G        C          C7'),
+      const Music(cipher: 'NO SANTUÁRIO PRA TE LOUVAR. (2X)'),
+      verse(),
+      const Cifra(cipher: '               F     G             Em  Am'),
+      const Music(cipher: 'Ó DÁ-ME MÃOS LIMPAS, E UM CORAÇÃO PURO,'),
+      const Cifra(cipher: '              Dm      G        C    C7'),
+      const Music(cipher: 'ARRANCA A VAIDADE, ENSINA-ME AMAR. (2X)'),
+      verse(),
+      const Music(cipher: 'C Am F G C C7'),
+      const Music(cipher: 'SENHOR, JÁ POSSO ENTRAR'),
+      const Music(cipher: 'NO SANTUÁRIO PRA TE LOUVAR. (2X)'),
+      verse(),
+      const Cifra(cipher: '                F    G              Em Am'),
+      const Music(cipher: 'TEU SANGUE ME LAVA, TEU CORPO ME QUEIMA,'),
+      const Cifra(cipher: '            Dm     G          C   C7'),
+      const Music(cipher: 'O ESPÍRITO SANTO INUNDA MEU SER. (2X)'),
+    ]);
 
 Chant oProfeta = Chant(
     title: 'O profeta',
@@ -625,7 +652,7 @@ Chant abreSenhorNossosLabios = Chant(
           cipher:
               'Abre Senhor nossos lábios, pra que nossa boca te cante eternamente'),
       const Music(cipher: 'os teus louvores em tons e acordes vibrantes.'),
-      const Music(cipher: ''),
+      verse(),
       const Music(
           cipher: '1.Tu és Senhor, o caminho que os nossos passos conduz.'),
       const Music(
