@@ -34,7 +34,8 @@ class Maestro with ChangeNotifier {
 
   List<Chant> sheet = [
     teAmareiSenhor,
-    aJesusEMaria,
+    senhorPiedade,
+    hinoDeLouvor,
     buscaiPrimeiro,
     aTiMeUDEUS,
     santo,
@@ -83,6 +84,7 @@ class Maestro with ChangeNotifier {
   int randomSaint = 0;
   int randomEnding = 0;
   int randomImg = 0;
+  int randomHymn = 0;
 
   void setShowCipher() {
     showCipher = !showCipher;
@@ -181,30 +183,34 @@ class Maestro with ChangeNotifier {
         sheet[1] = penitencial[randomPenitencial];
         break;
       case 2:
-        setRandomAclamation();
-        sheet[2] = aclamation[randomAclamation];
+        setRandomPenitencial();
+        sheet[2] = hymns[randomHymn];
         break;
       case 3:
-        setRandomOffer();
-        sheet[3] = offers[randomOffer];
+        setRandomAclamation();
+        sheet[3] = aclamation[randomAclamation];
         break;
       case 4:
+        setRandomOffer();
+        sheet[4] = offers[randomOffer];
+        break;
+      case 5:
         setRandomSaint();
-        sheet[4] = saint[randomSaint];
+        sheet[5] = saint[randomSaint];
         break;
       case 5:
         setRandomComunion();
         sheet[5] = comunion[randomComunion];
         break;
 
-      case 6:
+      case 7:
         setRandomPosComunion();
-        sheet[6] = posComunion[randomPosComunion];
+        sheet[7] = posComunion[randomPosComunion];
         break;
 
-      case 7:
+      case 8:
         setRandomEnding();
-        sheet[7] = ending[randomEnding];
+        sheet[8] = ending[randomEnding];
         break;
     }
     notifyListeners();
@@ -283,6 +289,12 @@ class Maestro with ChangeNotifier {
     isSheet = false;
     localList = catalogueList;
     notifyListeners();
+  }
+
+  void setRandomHymn() {
+    do {
+      randomHymn = Random().nextInt(hymns.length);
+    } while (sheet[2].title == hymns[randomHymn].title);
   }
 
   void setRandomOffer() {
