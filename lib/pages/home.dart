@@ -2,6 +2,18 @@ import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/cards_home.dart';
 import 'package:diasguto/components/home_img.dart';
 import 'package:diasguto/components/oration.dart';
+import 'package:diasguto/db/categorized/aclamacao.dart';
+import 'package:diasguto/db/categorized/comunhao.dart';
+import 'package:diasguto/db/categorized/entrada.dart';
+import 'package:diasguto/db/categorized/final.dart';
+import 'package:diasguto/db/categorized/ofertorio.dart';
+import 'package:diasguto/db/categorized/penitencial.dart';
+import 'package:diasguto/db/categorized/pos_comunion.dart';
+import 'package:diasguto/db/categorized/saint.dart';
+import 'package:diasguto/db/uncategorized/adoration.dart';
+import 'package:diasguto/db/uncategorized/holy_spirit.dart';
+import 'package:diasguto/db/uncategorized/hymns.dart';
+import 'package:diasguto/db/uncategorized/marianos.dart';
 import 'package:diasguto/models/legend_home.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -42,29 +54,36 @@ class Home extends StatelessWidget {
                   style: TextStyle(fontSize: 22, color: redApp),
                 ),
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CardHome("Entrada", "agnus1.jpg", false),
-                  CardHome("Ato Penitencial", "agnus1.jpg", false),
+                  CardHome("Entrada", "agnus1.jpg", false, entrance.length),
+                  CardHome("Ato Penitencial", "agnus1.jpg", false,
+                      penitencial.length),
                 ],
               ),
-              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                CardHome("Aclamação", "samaria.jpg", false),
-                CardHome("Ofertório", "corpus.jpg", false),
+              Container(height: 40),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                CardHome("Aclamação", "jesus-sermao-da-montanha.jpg", false,
+                    aclamation.length),
+                CardHome("Ofertório", "agnus.jpg", false, offers.length),
               ]),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Container(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CardHome("Santo", "agnus1.jpg", false),
-                  CardHome("Comunhão", "santissimo.jpg", false),
+                  CardHome("Santo", "agnus1.jpg", false, saint.length),
+                  CardHome(
+                      "Comunhão", "santissimo.jpg", false, comunion.length),
                 ],
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Container(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CardHome("Pós Comunhão", "agnus1.jpg", false),
-                  CardHome("Encerramento", "agnus1.jpg", false),
+                  CardHome(
+                      "Pós Comunhão", "agnus1.jpg", false, posComunion.length),
+                  CardHome("Encerramento", "agnus1.jpg", false, ending.length),
                 ],
               ),
               Padding(
@@ -76,21 +95,27 @@ class Home extends StatelessWidget {
                 ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GenericCard('Hinos de Louvor', 'agnus1.jpg', false),
-                  GenericCard("Espirito Santo", 'holyspirit2.jpg', false)
+                  GenericCard(
+                      'Hinos de Louvor', 'agnus1.jpg', true, hymns.length),
+                  GenericCard("Espirito Santo", 'holyspirit2.jpg', true,
+                      holy_spirit.length)
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GenericCard('Adoração', 'agnus1.jpg', false),
-                  GenericCard('Marianos', 'mary1.jpg', false)
-                ],
+              Container(
+                height: 40,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GenericCard('Adoração', 'agnus1.jpg', true, adoration.length),
+                  GenericCard('Marianos', 'mary1.jpg', true, marianos.length)
+                ],
+              ),
+              Container(height: 60),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [sentOration(context)],
               ),
             ],

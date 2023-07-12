@@ -9,122 +9,107 @@ import 'package:provider/provider.dart';
 class CardHome extends StatelessWidget {
   final String category, img;
   final bool direct;
+  final int qtd;
 
-  const CardHome(this.category, this.img, this.direct);
+  const CardHome(this.category, this.img, this.direct, this.qtd);
 
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     return Container(
-      height: 50,
-      child: Container(
-        width: MediaQuery.of(context).size.width / 2.1,
-        child: Card(
-          color: Colors.cyan[200],
-          shadowColor: const Color.fromARGB(255, 116, 12, 12),
-          child: Row(
+        width: MediaQuery.of(context).size.width * .4,
+        height: MediaQuery.of(context).size.width * .46,
+        color: Colors.black26,
+        child: InkWell(
+          onTap: () {
+            maestro.setLocalList(category);
+            maestro.setCatalogueFalse();
+            maestro.setSheetFalse();
+            if (direct) {
+              navigator(context, ShowMusic());
+            } else {
+              navigator(context, ShowCategory());
+            }
+          },
+          onLongPress: () {
+            maestro.setLocalList(category);
+            showModalBottomSheet<void>(
+              context: context,
+              builder: (BuildContext context) {
+                return CategoryBottomSheet();
+              },
+            );
+          },
+          focusColor: Colors.black,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                child: Image.asset('assets/img/$img'),
+              Container(height: 10),
+              Image.asset(
+                'assets/img/$img',
+                width: MediaQuery.of(context).size.width * .3,
               ),
-              InkWell(
-                onTap: () {
-                  maestro.setLocalList(category);
-                  maestro.setCatalogueFalse();
-                  maestro.setSheetFalse();
-                  if (direct) {
-                    navigator(context, ShowMusic());
-                  } else {
-                    navigator(context, ShowCategory());
-                  }
-                },
-                onLongPress: () {
-                  maestro.setLocalList(category);
-                  showModalBottomSheet<void>(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return CategoryBottomSheet();
-                    },
-                  );
-                },
-                focusColor: Colors.black,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      category.toUpperCase(),
-                      style: const TextStyle(
-                        color: Color.fromARGB(255, 116, 12, 12),
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
+              Text(
+                category.toUpperCase(),
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 116, 12, 12),
+                  fontSize: 12,
                 ),
               ),
+              Text('${qtd} cânticos.'),
+              Container(height: 10),
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
 
 class GenericCard extends StatelessWidget {
   final String category, img;
   final direct;
+  final int qtd;
 
-  const GenericCard(this.category, this.img, this.direct);
+  const GenericCard(this.category, this.img, this.direct, this.qtd);
 
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context);
     return Container(
-      height: 50,
-      child: Container(
         width: MediaQuery.of(context).size.width * .4,
-        child: Card(
-          color: Colors.cyan[200],
-          shadowColor: const Color.fromARGB(255, 116, 12, 12),
-          child: Row(
+        height: MediaQuery.of(context).size.width * .46,
+        color: Colors.black26,
+        child: InkWell(
+          onTap: () {
+            maestro.setLocalListUncategorized(category);
+            maestro.setCatalogueTrue();
+            maestro.setSheetFalse();
+            if (direct) {
+              maestro.setIndexToZero();
+              navigator(context, ShowMusic());
+            } else {
+              navigator(context, ShowCategory());
+            }
+          },
+          focusColor: Colors.black,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                child: Image.asset('assets/img/$img'),
+              Container(height: 10),
+              Image.asset(
+                'assets/img/$img',
+                width: MediaQuery.of(context).size.width * .3,
               ),
-              InkWell(
-                onTap: () {
-                  maestro.setLocalListUncategorized(category);
-                  maestro.setCatalogueTrue();
-                  maestro.setSheetFalse();
-                  if (direct) {
-                    navigator(context, ShowMusic());
-                  } else {
-                    navigator(context, ShowCategory());
-                  }
-                },
-                focusColor: Colors.black,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      child: Text(
-                        category.toUpperCase(),
-                        style: const TextStyle(
-                          color: Color.fromARGB(255, 116, 12, 12),
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
-                  ],
+              Text(
+                category.toUpperCase(),
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 116, 12, 12),
+                  fontSize: 12,
                 ),
               ),
+              Text('${qtd} cânticos.'),
+              Container(height: 10),
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

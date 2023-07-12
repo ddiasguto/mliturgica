@@ -67,11 +67,8 @@ flutter:
   assets:
      - assets/img/agnus.jpg
      - assets/img/agnus1.jpg
-     - assets/img/corpus.jpg
      - assets/img/samaria.jpg
-     - assets/img/holymary.jpg
      - assets/img/vatican3.jpg
-     - assets/img/family.jpg
      - assets/home_img/holymary2.jpg
      - assets/home_img/samaria2.jpg
      - assets/home_img/vatican3.jpg
@@ -89,7 +86,9 @@ flutter:
      - assets/home_img/faustina.jpg
      - assets/home_img/jesus-sermao-da-montanha.jpg
      - assets/home_img/agostinho.jpg
+     - assets/home_img/holyspirit.jpg
      - assets/home_img/edith.jpg
+     - assets/img/jesus-sermao-da-montanha.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
