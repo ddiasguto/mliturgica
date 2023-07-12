@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CardHome("Entrada", "agnus1.jpg", false, entrance.length),
-                  CardHome("Ato Penitencial", "agnus1.jpg", false,
+                  CardHome("Ato Penitencial", "penitencia.jpg", true,
                       penitencial.length),
                 ],
               ),
@@ -72,7 +72,7 @@ class Home extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CardHome("Santo", "agnus1.jpg", false, saint.length),
+                  CardHome("Santo", "agnus1.jpg", true, saint.length),
                   CardHome(
                       "Comunhão", "santissimo.jpg", false, comunion.length),
                 ],
