@@ -26,6 +26,7 @@ class CardHome extends StatelessWidget {
             maestro.setCatalogueFalse();
             maestro.setSheetFalse();
             if (direct) {
+              maestro.setIndexToZero();
               navigator(context, ShowMusic());
             } else {
               navigator(context, ShowCategory());
