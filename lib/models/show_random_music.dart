@@ -8,7 +8,7 @@ Widget showNewMusic(context, int index) {
   return TextScroll(
     "    ${maestro.sheet[index].title}",
     velocity: Velocity(
-      pixelsPerSecond: Offset(15, 0),
+      pixelsPerSecond: Offset(10, 0),
     ),
     delayBefore: Duration(seconds: 2),
   );

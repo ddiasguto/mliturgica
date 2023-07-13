@@ -56,6 +56,7 @@ class Cifra extends StatelessWidget {
         cipher,
         style: const TextStyle(
           fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic,
           color: redApp,
         ),
       ),

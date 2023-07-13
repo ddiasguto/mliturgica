@@ -20,12 +20,12 @@ Widget showRandomSheet(context) {
         children: [
           showNewMusic(context, 0),
           showNewMusic(context, 1),
-          showNewMusic(context, 2),
           showNewMusic(context, 3),
           showNewMusic(context, 4),
           showNewMusic(context, 5),
           showNewMusic(context, 6),
           showNewMusic(context, 7),
+          showNewMusic(context, 8),
         ],
       ),
     ),

@@ -361,12 +361,12 @@ class Maestro with ChangeNotifier {
     setRandomEnding();
     sheet[0] = entrance[randomEntrance];
     sheet[1] = penitencial[randomPenitencial];
-    sheet[2] = aclamation[randomAclamation];
-    sheet[3] = offers[randomOffer];
-    sheet[4] = saint[randomSaint];
-    sheet[5] = comunion[randomComunion];
-    sheet[6] = posComunion[randomPosComunion];
-    sheet[7] = ending[randomEnding];
+    sheet[3] = aclamation[randomAclamation];
+    sheet[4] = offers[randomOffer];
+    sheet[5] = saint[randomSaint];
+    sheet[6] = comunion[randomComunion];
+    sheet[7] = posComunion[randomPosComunion];
+    sheet[8] = ending[randomEnding];
     notifyListeners();
   }
 }

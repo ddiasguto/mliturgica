@@ -123,6 +123,7 @@ class ShowMusicState extends State<ShowMusic> {
       List<String> categories = [
         'Entrada',
         'Ato Penitencial',
+        '',
         'Aclamação',
         'Ofertório',
         'Santo',
