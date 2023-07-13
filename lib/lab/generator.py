@@ -10,7 +10,7 @@ file1 = open('aux.txt','r')
 
 titulo = input('Titulo da Classe:')
 
-category = int(input(print('Categorias:\n\t1-Entrada;\n\t2-Ofertorio;\n\t3-aclamacao\n\t4-Comunhão;\n\t5-Final\nDigite a categoria:')))
+category = int(input(print('Categorias:\n\t1-Entrada;\n\t2-Ato Penitencial;\n\t3-aclamacao\n\t4-Ofertório\n\t5-Santo\n\t6-Comunhão;\n\t7-Pós Comunhão\n\t8-Encerramento\nDigite a categoria:')))
 
 categoryName = functions.setCategory(category)
 
