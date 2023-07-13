@@ -15,6 +15,7 @@ List<Chant> offers = [
   paoEVinho,
   dianteDoAltar,
   sobeAJerusalem,
+  muitosGraosDeTrigo
 ];
 
 Chant aTiMeUDEUS = Chant(
@@ -458,3 +459,51 @@ Chant sobeAJerusalem = Chant(
     ],
     hasCypher: false,
     ciphers: []);
+
+Chant muitosGraosDeTrigo = Chant(
+    title: 'Muitos grãos de trigo',
+    category: 'Ofertório',
+    lyrics: [
+      const Music(cipher: 'Muitos grãos de trigo, se tornaram pão'),
+      const Music(cipher: 'Hoje são Teu corpo, ceia e comunhão'),
+      const Music(cipher: 'Muitos grãos de trigo, se tornaram pão'),
+      verse(),
+      const Music(cipher: 'Toma, Senhor, nossa vida em ação'),
+      const Music(cipher: 'Para mudá-la em fruto e missão'),
+      const Music(cipher: 'Toma, Senhor, nossa vida em ação'),
+      const Music(cipher: 'Para mudá-la em missão'),
+      verse(),
+      const Music(cipher: 'Muitos cachos de uva, se tornaram vinho'),
+      const Music(cipher: 'Hoje são teu sangue, força no caminho'),
+      const Music(cipher: 'Muitos cachos de uva, se tornaram vinho'),
+      verse(),
+      const Music(cipher: 'Muitas são as vidas, feitas vocação'),
+      const Music(cipher: 'Hoje oferecidas em consagração'),
+      const Music(cipher: 'Muitas são as vidas, feitas vocação'),
+    ],
+    hasCypher: true,
+    ciphers: [
+      const Cifra(cipher: '     A      E7       A    D     E     A'),
+      const Music(cipher: '1. MUITOS GRÃOS DE TRIGO SE TORNARAM PÃO.'),
+      const Cifra(cipher: 'A7             D      E      A'),
+      const Music(cipher: 'HOJE SÃO TEU CORPO, CEIA E COMUNHÃO.'),
+      const Cifra(cipher: 'F#m              Bm    E7         A'),
+      const Music(cipher: 'MUITOS GRÃOS DE TRIGO SE TORNARAM PÃO.'),
+      verse(),
+      const Cifra(cipher: 'A        A7         D'),
+      const Music(cipher: 'TOMA, SENHOR, NOSSA VIDA EM AÇÃO,'),
+      const Cifra(cipher: 'E                 D   E     A'),
+      const Music(cipher: 'PARA MUDÁ-LA EM FRUTO E MISSÃO.'),
+      const Cifra(cipher: 'A       A7           D'),
+      const Music(cipher: 'TOMA, SENHOR, NOSSA VIDA EM AÇÃO,'),
+      const Cifra(cipher: 'E       E7          A'),
+      const Music(cipher: 'PARA MUDÁ-LA EM MISSÃO.'),
+      verse(),
+      const Music(cipher: '2. MUITOS CACHOS DE UVA SE TORNARAM VINHO.'),
+      const Music(cipher: 'HOJE SÃO TEU SANGUE, FORÇA NO CAMINHO.'),
+      const Music(cipher: 'MUITOS CACHOS DE UVA SE TORNARAM VINHO.'),
+      verse(),
+      const Music(cipher: '3. MUITAS SÃO AS VIDAS FEITAS VOCAÇÃO'),
+      const Music(cipher: 'HOJE OFERECIDAS EM CONSAGRAÇÃO'),
+      const Music(cipher: 'MUITAS SÃO AS VIDAS FEITAS VOCAÇÃO'),
+    ]);
