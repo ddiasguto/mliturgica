@@ -43,7 +43,7 @@ Widget chantsCatalogue(context) {
           trailing: Icon(Icons.queue_music_outlined,
               color: maestro.catalogueList[index].hasCypher
                   ? Colors.green[800]
-                  : Colors.black26),
+                  : Colors.cyan[400]),
           tileColor: Colors.cyan[400],
           selectedColor: Colors.amberAccent,
           onTap: () {

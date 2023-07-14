@@ -33,7 +33,7 @@ Widget chantsCategory(context) {
           trailing: Icon(Icons.queue_music_outlined,
               color: maestro.localList[index].hasCypher
                   ? Colors.green[800]
-                  : Colors.black26),
+                  : Colors.cyan),
           selectedColor: Colors.amberAccent,
           onTap: () {
             maestro.setCurrentIndex(index);
