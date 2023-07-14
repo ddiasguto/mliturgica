@@ -8,6 +8,9 @@ import 'components/app_bars.dart';
 import 'pages/home.dart';
 
 void main() {
+  Maestro().sortCatalogue();
+  Maestro().randomImgHome();
+
   runApp(
     MultiProvider(
       providers: [
@@ -23,10 +26,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Maestro maestro = Provider.of<Maestro>(context);
-    maestro.sortCatalogue();
-    maestro.randomImgHome();
-
     return MaterialApp(
       title: "Músicas Litúrgicas",
       home: MyStatefulWidget(),
