@@ -39,42 +39,42 @@ Widget addOnCatalogue(context) {
           ),
         ),
         DropdownMenuItem<int>(
-          value: 2,
+          value: 3,
           child: Text(
             '  Aclamação'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
-          value: 3,
+          value: 4,
           child: Text(
             '  Ofertório'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
-          value: 4,
+          value: 5,
           child: Text(
             '  Santo'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
-          value: 5,
+          value: 6,
           child: Text(
             '  Comunhão'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
-          value: 6,
+          value: 7,
           child: Text(
             '  Pós Comunhão'.toUpperCase(),
             style: TextStyle(fontSize: 16),
           ),
         ),
         DropdownMenuItem<int>(
-          value: 7,
+          value: 8,
           child: Text(
             '  Encerramento'.toUpperCase(),
             style: TextStyle(fontSize: 16),

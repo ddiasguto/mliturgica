@@ -1,3 +1,4 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/models/show_random_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +19,54 @@ Widget showRandomSheet(context) {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          showNewMusic(context, 0),
-          showNewMusic(context, 1),
-          showNewMusic(context, 3),
-          showNewMusic(context, 4),
-          showNewMusic(context, 5),
-          showNewMusic(context, 6),
-          showNewMusic(context, 7),
-          showNewMusic(context, 8),
+          Row(
+            children: [
+              Text('  Entrada: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 0),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Ato penitencial: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 1),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Aclamação: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 3),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Ofertório: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 4),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Santo: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 5),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Comunhão: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 6),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Pós Comunhão: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 7),
+            ],
+          ),
+          Row(
+            children: [
+              Text('  Encerramento: ', style: TextStyle(color: redApp)),
+              showNewMusic(context, 8),
+            ],
+          ),
         ],
       ),
     ),

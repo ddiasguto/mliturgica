@@ -6,7 +6,7 @@ import 'package:text_scroll/text_scroll.dart';
 Widget showNewMusic(context, int index) {
   Maestro maestro = Provider.of<Maestro>(context);
   return TextScroll(
-    "    ${maestro.sheet[index].title}",
+    maestro.sheet[index].title,
     velocity: Velocity(
       pixelsPerSecond: Offset(10, 0),
     ),

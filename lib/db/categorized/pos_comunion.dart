@@ -2,7 +2,6 @@ import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/templates/cipher.dart';
 
 List<Chant> posComunion = [
-  estasEntreNos,
   teLouvoEmVerdade,
   amarComoJesusAmou,
   qualAChave,
@@ -13,34 +12,6 @@ List<Chant> posComunion = [
   tudoEDoPai,
   amarTeMais
 ];
-
-Chant estasEntreNos = Chant(
-    title: 'Estás entre nós',
-    category: 'Pós Comunhão',
-    lyrics: [
-      const Music(
-          cipher:
-              '1. Tu és minha vida, outro Deus não há. Tu és minha estrada, a minha verdade. Em tua Palavra eu caminharei, enquanto eu viver e até quando tu quiseres. Já não sentirei temor, pois estás aqui, tu estás no meio de nós'),
-      verse(),
-      const Music(cipher: '2. Creio em ti, Senhor, vindo de Maria,'),
-      const Music(cipher: 'Filho eterno e Santo, homem como nós.'),
-      const Music(
-          cipher:
-              'Tu morreste por amor, vivo estás em nós, Unidade Trina com o Espirito e o Pai. E um dia eu bem sei, tu retornarás, e abrirás o Reino dos Céus!'),
-      verse(),
-      const Music(
-          cipher:
-              '3. Tu és minha força, outro Deus não há, tu és minha paz, minha liberdade.'),
-      const Music(
-          cipher:
-              'Nada nessa vida nos separará, em tuas mãos seguras minha vida guardarás. Eu não temerei o mal, tu me livrarás, e no teu perdão viverei!'),
-      verse(),
-      const Music(
-          cipher:
-              '4. Ó Senhor da vida, creio sempre em ti! Filho Salvador, eu espero em ti! Santo Espírito de Amor, desce sobre nós. Tu de mil caminhos nos conduzes a uma fé, e por mil estradas onde andarmos nós, qual semente nos levarás!'),
-    ],
-    hasCypher: false,
-    ciphers: []);
 
 Chant teLouvoEmVerdade = Chant(
     title: 'Te louvo em verdade',
@@ -408,7 +379,7 @@ Chant tudoEDoPai = Chant(
 
 Chant amarTeMais = Chant(
     title: 'Amar-te mais',
-    category: 'Comunhão',
+    category: 'Pós Comunhão',
     lyrics: [
       const Music(cipher: 'Amar-te mais que a mim mesmo,'),
       const Music(cipher: 'amar-te mais que tudo o que há aqui!'),
