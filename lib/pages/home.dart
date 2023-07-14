@@ -14,7 +14,9 @@ import 'package:diasguto/db/uncategorized/adoration.dart';
 import 'package:diasguto/db/uncategorized/holy_spirit.dart';
 import 'package:diasguto/db/uncategorized/hymns.dart';
 import 'package:diasguto/db/uncategorized/marianos.dart';
+import 'package:diasguto/functions/navigator.dart';
 import 'package:diasguto/models/legend_home.dart';
+import 'package:diasguto/pages/oracao_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:diasguto/models/colors.dart';
@@ -46,18 +48,10 @@ class Home extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(10),
             children: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Text(
-                  'Liturgia da Missa'.toUpperCase(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 22, color: redApp),
-                ),
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CardHome("Entrada", "agnus1.jpg", false, entrance.length),
+                  CardHome("Entrada", "entrance.jpg", false, entrance.length),
                   CardHome("Ato Penitencial", "penitencia.jpg", true,
                       penitencial.length),
                 ],
@@ -114,9 +108,13 @@ class Home extends StatelessWidget {
                 ],
               ),
               Container(height: 60),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [sentOration(context)],
+              ListTile(
+                title: Text(
+                  'Oração do músico católico'.toUpperCase(),
+                  style: TextStyle(color: redApp),
+                ),
+                onTap: () => navigator(context, Oracao()),
+                tileColor: Colors.black12,
               ),
             ],
           ),

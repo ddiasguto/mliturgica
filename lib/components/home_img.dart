@@ -16,13 +16,20 @@ List<ImgHome> imgHome = [
   sermao,
   edith,
   agostinho,
-  holyspirit
+  holyspirit,
+  joana
 ];
 
 String putLegend(ImgHome element) {
   String str = element.hasLegend ? element.description : '';
   return str;
 }
+
+ImgHome joana = ImgHome(
+  filename: 'joana',
+  hasLegend: false,
+  description: '',
+);
 
 ImgHome Holymary = ImgHome(
   filename: 'holymary2',
