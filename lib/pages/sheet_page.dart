@@ -1,5 +1,8 @@
 import 'package:diasguto/components/Sheet_Components/sheet_buttons.dart';
+import 'package:diasguto/contents/quotes.dart';
+import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SheetPage extends StatefulWidget {
   const SheetPage({super.key});
@@ -11,6 +14,7 @@ class SheetPage extends StatefulWidget {
 class _SheetPageState extends State<SheetPage> {
   @override
   Widget build(BuildContext context) {
+    Maestro maestro = Provider.of<Maestro>(context);
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       navigateThroughSheet(context),
       Row(
@@ -20,6 +24,13 @@ class _SheetPageState extends State<SheetPage> {
           acessShared(context),
         ],
       ),
+      Container(
+        height: 10,
+      ),
+      Container(
+        width: 300,
+        child: Quotes[maestro.getRandomQuote],
+      )
     ]);
   }
 }

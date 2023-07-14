@@ -8,7 +8,7 @@ import '../../widgets/random_sheet_dialog.dart';
 
 Widget generateButton(context) {
   return Container(
-    width: 150,
+    width: MediaQuery.sizeOf(context).width * .85 * .5,
     height: 45,
     child: Card(
       child: InkWell(
@@ -44,7 +44,7 @@ Widget generateButton(context) {
 
 Widget acessShared(context) {
   return Container(
-    width: 150,
+    width: MediaQuery.sizeOf(context).width * .85 * .5,
     height: 45,
     child: Card(
       child: InkWell(
@@ -80,7 +80,7 @@ Widget navigateThroughSheet(context) {
   Maestro maestro = Provider.of<Maestro>(context);
 
   return Container(
-    width: 300,
+    width: MediaQuery.sizeOf(context).width * .85,
     height: 45,
     child: Card(
       child: InkWell(
