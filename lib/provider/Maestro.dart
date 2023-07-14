@@ -1,4 +1,5 @@
-import 'package:diasguto/components/home_img.dart';
+import 'package:diasguto/components/contents/home_img.dart';
+import 'package:diasguto/components/contents/quotes.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/entrada.dart';
 import 'package:diasguto/db/categorized/final.dart';
@@ -74,7 +75,7 @@ class Maestro with ChangeNotifier {
   get getIndexCatalogue => indexCatalogue;
   get getRandomImg => randomImg;
   get getShowCipher => showCipher;
-
+  get getRandomQuote => randomQuote;
   int randomEntrance = 0;
   int randomPenitencial = 0;
   int randomAclamation = 0;
@@ -85,14 +86,16 @@ class Maestro with ChangeNotifier {
   int randomEnding = 0;
   int randomImg = 0;
   int randomHymn = 0;
+  int randomQuote = 0;
 
   void setShowCipher() {
     showCipher = !showCipher;
     notifyListeners();
   }
 
-  void randomImgHome() {
+  void randomContent() {
     randomImg = Random().nextInt(imgHome.length);
+    randomQuote = Random().nextInt(Quotes.length);
   }
 
   void setLocalList(String _category) {
