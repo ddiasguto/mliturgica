@@ -1,5 +1,5 @@
-import 'package:diasguto/components/contents/home_img.dart';
-import 'package:diasguto/components/contents/quotes.dart';
+import 'package:diasguto/contents/home_img.dart';
+import 'package:diasguto/contents/quotes.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/entrada.dart';
 import 'package:diasguto/db/categorized/final.dart';
@@ -96,6 +96,14 @@ class Maestro with ChangeNotifier {
   void randomContent() {
     randomImg = Random().nextInt(imgHome.length);
     randomQuote = Random().nextInt(Quotes.length);
+  }
+
+  void filterSearchResults(String query) {
+    catalogueList
+        .where((item) => item.title.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    notifyListeners();
   }
 
   void setLocalList(String _category) {

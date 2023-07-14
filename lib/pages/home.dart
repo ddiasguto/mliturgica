@@ -1,6 +1,6 @@
 import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/cards_home.dart';
-import 'package:diasguto/components/home_img.dart';
+import 'package:diasguto/contents/home_img.dart';
 import 'package:diasguto/components/oration.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/comunhao.dart';
