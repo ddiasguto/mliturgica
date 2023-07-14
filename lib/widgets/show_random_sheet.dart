@@ -14,59 +14,19 @@ Widget showRandomSheet(context) {
       style: TextStyle(color: Colors.cyan, fontSize: 18),
     ),
     content: SizedBox(
-      width: 120,
+      width: MediaQuery.sizeOf(context).width * .75,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Text('  Entrada: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 0),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Ato penitencial: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 1),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Aclamação: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 3),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Ofertório: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 4),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Santo: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 5),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Comunhão: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 6),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Pós Comunhão: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 7),
-            ],
-          ),
-          Row(
-            children: [
-              Text('  Encerramento: ', style: TextStyle(color: redApp)),
-              showNewMusic(context, 8),
-            ],
-          ),
+          showNewMusic(context, 0),
+          showNewMusic(context, 1),
+          showNewMusic(context, 3),
+          showNewMusic(context, 4),
+          showNewMusic(context, 5),
+          showNewMusic(context, 6),
+          showNewMusic(context, 7),
+          showNewMusic(context, 8),
         ],
       ),
     ),
