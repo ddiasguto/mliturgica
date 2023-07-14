@@ -108,31 +108,31 @@ class Maestro with ChangeNotifier {
 
       case 'Aclamação':
         localList = aclamation;
-        indexCategory = 2;
+        indexCategory = 3;
         break;
 
       case 'Ofertório':
         localList = offers;
-        indexCategory = 3;
+        indexCategory = 4;
         break;
 
       case 'Santo':
         localList = saint;
-        indexCategory = 4;
+        indexCategory = 5;
         break;
 
       case 'Comunhão':
         localList = comunion;
-        indexCategory = 5;
+        indexCategory = 6;
         break;
 
       case 'Pós Comunhão':
         localList = posComunion;
-        indexCategory = 6;
+        indexCategory = 7;
         break;
       case 'Encerramento':
         localList = ending;
-        indexCategory = 7;
+        indexCategory = 8;
         break;
 
       default:
@@ -292,9 +292,7 @@ class Maestro with ChangeNotifier {
   }
 
   void setRandomHymn() {
-    do {
-      randomHymn = Random().nextInt(hymns.length);
-    } while (sheet[2].title == hymns[randomHymn].title);
+    randomHymn = (randomHymn + 1) % hymns.length;
   }
 
   void setRandomOffer() {
