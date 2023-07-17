@@ -1,4 +1,5 @@
 import 'package:diasguto/components/Sheet_Components/sheet_buttons.dart';
+import 'package:diasguto/components/check_box.dart';
 import 'package:diasguto/contents/quotes.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +25,15 @@ class _SheetPageState extends State<SheetPage> {
           acessShared(context),
         ],
       ),
-      Container(
-        height: 10,
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CheckHymn(),
+          Text('Incluir hino de louvor'),
+          Container(
+            height: 60,
+          )
+        ],
       ),
       Container(
         width: 300,

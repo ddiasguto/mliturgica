@@ -35,7 +35,8 @@ class ShowMusicState extends State<ShowMusic> {
     int currentIndex = maestro.getCurrentIndex;
     List<Chant> localList = maestro.getLocalList;
     bool showCipher = maestro.getShowCipher;
-
+    int full = maestro.getFullProgress;
+    int progress = maestro.getProgress;
     return Scaffold(
         appBar: AppBar(
           title: TextScroll(
@@ -51,9 +52,7 @@ class ShowMusicState extends State<ShowMusic> {
           elevation: 0,
           actions: [
             Center(
-              child: Text(
-                  "${maestro.getCurrentIndex + 1}/${maestro.localList.length}",
-                  style: TextStyle(fontSize: 16)),
+              child: Text("$progress / $full", style: TextStyle(fontSize: 16)),
             ),
             ChangeChant(),
             buttonCipher(context),

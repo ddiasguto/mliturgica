@@ -1,3 +1,4 @@
+import 'package:diasguto/components/check_box.dart';
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
@@ -89,6 +90,8 @@ Widget navigateThroughSheet(context) {
           maestro.setIndexToZero();
           maestro.setCatalogueFalse();
           maestro.setSheetTrue();
+          maestro.setSheetLenght();
+          maestro.setSheetProgress();
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ShowMusic()));
         },
@@ -106,7 +109,7 @@ Widget navigateThroughSheet(context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Navegar pela partitura ',
+              'Navegar',
               style: TextStyle(
                 color: redApp,
                 fontSize: 20,

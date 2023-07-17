@@ -49,6 +49,7 @@ Widget chantsCatalogue(context) {
           onTap: () {
             maestro.setLocalListToCatalogue();
             maestro.setCurrentIndex(index);
+            maestro.setLocalListTofull();
             maestro.setCatalogueTrue();
             maestro.setSheetFalse();
             Navigator.push(context,

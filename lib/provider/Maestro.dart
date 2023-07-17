@@ -75,7 +75,11 @@ class Maestro with ChangeNotifier {
   get getIndexCatalogue => indexCatalogue;
   get getRandomImg => randomImg;
   get getShowCipher => showCipher;
+  get getProgress => progress;
   get getRandomQuote => randomQuote;
+  get getHasHymn => hasHymn;
+  get getHasLamb => hasLamb;
+  get getFullProgress => fullProgress;
   int randomEntrance = 0;
   int randomPenitencial = 0;
   int randomAclamation = 0;
@@ -87,6 +91,11 @@ class Maestro with ChangeNotifier {
   int randomImg = 0;
   int randomHymn = 0;
   int randomQuote = 0;
+  int sheetLenght = 9;
+  int fullProgress = 0;
+  int progress = 0;
+  bool hasHymn = true;
+  bool hasLamb = true;
 
   void setShowCipher() {
     showCipher = !showCipher;
@@ -183,6 +192,16 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void handleHasHymn() {
+    hasHymn = !hasHymn;
+    notifyListeners();
+  }
+
+  void handleHasLamb() {
+    hasLamb = !hasLamb;
+    notifyListeners();
+  }
+
   void changeChant(int index) {
     switch (index) {
       case 0:
@@ -209,7 +228,7 @@ class Maestro with ChangeNotifier {
         setRandomSaint();
         sheet[5] = saint[randomSaint];
         break;
-      case 5:
+      case 6:
         setRandomComunion();
         sheet[5] = comunion[randomComunion];
         break;
@@ -229,6 +248,16 @@ class Maestro with ChangeNotifier {
 
   void setCatalogueFalse() {
     isCatalogue = false;
+    notifyListeners();
+  }
+
+  void setLocalListTofull() {
+    fullProgress = localList.length;
+    notifyListeners();
+  }
+
+  void setSheetProgress() {
+    fullProgress = sheetLenght;
     notifyListeners();
   }
 
@@ -258,32 +287,68 @@ class Maestro with ChangeNotifier {
 
   void setCurrentIndex(int i) {
     currentIndex = i;
+    progress = i + 1;
+    notifyListeners();
+  }
+
+  void setSheetLenght() {
+    sheetLenght = 9;
+    if (!hasHymn) {
+      sheetLenght--;
+    }
     notifyListeners();
   }
 
   void nextItem() {
     if (currentIndex < localList.length - 1) {
-      currentIndex++;
+      if (isSheet) {
+        incrementIndexAtSheet();
+      } else {
+        currentIndex++;
+      }
+      progress++;
     }
-    if (isSheet) {
+
+    notifyListeners();
+  }
+
+  void incrementIndexAtSheet() {
+    if (!hasHymn && currentIndex == 1) {
+      currentIndex += 2;
+      indexCategory += 2;
+    } else {
+      currentIndex++;
       indexCategory++;
     }
     notifyListeners();
   }
 
-  void previousItem() {
-    if (currentIndex > 0) {
+  void decrementIndexAtSheet() {
+    if (!hasHymn && currentIndex == 3) {
+      currentIndex -= 2;
+      indexCategory -= 2;
+    } else {
       currentIndex--;
-    }
-
-    if (isSheet) {
       indexCategory--;
     }
+  }
+
+  void previousItem() {
+    if (currentIndex > 0) {
+      if (isSheet) {
+        decrementIndexAtSheet();
+      } else {
+        currentIndex--;
+      }
+    }
+    progress--;
+
     notifyListeners();
   }
 
   void setIndexToZero() {
     currentIndex = 0;
+    progress = 1;
     notifyListeners();
   }
 
