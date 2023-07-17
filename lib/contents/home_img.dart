@@ -17,7 +17,8 @@ List<ImgHome> imgHome = [
   edith,
   agostinho,
   holyspirit,
-  joana
+  joana,
+  francis
 ];
 
 String putLegend(ImgHome element) {
@@ -25,10 +26,17 @@ String putLegend(ImgHome element) {
   return str;
 }
 
+ImgHome francis = ImgHome(
+  filename: 'francis',
+  hasLegend: true,
+  description: "São Francisco de Assis",
+);
+
 ImgHome joana = ImgHome(
   filename: 'joana',
-  hasLegend: false,
-  description: '',
+  hasLegend: true,
+  description:
+      "Aparição de Santa Catarina e Santa Margarida à Joana d'Arc, a donzela de Orleans",
 );
 
 ImgHome Holymary = ImgHome(

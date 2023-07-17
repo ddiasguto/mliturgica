@@ -1,6 +1,4 @@
 import 'package:diasguto/models/imgHome.dart';
-import 'package:diasguto/models/legend_home.dart';
-import 'package:flutter/material.dart';
 
 List<ImgHome> imgHome = [
   Holymary,
@@ -17,13 +15,20 @@ List<ImgHome> imgHome = [
   edith,
   agostinho,
   holyspirit,
-  joana
+  joana,
+  francis
 ];
 
 String putLegend(ImgHome element) {
   String str = element.hasLegend ? element.description : '';
   return str;
 }
+
+ImgHome francis = ImgHome(
+  filename: 'francis',
+  description: 'São Francisco de Assis',
+  hasLegend: true,
+);
 
 ImgHome joana = ImgHome(
   filename: 'joana',

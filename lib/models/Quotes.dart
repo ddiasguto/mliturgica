@@ -13,7 +13,10 @@ class Quote extends StatelessWidget {
       children: [
         Text(
           '"$quote"',
-          style: TextStyle(color: redApp),
+          style: TextStyle(
+            color: redApp,
+            fontStyle: FontStyle.italic,
+          ),
           softWrap: true,
           textAlign: TextAlign.center,
         ),
@@ -21,6 +24,7 @@ class Quote extends StatelessWidget {
         Text(
           reference,
           textAlign: TextAlign.center,
+          style: TextStyle(color: redApp),
         )
       ],
     );
