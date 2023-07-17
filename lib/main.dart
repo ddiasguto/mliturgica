@@ -2,6 +2,7 @@ import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
+import 'package:diasguto/provider/Manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'components/app_bars.dart';
@@ -12,6 +13,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Maestro()),
+        ChangeNotifierProvider(create: (_) => Manager())
       ],
       child: const MyApp(),
     ),
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Maestro maestro = Provider.of<Maestro>(context);
+    Maestro maestro = Provider.of<Maestro>(context, listen: false);
     maestro.randomContent();
     maestro.sortCatalogue();
     return MaterialApp(
@@ -70,7 +72,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
-        backgroundColor: Colors.cyan[400],
+        backgroundColor: cyanApp,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -86,8 +88,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green[900],
-        unselectedItemColor: redApp,
+        selectedItemColor: redApp,
+        unselectedItemColor: Colors.black38,
         onTap: _onItemTapped,
       ),
     );

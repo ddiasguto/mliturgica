@@ -1,7 +1,6 @@
-import 'package:diasguto/components/app_bars.dart';
 import 'package:diasguto/components/cards_home.dart';
+import 'package:diasguto/components/home_oracao.dart';
 import 'package:diasguto/contents/home_img.dart';
-import 'package:diasguto/components/oration.dart';
 import 'package:diasguto/db/categorized/aclamacao.dart';
 import 'package:diasguto/db/categorized/comunhao.dart';
 import 'package:diasguto/db/categorized/entrada.dart';
@@ -14,9 +13,7 @@ import 'package:diasguto/db/uncategorized/adoration.dart';
 import 'package:diasguto/db/uncategorized/holy_spirit.dart';
 import 'package:diasguto/db/uncategorized/hymns.dart';
 import 'package:diasguto/db/uncategorized/marianos.dart';
-import 'package:diasguto/functions/navigator.dart';
 import 'package:diasguto/models/legend_home.dart';
-import 'package:diasguto/pages/oracao_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:diasguto/models/colors.dart';
@@ -107,15 +104,11 @@ class Home extends StatelessWidget {
                   GenericCard('Marianos', 'mary1.jpg', true, marianos.length)
                 ],
               ),
-              Container(height: 60),
-              ListTile(
-                title: Text(
-                  'Oração do músico católico'.toUpperCase(),
-                  style: TextStyle(color: redApp),
-                ),
-                onTap: () => navigator(context, Oracao()),
-                tileColor: Colors.black12,
-              ),
+              Container(height: 20),
+              navigateToOration(context),
+              Container(
+                height: 20,
+              )
             ],
           ),
         ),

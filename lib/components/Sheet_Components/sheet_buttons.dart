@@ -25,7 +25,7 @@ Widget generateButton(context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Gerar nova',
+              'Gerar',
               style: TextStyle(
                 color: Colors.green[800],
                 fontSize: 20,
@@ -59,7 +59,7 @@ Widget acessShared(context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Acessar ',
+              'Acessar',
               style: TextStyle(
                 color: Colors.blue[800],
                 fontSize: 20,

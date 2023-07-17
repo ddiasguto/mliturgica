@@ -31,7 +31,7 @@ class _SheetPageState extends State<SheetPage> {
           CheckHymn(),
           Text('Incluir hino de louvor'),
           Container(
-            height: 60,
+            height: 40,
           )
         ],
       ),

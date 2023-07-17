@@ -16,13 +16,13 @@ class CheckHymn extends StatelessWidget {
         MaterialState.focused,
       };
       if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
+        return redApp;
       }
       return redApp;
     }
 
     return Checkbox(
-      checkColor: Colors.white,
+      checkColor: Color.fromARGB(255, 0, 125, 255),
       fillColor: MaterialStateProperty.resolveWith(getColor),
       value: isChecked,
       onChanged: (bool? value) {

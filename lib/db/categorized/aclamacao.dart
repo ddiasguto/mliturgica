@@ -9,8 +9,8 @@ List<Chant> aclamation = [
   palavraDeSalvacao,
   versiculoDoDia,
   euVosDouUmNovoMandamento,
-  louvorEGloriaII,
   louvorEGloria,
+  louvorEGloriaII,
   comoSaoBelosOsPes,
   rendeiGracasAoSenhor,
   noPrincipioEraAPalavra
@@ -211,6 +211,30 @@ Chant euVosDouUmNovoMandamento = Chant(
       const Music(cipher: 'DISSE O SENHOR. (2X)'),
     ]);
 
+Chant louvorEGloria = Chant(
+    title: 'Louvor e Glória',
+    category: 'Aclamação',
+    lyrics: [
+      const Music(cipher: 'Louvor e glória a ti, Senhor,'),
+      const Music(cipher: 'Cristo palavra, palavra de Deus!'),
+      verse(),
+      const Music(cipher: 'O Homem não vive'),
+      const Music(cipher: 'Somente de pão,'),
+      const Music(cipher: 'Mas de toda palavra'),
+      const Music(cipher: 'Da boca de Deus!'),
+    ],
+    hasCypher: false,
+    ciphers: [
+      const Cifra(cipher: '   D       D7     G        D'),
+      const Music(cipher: 'LOUVOR E GLÓRIA A TI, SENHOR'),
+      const Cifra(cipher: 'Em       F#m       G   A      D'),
+      const Music(cipher: 'CRISTO PALAVRA, PALAVRA DE DEUS (2X)'),
+      const Cifra(cipher: 'D                            G'),
+      const Music(cipher: 'O HOMEM NÃO VIVE SOMENTE DE PÃO'),
+      const Cifra(cipher: 'Em                                A'),
+      const Music(cipher: 'MAS DE TODA PALAVRA DA BOCA DE DEUS'),
+    ]);
+
 Chant louvorEGloriaII = Chant(
     title: 'Louvor e Gloria 2',
     category: 'Aclamação',
@@ -240,30 +264,6 @@ Chant louvorEGloriaII = Chant(
       const Music(cipher: '“EIS MEU FILHO MUITO AMADO,'),
       const Music(cipher: '                   D'),
       const Music(cipher: ' ESCUTAI-O TODOS VÓS”')
-    ]);
-
-Chant louvorEGloria = Chant(
-    title: 'Louvor e Glória',
-    category: 'Aclamação',
-    lyrics: [
-      const Music(cipher: 'Louvor e glória a ti, Senhor,'),
-      const Music(cipher: 'Cristo palavra, palavra de Deus!'),
-      verse(),
-      const Music(cipher: 'O Homem não vive'),
-      const Music(cipher: 'Somente de pão,'),
-      const Music(cipher: 'Mas de toda palavra'),
-      const Music(cipher: 'Da boca de Deus!'),
-    ],
-    hasCypher: false,
-    ciphers: [
-      const Cifra(cipher: '   D       D7     G        D'),
-      const Music(cipher: 'LOUVOR E GLÓRIA A TI, SENHOR'),
-      const Cifra(cipher: 'Em       F#m       G   A      D'),
-      const Music(cipher: 'CRISTO PALAVRA, PALAVRA DE DEUS (2X)'),
-      const Cifra(cipher: 'D                            G'),
-      const Music(cipher: 'O HOMEM NÃO VIVE SOMENTE DE PÃO'),
-      const Cifra(cipher: 'Em                                A'),
-      const Music(cipher: 'MAS DE TODA PALAVRA DA BOCA DE DEUS'),
     ]);
 
 Chant comoSaoBelosOsPes = Chant(
