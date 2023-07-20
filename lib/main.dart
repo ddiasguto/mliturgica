@@ -2,7 +2,6 @@ import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:diasguto/provider/Maestro.dart';
-import 'package:diasguto/provider/Manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'components/app_bars.dart';
@@ -13,7 +12,6 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Maestro()),
-        ChangeNotifierProvider(create: (_) => Manager())
       ],
       child: const MyApp(),
     ),
@@ -72,7 +70,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
-        backgroundColor: cyanApp,
+        backgroundColor: Colors.black26,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

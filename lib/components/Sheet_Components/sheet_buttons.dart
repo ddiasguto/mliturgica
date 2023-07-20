@@ -87,9 +87,9 @@ Widget navigateThroughSheet(context) {
       child: InkWell(
         onTap: () {
           maestro.setLocalListToSheet();
-          maestro.setIndexToZero();
-          maestro.setCatalogueFalse();
           maestro.setSheetTrue();
+          maestro.setCurrentIndexForSheet();
+          maestro.setCatalogueFalse();
           maestro.setSheetLenght();
           maestro.setSheetProgress();
           Navigator.push(context,

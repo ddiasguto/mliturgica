@@ -12,7 +12,10 @@ List<Quote> Quotes = [
   ex15,
   sl47,
   sl472,
-  sl473
+  sl473,
+  jt,
+  sl148,
+  sl149
 ];
 
 Quote is12 = Quote(
@@ -64,5 +67,27 @@ Quote sl472 = Quote(
 );
 
 Quote sl473 = Quote(
-    quote: 'Pois o Rei de toda a terra é o Senhor!\n Cantem para mostrá-lo!',
+    quote: 'Pois o Rei de toda a terra é o Senhor! Cantem para mostrá-lo!',
     reference: 'Sl 47');
+
+Quote jt = Quote(
+  quote:
+      'Entoai um cântico a meu Deus com tamborins, cantai ao Senhor com címbalos, componham para ele Salmo e hino',
+  reference: 'Jt 16',
+);
+
+Quote sl148 = Quote(
+  quote:
+      "Louvai ao Senhor no céu, louvai-o  nas alturar; louvai-o todos os seus anjos, louvai-o, seus exércitos todos",
+  reference: 'Sl 148',
+);
+
+Quote sl149 = Quote(
+  quote: 'Louvai a Deus em seu templo, louvai-o em seu poderoso firmamento',
+  reference: 'Sl 149',
+);
+
+Quote sl1492 = Quote(
+  quote: 'Louvai-o por suas façanhas, louvai-o por sua grandeza imensa',
+  reference: 'Sl 149',
+);
