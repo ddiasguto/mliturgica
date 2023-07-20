@@ -182,7 +182,7 @@ Chant hinoDeLouvor2 = Chant(
       const Music(cipher: ''),
       const Music(
           cipher:
-              '1. Senhor Deus rei dos céus, Deus pai onipotente, vos louvamos bem dizemos, adoramos. Nós vos glorificamos e vos damos graças, por vossa Gloria..'),
+              '1. Senhor Deus rei dos céus, Deus pai onipotente, vos louvamos bendizemos, adoramos. Nós vos glorificamos e vos damos graças, por vossa Gloria..'),
       const Music(cipher: ''),
       const Music(
           cipher:
