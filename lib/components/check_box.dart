@@ -31,3 +31,38 @@ class CheckHymn extends StatelessWidget {
     );
   }
 }
+
+class CheckImgHome extends StatelessWidget {
+  const CheckImgHome({super.key});
+
+  Widget build(BuildContext context) {
+    Maestro maestro = Provider.of<Maestro>(context);
+    bool isChecked = maestro.removeImgHome;
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return redApp;
+      }
+      return redApp;
+    }
+
+    return ListTile(
+      leading: Checkbox(
+        checkColor: Color.fromARGB(255, 0, 125, 255),
+        fillColor: MaterialStateProperty.resolveWith(getColor),
+        value: isChecked,
+        onChanged: (bool? value) {
+          maestro.handleImgHome();
+        },
+      ),
+      title: Text(
+        'Remover Imagem da homepage',
+        style: TextStyle(fontSize: 16, color: redApp),
+      ),
+    );
+  }
+}

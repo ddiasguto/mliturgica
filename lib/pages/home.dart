@@ -29,16 +29,21 @@ class Home extends StatelessWidget {
     return Column(
       children: [
         Container(
+          color: maestro.removeImgHome ? Colors.cyan[800] : Colors.black38,
           width: MediaQuery.of(context).size.width,
-          color: Colors.black,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(children: [
-              imgHome[randomImg],
-              imgHome[randomImg].hasLegend
-                  ? LegendHome(description: putLegend(imgHome[randomImg]))
-                  : Container()
-            ]),
+            child: Column(
+              children: maestro.removeImgHome
+                  ? [Container()]
+                  : [
+                      imgHome[randomImg],
+                      imgHome[randomImg].hasLegend
+                          ? LegendHome(
+                              description: putLegend(imgHome[randomImg]))
+                          : Container()
+                    ],
+            ),
           ),
         ),
         Expanded(
