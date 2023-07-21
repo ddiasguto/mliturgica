@@ -12,26 +12,33 @@ List<Chant> penitencial = [
 
 Chant senhorQueViestesSalvar = Chant(
     title: 'Sehor, que viestes salvar',
-    category: 'Encerramento',
+    category: 'Ato Penitencial',
     lyrics: [
-      const Music(
-          cipher: '1. Senhor que vieste salvar os corações arrependidos'),
+      const Music(cipher: '1. Senhor que vieste salvar'),
+      const Music(cipher: ' os corações arrependidos'),
       verse(),
-      const Music(cipher: 'Piedade. piedade. Piedade de nós. (bis)'),
+      const Refrao(cipher: 'Piedade. piedade. '),
+      const Refrao(cipher: 'Piedade de nós. (bis)'),
       verse(),
-      const Music(
-          cipher: '2.Ó Cristo que vieste chamar os pecadores humilhados.'),
+      const Music(cipher: '2.Ó Cristo que vieste chamar'),
+      const Music(cipher: 'os pecadores humilhados.'),
       verse(),
-      const Music(
-          cipher:
-              '3.Senhor que intercedei por nós junto a Deus pai que nos perdoa.'),
+      const Refrao(cipher: 'Piedade. piedade. '),
+      const Refrao(cipher: 'Piedade de nós. (bis)'),
+      verse(),
+      const Music(cipher: '3.Senhor que intercedei por nós'),
+      const Music(cipher: ' junto a Deus pai que nos perdoa.'),
+      verse(),
+      const Refrao(cipher: 'Piedade. piedade. '),
+      const Refrao(cipher: 'Piedade de nós. (bis)'),
+      verse(),
     ],
     hasCypher: false,
     ciphers: []);
 
 Chant senhorPiedade = Chant(
     title: 'Senhor, piedade',
-    category: 'Encerramento',
+    category: 'Ato Penitencial',
     lyrics: [
       verse(),
       const Music(cipher: '60. Senhor piedade, Senhor piedade de nós.'),
@@ -43,7 +50,7 @@ Chant senhorPiedade = Chant(
 
 Chant seEuPossoFalarMeuDeus = Chant(
     title: 'Se eu posso falar',
-    category: 'Encerramento',
+    category: 'Ato Penitencial',
     lyrics: [
       verse(),
       const Music(cipher: '61 Se eu posso falar meu Deus,'),
@@ -69,31 +76,34 @@ Chant seEuPossoFalarMeuDeus = Chant(
 
 Chant comoAOvelhaPerdida = Chant(
     title: 'Como a ovelha perdida',
-    category: 'Encerramento',
+    category: 'Ato Penitencial',
     lyrics: [
       verse(),
-      const Music(cipher: '62. Como a ovelha perdida,'),
+      const Music(cipher: 'Como a ovelha perdida,'),
       const Music(cipher: 'pelo pecado ferida. ,'),
       const Music(cipher: 'Eu te suplico perdão,'),
       const Music(cipher: 'ó bom pastor.'),
-      const Music(cipher: 'Kyrie Eleison (3x)'),
+      verse(),
+      const Refrao(cipher: 'Kyrie Eleison (3x)'),
       verse(),
       const Music(cipher: '2.Como o ladrão perdoado,'),
       const Music(cipher: 'encontro o paraíso ao teu lado.'),
       const Music(cipher: 'Lembra-te de mim, pecador por tua cruz.'),
-      const Music(cipher: 'Christe Eleison (3x)'),
+      verse(),
+      const Refrao(cipher: 'Christe Eleison (3x)'),
       verse(),
       const Music(cipher: '3.Como a pecadora caída,'),
       const Music(cipher: 'derramo aos teus pés minha vida'),
       const Music(cipher: 'vê as lagrimas do meu coração e salva-me!'),
-      const Music(cipher: 'Kyrie Eleison (3x)'),
+      verse(),
+      const Refrao(cipher: 'Kyrie Eleison (3x)'),
     ],
     hasCypher: false,
     ciphers: []);
 
 Chant senhorTendePiedadeEPerdoai = Chant(
     title: 'Senhor tende piedade e perdoai as nossas culpas',
-    category: 'Encerramento',
+    category: 'Ato Penitencial',
     lyrics: [
       const Music(cipher: 'Senhor tende piedade'),
       const Music(cipher: 'e perdoai a nossa culpa,'),

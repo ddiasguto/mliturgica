@@ -85,6 +85,7 @@ class GenericCard extends StatelessWidget {
             maestro.setLocalListUncategorized(category);
             maestro.setCatalogueTrue();
             maestro.setSheetFalse();
+            maestro.setLocalListTofull();
             if (direct) {
               maestro.setIndexToZero();
               navigator(context, ShowMusic());
