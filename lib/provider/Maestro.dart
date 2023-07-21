@@ -94,6 +94,7 @@ class Maestro with ChangeNotifier {
   int sheetLenght = 9;
   int fullProgress = 0;
   int progress = 0;
+  int sheetIndex = 0;
   bool hasHymn = true;
   bool hasLamb = true;
 
@@ -291,6 +292,11 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void setCurrentIndexForSheet() {
+    currentIndex = sheetIndex;
+    progress = currentIndex + 1;
+  }
+
   void setSheetLenght() {
     sheetLenght = 9;
     if (!hasHymn) {
@@ -313,24 +319,25 @@ class Maestro with ChangeNotifier {
   }
 
   void incrementIndexAtSheet() {
-    if (!hasHymn && currentIndex == 1) {
-      currentIndex += 2;
+    if (!hasHymn && sheetIndex == 1) {
+      sheetIndex += 2;
       indexCategory += 2;
     } else {
-      currentIndex++;
+      sheetIndex++;
       indexCategory++;
     }
-    notifyListeners();
+    currentIndex = sheetIndex;
   }
 
   void decrementIndexAtSheet() {
-    if (!hasHymn && currentIndex == 3) {
-      currentIndex -= 2;
+    if (!hasHymn && sheetIndex == 3) {
+      sheetIndex -= 2;
       indexCategory -= 2;
     } else {
-      currentIndex--;
+      sheetIndex--;
       indexCategory--;
     }
+    currentIndex = sheetIndex;
   }
 
   void previousItem() {
