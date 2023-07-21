@@ -1,13 +1,15 @@
+import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
+import 'package:diasguto/widgets/already_in_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 Widget addOnCatalogue(context) {
   Maestro maestro = Provider.of<Maestro>(context);
-  int indexCategory = maestro.getIndexCategory;
   int currentIndex = maestro.getCurrentIndex;
   List localList = maestro.getLocalList;
   int index = maestro.getIndexCatalogue;
+  List sheet = maestro.getSheet;
 
   return AlertDialog(
     title: const Text(
@@ -93,15 +95,32 @@ Widget addOnCatalogue(context) {
       ),
       TextButton(
         onPressed: () {
-          Navigator.pop(context);
-          maestro.setSheetElement(
-            localList[currentIndex],
-          );
-          final snackbar = SnackBar(
-            content: const Text('Adicionado.'),
-            backgroundColor: Colors.green[800],
-          );
-          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+          if (localList[currentIndex].title == sheet[index].title) {
+            Navigator.pop(context);
+            final snackbar = SnackBar(
+              content: Row(
+                children: [
+                  Icon(
+                    Icons.warning,
+                    color: redApp,
+                  ),
+                  const Text('Este cântico já está na partitura'),
+                ],
+              ),
+              backgroundColor: const Color.fromARGB(255, 197, 187, 96),
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+          } else {
+            Navigator.pop(context);
+            maestro.setSheetElement(
+              localList[currentIndex],
+            );
+            final snackbar = SnackBar(
+              content: const Text('Adicionado.'),
+              backgroundColor: Colors.green[800],
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+          }
         },
         child: const Text(
           'Adicionar',
