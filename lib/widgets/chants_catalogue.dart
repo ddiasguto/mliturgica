@@ -2,7 +2,7 @@ import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:diasguto/widgets/add_to_sheet.dart';
 import 'package:diasguto/widgets/already_in_sheet.dart';
-import 'package:diasguto/widgets/radio_catalogue.dart';
+import 'package:diasguto/widgets/add_catalogue.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -47,6 +47,15 @@ class Maestro with ChangeNotifier {
     'encerramento'
   ];
 
+  void startSheetStatus() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.getInt('sheetStatus') != null) {
+      sheetIndex = prefs.getInt('sheetStatus')!;
+    } else {
+      sheetIndex = 0;
+    }
+  }
+
   void startSheet() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     for (int j = 0; j < aux.length; j++) {
@@ -361,6 +370,7 @@ class Maestro with ChangeNotifier {
       sheetIndex++;
       indexCategory++;
     }
+    setSheetStatus(sheetIndex);
     currentIndex = sheetIndex;
   }
 
@@ -372,6 +382,7 @@ class Maestro with ChangeNotifier {
       sheetIndex--;
       indexCategory--;
     }
+    setSheetStatus(sheetIndex);
     currentIndex = sheetIndex;
   }
 

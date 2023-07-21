@@ -31,3 +31,8 @@ void persistData(int i, String str) async {
     default:
   }
 }
+
+void setSheetStatus(int i) async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setInt('sheetStatus', i);
+}

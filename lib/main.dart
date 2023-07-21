@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context, listen: false);
     maestro.startSheet();
+    maestro.startSheetStatus();
     maestro.randomContent();
     maestro.sortCatalogue();
 
