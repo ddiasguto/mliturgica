@@ -34,6 +34,7 @@ class Maestro with ChangeNotifier {
   bool isSheet = false;
   bool isCatalogue = false;
   bool showCipher = false;
+  bool removeImgHome = true;
 
   List<String> aux = [
     'entrance',
@@ -236,6 +237,11 @@ class Maestro with ChangeNotifier {
 
   void handleHasHymn() {
     hasHymn = !hasHymn;
+    notifyListeners();
+  }
+
+  void handleImgHome() {
+    removeImgHome = !removeImgHome;
     notifyListeners();
   }
 
