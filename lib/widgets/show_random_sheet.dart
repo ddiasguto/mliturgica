@@ -1,9 +1,8 @@
-import 'package:diasguto/models/colors.dart';
+import 'package:diasguto/functions/shared.dart';
 import 'package:diasguto/models/show_random_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:text_scroll/text_scroll.dart';
 
 Widget showRandomSheet(context) {
   Maestro maestro = Provider.of<Maestro>(context);
@@ -33,7 +32,15 @@ Widget showRandomSheet(context) {
     actionsAlignment: MainAxisAlignment.spaceEvenly,
     actions: <Widget>[
       TextButton(
-        onPressed: () => Navigator.pop(context, 'Cancel'),
+        onPressed: () {
+          for (int i = 0; i < 9; i++) {
+            if (i == 2) {
+              continue;
+            }
+            persistData(i, maestro.sheet[i].title);
+          }
+          Navigator.pop(context, 'Cancel');
+        },
         child: Text(
           'Ok',
           style: TextStyle(color: Colors.cyan[700], fontSize: 18),

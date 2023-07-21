@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Maestro maestro = Provider.of<Maestro>(context, listen: false);
+    maestro.startSheet();
     maestro.randomContent();
     maestro.sortCatalogue();
+
     return MaterialApp(
       title: "Músicas Litúrgicas",
       home: RootWidget(),

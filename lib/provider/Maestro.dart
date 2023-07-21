@@ -12,9 +12,11 @@ import 'package:diasguto/db/categorized/pos_comunion.dart';
 import 'package:diasguto/db/categorized/saint.dart';
 import 'package:diasguto/db/categorized/comunhao.dart';
 import 'package:diasguto/db/uncategorized/marianos.dart';
+import 'package:diasguto/functions/shared.dart';
 import 'package:diasguto/models/chant.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Maestro with ChangeNotifier {
   List<Chant> localList = [
@@ -32,6 +34,36 @@ class Maestro with ChangeNotifier {
   bool isSheet = false;
   bool isCatalogue = false;
   bool showCipher = false;
+
+  List<String> aux = [
+    'entrance',
+    'penitencial',
+    '',
+    'aclamacao',
+    'ofertorio',
+    'santo',
+    'comunhao',
+    'poscomunhao',
+    'encerramento'
+  ];
+
+  void startSheet() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    for (int j = 0; j < aux.length; j++) {
+      if (j == 2) {
+        continue;
+      }
+      if (prefs.getString(aux[j]) != null) {
+        for (int i = 0; i < catalogueList.length; i++) {
+          if (prefs.getString(aux[j]).toString().toLowerCase() ==
+              catalogueList[i].title.toLowerCase()) {
+            sheet[j] = catalogueList[i];
+          }
+        }
+      }
+    }
+    notifyListeners();
+  }
 
   List<Chant> sheet = [
     teAmareiSenhor,
@@ -280,9 +312,12 @@ class Maestro with ChangeNotifier {
   void setSheetElement(Chant element) {
     if (isCatalogue) {
       sheet[indexCatalogue] = element;
+      persistData(indexCatalogue, element.title);
     } else {
       sheet[indexCategory] = element;
+      persistData(indexCategory, element.title);
     }
+
     notifyListeners();
   }
 
