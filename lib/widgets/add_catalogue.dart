@@ -1,3 +1,4 @@
+import 'package:diasguto/components/snack_bars.dart';
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:diasguto/widgets/already_in_sheet.dart';
@@ -97,29 +98,13 @@ Widget addOnCatalogue(context) {
         onPressed: () {
           if (localList[currentIndex].title == sheet[index].title) {
             Navigator.pop(context);
-            final snackbar = SnackBar(
-              content: Row(
-                children: [
-                  Icon(
-                    Icons.warning,
-                    color: redApp,
-                  ),
-                  const Text('Este cântico já está na partitura'),
-                ],
-              ),
-              backgroundColor: const Color.fromARGB(255, 197, 187, 96),
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+            snackAlready(context);
           } else {
             Navigator.pop(context);
             maestro.setSheetElement(
               localList[currentIndex],
             );
-            final snackbar = SnackBar(
-              content: const Text('Adicionado.'),
-              backgroundColor: Colors.green[800],
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+            snackAdded(context);
           }
         },
         child: const Text(
