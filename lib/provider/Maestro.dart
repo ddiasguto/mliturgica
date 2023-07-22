@@ -399,8 +399,8 @@ class Maestro with ChangeNotifier {
       } else {
         currentIndex--;
       }
+      progress--;
     }
-    progress--;
 
     notifyListeners();
   }
