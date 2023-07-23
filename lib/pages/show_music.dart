@@ -83,7 +83,7 @@ class ShowMusicState extends State<ShowMusic> {
           LinearProgressIndicator(
               backgroundColor: redApp,
               color: Colors.green[800],
-              value: (maestro.currentIndex + 1) / maestro.localList.length),
+              value: (maestro.getCurrentIndex + 1) / maestro.localList.length),
           CategoryAtMusic(context),
           Expanded(
               child: ListView(
