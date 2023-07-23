@@ -1,9 +1,8 @@
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/catalogue_page.dart';
-import 'package:diasguto/pages/home.dart';
+import 'package:diasguto/pages/Home/home.dart';
 import 'package:diasguto/pages/sheet_page.dart';
 import 'package:flutter/material.dart';
-
 import 'components/app_bars.dart';
 
 class RootWidget extends StatefulWidget {

@@ -9,23 +9,44 @@ class Oracao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan[800],
-      appBar: AppBar(
-        title: Text(
-          'Oração dos Músicos Católicos'.toUpperCase(),
-          style: TextStyle(fontSize: 14, color: redApp),
-        ),
-        backgroundColor: blackApp,
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            oracao,
-            softWrap: true,
-            style: TextStyle(color: redApp),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Text(
+              'Oração do Músico Católico'.toUpperCase(),
+            ),
           ),
-        ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Text(
+                  oracao,
+                  softWrap: true,
+                ),
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.home,
+                      size: 45,
+                      color: Colors.black45,
+                    )),
+              )
+            ],
+          )
+        ],
       ),
     );
   }

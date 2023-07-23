@@ -70,6 +70,7 @@ class Maestro with ChangeNotifier {
     aTiMeUDEUS,
     aEscolhida
   ];
+  bool removeImgHome = true;
 
   List<String> aux = [
     'entrance',
@@ -265,6 +266,11 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void handleImgHome() {
+    removeImgHome = !removeImgHome;
+    notifyListeners();
+  }
+
   void handleHasLamb() {
     hasLamb = !hasLamb;
     notifyListeners();
@@ -419,8 +425,8 @@ class Maestro with ChangeNotifier {
       } else {
         currentIndex--;
       }
+      progress--;
     }
-    progress--;
 
     notifyListeners();
   }

@@ -1,3 +1,4 @@
+import 'package:diasguto/components/check_box.dart';
 import 'package:diasguto/models/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,8 @@ class _PoliticPageState extends State<PoliticPage> {
             'Contato'.toUpperCase(),
             style: TextStyle(fontSize: 16, color: redApp),
           ),
-        )
+        ),
+        CheckImgHome(),
       ]),
     );
   }
