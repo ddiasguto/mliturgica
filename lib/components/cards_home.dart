@@ -1,6 +1,6 @@
 import 'package:diasguto/functions/navigator.dart';
 import 'package:diasguto/pages/show_list_category.dart';
-import 'package:diasguto/pages/show_music.dart';
+import 'package:diasguto/pages/show_music/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:diasguto/widgets/bottom_category.dart';
 import 'package:flutter/material.dart';
