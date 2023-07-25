@@ -18,7 +18,51 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 
+int randomEntrance = 0;
+int randomPenitencial = 0;
+int randomAclamation = 0;
+int randomOffer = 0;
+int randomComunion = 0;
+int randomPosComunion = 0;
+int randomSaint = 0;
+int randomEnding = 0;
+int randomImg = 0;
+int randomHymn = 0;
+int randomQuote = 0;
+int sheetLenght = 9;
+int indexCatalogue = 0;
+int currentIndex = 0;
+int indexCategory = 0;
+int fullProgress = 0;
+int progress = 0;
+int sheetIndex = 0;
+
 class Maestro with ChangeNotifier {
+  get getCurrentIndex => currentIndex;
+  get getIndexCategory => indexCategory;
+  get getLocalList => localList;
+  get getCategory => category;
+  get getSheet => sheet;
+  get getIsSheet => isSheet;
+  get getCatalogueList => catalogueList;
+  get getIsCatalogue => isCatalogue;
+  get getIndexCatalogue => indexCatalogue;
+  get getRandomImg => randomImg;
+  get getShowCipher => showCipher;
+  get getProgress => progress;
+  get getRandomQuote => randomQuote;
+  get getHasHymn => hasHymn;
+  get getHasLamb => hasLamb;
+  get getFullProgress => fullProgress;
+
+  bool hasHymn = true;
+  bool hasLamb = true;
+  bool showCipher = false;
+  bool isSheet = false;
+  bool isCatalogue = false;
+
+  String category = '';
+
   List<Chant> localList = [
     teAmareiSenhor,
     buscaiPrimeiro,
@@ -26,14 +70,6 @@ class Maestro with ChangeNotifier {
     aTiMeUDEUS,
     aEscolhida
   ];
-
-  int currentIndex = 0;
-  int indexCategory = 0;
-  int indexCatalogue = 0;
-  String category = '';
-  bool isSheet = false;
-  bool isCatalogue = false;
-  bool showCipher = false;
   bool removeImgHome = true;
 
   List<String> aux = [
@@ -46,6 +82,57 @@ class Maestro with ChangeNotifier {
     'comunhao',
     'poscomunhao',
     'encerramento'
+  ];
+
+  List<List<Chant>> listsCategories = [
+    entrance,
+    penitencial,
+    hymns,
+    aclamation,
+    offers,
+    saint,
+    comunion,
+    posComunion,
+    ending
+  ];
+
+  List<int> randomInts = [
+    randomEntrance,
+    randomPenitencial,
+    randomHymn,
+    randomAclamation,
+    randomOffer,
+    randomSaint,
+    randomComunion,
+    randomPosComunion,
+    randomEnding
+  ];
+
+  List<Chant> sheet = [
+    teAmareiSenhor,
+    senhorPiedade,
+    hinoDeLouvor,
+    buscaiPrimeiro,
+    aTiMeUDEUS,
+    santo,
+    comoEsLindo,
+    estasEntreNos,
+    aEscolhida,
+  ];
+
+  List<Chant> catalogueList = [
+    ...entrance,
+    ...offers,
+    ...aclamation,
+    ...comunion,
+    ...ending,
+    ...hymns,
+    ...saint,
+    ...marianos,
+    ...adoration,
+    ...posComunion,
+    ...penitencial,
+    ...holy_spirit
   ];
 
   void startSheetStatus() async {
@@ -75,70 +162,9 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
-  List<Chant> sheet = [
-    teAmareiSenhor,
-    senhorPiedade,
-    hinoDeLouvor,
-    buscaiPrimeiro,
-    aTiMeUDEUS,
-    santo,
-    comoEsLindo,
-    estasEntreNos,
-    aEscolhida,
-  ];
-
-  List<Chant> catalogueList = [
-    ...entrance,
-    ...offers,
-    ...aclamation,
-    ...comunion,
-    ...ending,
-    ...hymns,
-    ...saint,
-    ...marianos,
-    ...adoration,
-    ...posComunion,
-    ...penitencial,
-    ...holy_spirit
-  ];
-
   void sortCatalogue() {
     catalogueList.sort((a, b) => a.title.compareTo(b.title));
   }
-
-  get getCurrentIndex => currentIndex;
-  get getIndexCategory => indexCategory;
-  get getLocalList => localList;
-  get getCategory => category;
-  get getSheet => sheet;
-  get getIsSheet => isSheet;
-  get getCatalogueList => catalogueList;
-  get getIsCatalogue => isCatalogue;
-  get getIndexCatalogue => indexCatalogue;
-  get getRandomImg => randomImg;
-  get getShowCipher => showCipher;
-  get getProgress => progress;
-  get getRandomQuote => randomQuote;
-  get getHasHymn => hasHymn;
-  get getHasLamb => hasLamb;
-  get getFullProgress => fullProgress;
-  int randomEntrance = 0;
-  int randomPenitencial = 0;
-  int randomAclamation = 0;
-  int randomOffer = 0;
-  int randomComunion = 0;
-  int randomPosComunion = 0;
-  int randomSaint = 0;
-  int randomEnding = 0;
-  int randomImg = 0;
-  int randomHymn = 0;
-  int randomQuote = 0;
-  int sheetLenght = 9;
-  int fullProgress = 0;
-  int progress = 0;
-  int sheetIndex = 0;
-  bool hasHymn = true;
-  bool hasLamb = true;
 
   void setShowCipher() {
     showCipher = !showCipher;
@@ -483,7 +509,7 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
-  void randomSheet() {
+  void setRandomCategories() {
     setRandomEntrance();
     setRandomPenitencial();
     setRandomAclamation();
@@ -492,14 +518,16 @@ class Maestro with ChangeNotifier {
     setRandomComunion();
     setRandomPosComunion();
     setRandomEnding();
-    sheet[0] = entrance[randomEntrance];
-    sheet[1] = penitencial[randomPenitencial];
-    sheet[3] = aclamation[randomAclamation];
-    sheet[4] = offers[randomOffer];
-    sheet[5] = saint[randomSaint];
-    sheet[6] = comunion[randomComunion];
-    sheet[7] = posComunion[randomPosComunion];
-    sheet[8] = ending[randomEnding];
+  }
+
+  void randomSheet() {
+    setRandomCategories();
+    for (int i = 0; i < 9; i++) {
+      if (i == 2) {
+        continue;
+      }
+      sheet[i] = listsCategories[i][randomInts[i]];
+    }
     notifyListeners();
   }
 }
