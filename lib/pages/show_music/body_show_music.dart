@@ -1,6 +1,7 @@
 import 'package:diasguto/models/chant.dart';
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/pages/show_music/category_at_music.dart';
+import 'package:diasguto/pages/show_music/ciphers_options.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,8 +15,9 @@ Widget bodyShowMusic(BuildContext context) {
     LinearProgressIndicator(
         backgroundColor: redApp,
         color: Colors.green[800],
-        value: (maestro.currentIndex + 1) / maestro.localList.length),
+        value: (currentIndex + 1) / maestro.localList.length),
     categoryAtMusic(context),
+    cipherOptions(context),
     Expanded(
         child: ListView(
             children: localList[currentIndex].hasCypher

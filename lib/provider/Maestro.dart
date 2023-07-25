@@ -54,6 +54,7 @@ class Maestro with ChangeNotifier {
   get getHasHymn => hasHymn;
   get getHasLamb => hasLamb;
   get getFullProgress => fullProgress;
+  get getTom => tom;
 
   bool hasHymn = true;
   bool hasLamb = true;
@@ -62,6 +63,7 @@ class Maestro with ChangeNotifier {
   bool isCatalogue = false;
 
   String category = '';
+  String tom = '';
 
   List<Chant> localList = [
     teAmareiSenhor,
@@ -134,6 +136,10 @@ class Maestro with ChangeNotifier {
     ...penitencial,
     ...holy_spirit
   ];
+  void setTom(String str) {
+    tom = str;
+    notifyListeners();
+  }
 
   void startSheetStatus() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();

@@ -15,7 +15,7 @@ Widget categoryAtMusic(context) {
       children: [
         Container(
           width: 15,
-          height: 30,
+          height: 10,
         ),
         Text(
           maestro.localList[currentIndex].category.toUpperCase(),
@@ -51,8 +51,6 @@ Widget categoryAtMusic(context) {
       ],
     );
   } else {
-    return Container(
-      height: 30,
-    );
+    return Container();
   }
 }
