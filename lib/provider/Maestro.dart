@@ -141,6 +141,13 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
+  void setImgHomeUserPreference() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool('putImgHome') != null) {
+      removeImgHome = prefs.getBool('putImgHome')!;
+    }
+  }
+
   void startSheetStatus() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     if (prefs.getInt('sheetStatus') != null) {
@@ -272,8 +279,10 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
-  void handleImgHome() {
+  void handleImgHome() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
     removeImgHome = !removeImgHome;
+    prefs.setBool('putImgHome', removeImgHome);
     notifyListeners();
   }
 
