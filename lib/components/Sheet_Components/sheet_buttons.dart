@@ -1,6 +1,5 @@
-import 'package:diasguto/components/check_box.dart';
 import 'package:diasguto/models/colors.dart';
-import 'package:diasguto/pages/show_music.dart';
+import 'package:diasguto/pages/show_music/show_music.dart';
 import 'package:diasguto/provider/Maestro.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

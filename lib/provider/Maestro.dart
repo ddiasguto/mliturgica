@@ -54,6 +54,7 @@ class Maestro with ChangeNotifier {
   get getHasHymn => hasHymn;
   get getHasLamb => hasLamb;
   get getFullProgress => fullProgress;
+  get getTom => tom;
 
   bool hasHymn = true;
   bool hasLamb = true;
@@ -62,6 +63,7 @@ class Maestro with ChangeNotifier {
   bool isCatalogue = false;
 
   String category = '';
+  String tom = '';
 
   List<Chant> localList = [
     teAmareiSenhor,
@@ -134,6 +136,17 @@ class Maestro with ChangeNotifier {
     ...penitencial,
     ...holy_spirit
   ];
+  void setTom(String str) {
+    tom = str;
+    notifyListeners();
+  }
+
+  void setImgHomeUserPreference() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool('putImgHome') != null) {
+      removeImgHome = prefs.getBool('putImgHome')!;
+    }
+  }
 
   void startSheetStatus() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -266,8 +279,10 @@ class Maestro with ChangeNotifier {
     notifyListeners();
   }
 
-  void handleImgHome() {
+  void handleImgHome() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
     removeImgHome = !removeImgHome;
+    prefs.setBool('putImgHome', removeImgHome);
     notifyListeners();
   }
 
