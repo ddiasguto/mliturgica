@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     maestro.startSheetStatus();
     maestro.randomContent();
     maestro.sortCatalogue();
+    maestro.setImgHomeUserPreference();
 
     return MaterialApp(
       title: "Músicas Litúrgicas",

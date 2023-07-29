@@ -1,13 +1,12 @@
 import 'package:diasguto/models/colors.dart';
 import 'package:diasguto/provider/Maestro.dart';
-import 'package:diasguto/widgets/already_in_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 Widget cipherOptions(BuildContext context) {
   Maestro maestro = Provider.of<Maestro>(context);
   bool showCipher = maestro.getShowCipher;
-
+  int currentIndex = maestro.getCurrentIndex;
   return !maestro.localList[currentIndex].hasCypher
       ? Container()
       : (showCipher

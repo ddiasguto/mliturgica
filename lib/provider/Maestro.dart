@@ -18,25 +18,6 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 
-int randomEntrance = 0;
-int randomPenitencial = 0;
-int randomAclamation = 0;
-int randomOffer = 0;
-int randomComunion = 0;
-int randomPosComunion = 0;
-int randomSaint = 0;
-int randomEnding = 0;
-int randomImg = 0;
-int randomHymn = 0;
-int randomQuote = 0;
-int sheetLenght = 9;
-int indexCatalogue = 0;
-int currentIndex = 0;
-int indexCategory = 0;
-int fullProgress = 0;
-int progress = 0;
-int sheetIndex = 0;
-
 class Maestro with ChangeNotifier {
   get getCurrentIndex => currentIndex;
   get getIndexCategory => indexCategory;
@@ -62,6 +43,25 @@ class Maestro with ChangeNotifier {
   bool isSheet = false;
   bool isCatalogue = false;
 
+  int randomEntrance = 0;
+  int randomPenitencial = 0;
+  int randomAclamation = 0;
+  int randomOffer = 0;
+  int randomComunion = 0;
+  int randomPosComunion = 0;
+  int randomSaint = 0;
+  int randomEnding = 0;
+  int randomImg = 0;
+  int randomHymn = 0;
+  int randomQuote = 0;
+  int sheetLenght = 9;
+  int indexCatalogue = 0;
+  int currentIndex = 0;
+  int indexCategory = 0;
+  int fullProgress = 0;
+  int progress = 0;
+  int sheetIndex = 0;
+
   String category = '';
   String tom = '';
 
@@ -84,30 +84,6 @@ class Maestro with ChangeNotifier {
     'comunhao',
     'poscomunhao',
     'encerramento'
-  ];
-
-  List<List<Chant>> listsCategories = [
-    entrance,
-    penitencial,
-    hymns,
-    aclamation,
-    offers,
-    saint,
-    comunion,
-    posComunion,
-    ending
-  ];
-
-  List<int> randomInts = [
-    randomEntrance,
-    randomPenitencial,
-    randomHymn,
-    randomAclamation,
-    randomOffer,
-    randomSaint,
-    randomComunion,
-    randomPosComunion,
-    randomEnding
   ];
 
   List<Chant> sheet = [
@@ -537,12 +513,14 @@ class Maestro with ChangeNotifier {
 
   void randomSheet() {
     setRandomCategories();
-    for (int i = 0; i < 9; i++) {
-      if (i == 2) {
-        continue;
-      }
-      sheet[i] = listsCategories[i][randomInts[i]];
-    }
+    sheet[0] = entrance[randomEntrance];
+    sheet[1] = penitencial[randomPenitencial];
+    sheet[3] = aclamation[randomAclamation];
+    sheet[4] = offers[randomOffer];
+    sheet[5] = saint[randomSaint];
+    sheet[6] = comunion[randomComunion];
+    sheet[7] = posComunion[randomPosComunion];
+    sheet[8] = ending[randomEnding];
     notifyListeners();
   }
 }

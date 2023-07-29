@@ -1,4 +1,4 @@
-import 'package:diasguto/models/Quotes.dart';
+import 'package:diasguto/templates/Quotes.dart';
 
 List<Quote> Quotes = [
   is12,
@@ -15,7 +15,9 @@ List<Quote> Quotes = [
   sl473,
   jt,
   sl148,
-  sl149
+  sl149,
+  cr16,
+  cr162
 ];
 
 Quote is12 = Quote(
@@ -90,4 +92,14 @@ Quote sl149 = Quote(
 Quote sl1492 = Quote(
   quote: 'Louvai-o por suas façanhas, louvai-o por sua grandeza imensa',
   reference: 'Sl 149',
+);
+
+Quote cr16 = Quote(
+    quote: 'Cantai, entoai salmos para ele, narrai todas as suas maravilhas!',
+    reference: '1Cr 16');
+
+Quote cr162 = Quote(
+  quote:
+      'Cantai ao Senhor, terra inteira!\n Proclamai, dia após dia, a sua salvação',
+  reference: '1Cr 16',
 );
