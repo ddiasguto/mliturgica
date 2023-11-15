@@ -1,16 +1,8 @@
-# diasguto
+PT-BR
 
-A new Flutter project.
+App feito em Flutter com o objetivo de compilar cânticos litúrgicos para o rito latino da Santa Missa e mostrar os escolhidos de acordo com o rito litúrgico da celebração eucaristíca.
 
-## Getting Started
+-------------------------
+EN
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+App built in Flutter with the purpose of compiling liturgical chants for the Latin Rite of the Holy Mass and displaying the chosen ones according to the liturgical rite of the Eucharistic celebration.
