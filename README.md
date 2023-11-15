@@ -1,8 +1,8 @@
 PT-BR
 
-App feito em Flutter com o objetivo de compilar cânticos litúrgicos para o rito latino da Santa Missa e mostrar os escolhidos de acordo com o rito litúrgico da celebração eucaristíca.
+Desenvolvido em Flutter, este aplicativo tem como objetivo compilar cânticos litúrgicos destinados ao rito latino da Santa Missa, apresentando os selecionados de acordo com a liturgia específica da celebração eucarística.
 
 -------------------------
 EN
 
-App built in Flutter with the purpose of compiling liturgical chants for the Latin Rite of the Holy Mass and displaying the chosen ones according to the liturgical rite of the Eucharistic celebration.
+Developed in Flutter, this app aims to compile liturgical chants intended for the Latin Rite of the Holy Mass, presenting the selected ones according to the specific liturgy of the Eucharistic celebration.
